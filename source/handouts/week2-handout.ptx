@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="week2-handout">
+  <title>Week 2 Handout- Vector Calculus- Part 1</title>
+
+    <introduction>
+    <p>
+      This is an outline of the topics we covered in Week 2. 
+      You should have <url href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook"> Jupyter Notebook</url>, 
+      <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html"> MATHEMATICA</url>,
+      and <url href="https://octave.org/download"> Octave</url> ASAP.
+              
+    </p>
+    </introduction>
+
+     
+
+</worksheet>

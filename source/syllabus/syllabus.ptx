@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="syllabus" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Syllabus</title>
+
+  <introduction>
+    <p>
+      Instructors reserve the right to make changes to this syllabus as needed.
+      Only work assigned by and submitted to the instructor of record will count 
+      toward the final grade in this course.
+
+    </p>
+  </introduction>
+  <!-- Include chapters -->
+  <subsection xml:id="sec-course-info">
+    <title>Course Information</title>
+
+    <p>
+      
+      <dl>
+      <li>
+        <title>Instructor</title>
+
+        <p>
+          Yuju Kuo
+        </p>
+      </li>
+      <li>
+        <title>Office </title>
+
+        <p>
+          STRGT 314
+        </p>
+      </li>
+            <li>
+        <title>Email </title>
+
+        <p>
+          <url href="mailto:yjkuo@iup.edu">yjkuo@iup.edu</url>.
+        </p>
+      </li>
+      <li>
+        <title>Office Hours</title>
+
+        <p> Monday 12:30 PM - 1:30 PM </p>
+        <p> Tuesday 1:00 PM - 2:00 PM, 5:00 PM - 6:00 PM </p>
+        <p> Wednesday 12:30 PM - 2:30 PM </p>
+        <p> Thursday 1:00 PM - 2:00 PM (via Zoom) </p>
+
+        <p>
+          <alert>Important</alert>: I <em>want</em> to see you in office hours,
+           and will happily make appointments with you outside of the regular hours.  
+           I am avilable by email and will respond within 24 hours, usually much sooner, during the weekdays. 
+           You can also make appointments through  <url href="https://calendly.com/yjkuo/"/>
+        </p>
+      </li>
+
+      <li>
+        <title>Class meets</title>
+
+        <p> Tuesday 9:35 AM-10:50 AM STRGT 220 </p>
+        <p> Thursday 9:35 AM-10:50 AM STRGT 202 </p>
+      
+      </li>
+
+      <li>
+        <title>Course Description</title>
+
+        <p>
+          Applies advanced mathematics to problems of science. 
+          Identifies the three phases of such an application and develops skills 
+          necessary to carry out each step: a) translation of the given physical 
+          information into a mathematical model; b) treatment of the model by 
+          mathematical methods; c) interpretation of the mathematical result in 
+          physical terms. Investigates topics including vector analysis, 
+          Taylor and Fourier series, partial differential equations and their applications.
+        </p>
+      </li>
+
+      <li>
+        <title>Prerequisite</title>
+
+        <p>
+          MATH 341 AND (MATH 122 OR MATH 225)
+        </p>
+      </li>
+
+      <li>
+        <title>Textbook and course materials</title>
+
+        <p>
+          <pubtitle>Advanced Engineering Mathematics</pubtitle>
+          by Zill, Dennis G.</p>
+        <p> Software: Jupyter Notebook, Mathematica, Octave </p>
+      </li>
+      </dl>
+    </p>
+
+
+  </subsection>
+
+
+  <subsection xml:id="sec-assessments">
+    <title>Assessments and Grades</title>
+
+    <paragraphs>
+      <title>Learning Outcomes</title>
+
+      <p>
+        By the end of this course, you should be able to:
+        <ol>
+          <li> 
+            <p> 	Apply techniques from multivariable analysis to construct 
+              mathematical models and obtain results,
+            </p>
+          </li>
+
+          <li>
+            <p> Construct series representations of functions and use them to 
+              solve applied problems,
+            </p>
+          </li>
+          <li>
+            <p> Investigate partial differential equations and their solutions.
+              
+            </p>
+          </li>
+        </ol>
+      </p>
+    </paragraphs>
+
+    <paragraphs>
+      <title>Assessment Categories</title>
+        
+      <tabular>
+        <row> 
+            <cell> <term>Category</term> </cell> <cell> Weight </cell> <cell>  </cell><cell> <term>Grade</term> </cell> <cell>Percentage</cell>
+        </row>
+        <row>
+            <cell> <term>In-Class Activities/Quizzes</term> </cell> <cell> 12% </cell> <cell>   </cell><cell> <term>A</term></cell> <cell>90-100%</cell>
+        </row>
+        <row>
+            <cell> <term>Homework</term> </cell> <cell> 17% </cell> <cell>   </cell><cell> <term>B</term></cell> <cell>80-89%</cell>
+        </row>
+        <row>
+            <cell> <term>2 Midterm Exams</term> </cell> <cell> 30% </cell> <cell>   </cell><cell> <term>C</term></cell> <cell>70-79%</cell>
+        </row> 
+        <row>
+            <cell> <term>Final Exam</term> </cell> <cell> 20% </cell> <cell>   </cell><cell> <term>D</term></cell> <cell>55-69%</cell>
+        </row>
+        <row>
+            <cell> <term>COMAP</term> </cell> <cell> 6% </cell> <cell>   </cell><cell> <term>F</term></cell> <cell> Below 55% </cell>
+        </row>
+        <row>
+            <cell> <term>Final Project</term> </cell> <cell> 15% </cell> <cell>   </cell><cell> </cell> <cell></cell>
+        </row>
+      </tabular>
+    </paragraphs>
+    
+  </subsection>
+
+
+
+  <!-- Since some parts of the syllabus are used in multiple courses, the following are included as separate files that can easily be copied elsehwere. -->
+  <xi:include href="./subsec-schedule.ptx" />
+
+  <xi:include href="./subsec-dates.ptx" />
+  
+  <xi:include href="./subsec-policies.ptx" />
+
+
+</section>

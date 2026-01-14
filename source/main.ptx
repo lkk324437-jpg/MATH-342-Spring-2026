@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- Include common macros etc: -->
+  <xi:include href="./docinfo.ptx" />
+  <!-- By creating a PreTeXt "book" for the course, we can split components into "chapters" -->
+  <book>
+    <title>Spring 2026 MATH 342 </title>
+
+    <subtitle>Advanced Mathematics for Applications</subtitle>
+
+    
+
+    <chapter xml:id="course-documents">
+      <title>Course Documents</title>
+
+      <!-- Course syllabus -->
+      <xi:include href="./syllabus/syllabus.ptx" />
+
+      <!-- Other documents could go here, like a schedule, project description, etc. -->
+
+    </chapter>
+
+
+
+
+    <chapter xml:id="handouts">
+      <title>Handouts</title>
+
+      <!-- Remove or comment out the sample and replace with your own handouts -->
+      <!-- You can also comment out the entire chapter on Handouts until you are ready to include them -->
+      <xi:include href="./handouts/week1-handout.ptx"/>
+      <xi:include href="./handouts/week2-handout.ptx"/>
+    </chapter>
+
+    <chapter xml:id="homework">
+      <title>Homework</title>
+
+      <!-- Remove or comment out the sample and replace with your own homework -->
+      <xi:include href="./homework/homework1.ptx"/>
+
+    </chapter>
+
+
+    <!-- Include additional chapters for other categories -->
+
+    </book>
+  </pretext>

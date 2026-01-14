@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Written by Sarah Sparks, Fall 2025 -->
+
+<worksheet xml:id="hw1">
+  <title>Homework 1</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Complete all the parts below 
+      on a <em>separate page</em>.  
+      Submit your work by uploading a <alert>single PDF</alert> to D2L.  
+      This can either be a scan of handwritten solutions or a PDF you created by 
+      first typing your solutions. Your work must clearly label which definition, remark, theorem and/or 
+      which part of theorem in <alert>Week 1 Handout</alert> is used for each step.  
+    </p>
+
+  </introduction>
+
+  <p>
+    <ol>
+        <li> <p> Deteremine whether each of the following functions is of exponential order. 
+            If it is, find minimum c and minimum T. If it is not, justify your answer.        </p>
+            <ol>
+                <li> <p>  <m>f(t)=e^{t-2}\sin(2t)</m>    </p>   </li>
+                <li> <p>  <m>f(t)=e^{3t^2}</m>    </p>  </li>
+            </ol>
+        </li>
+        <li> <p> Find the Laplace transform of each of the following functions if it exists. 
+        Provide a brief justification if it doesn't exist. You must also include Mathematica
+        code for verifying your answers. </p>    
+            <ol>
+                <li>  <p> <m>   f(t) = \begin{cases}   1, &amp; -1\leq t\lt 2 \\  t, &amp; 2\leq t\lt 4\\ t^2-4, &amp; t\geq 4 \end{cases}  </m>   </p> </li>
+                <li> <p> <m> f(t)= e^{t-2}\sin(2t) </m>         </p> </li>
+                <li> <p> <m>f(t)=e^{t^2/4}</m>                </p>  </li>
+            </ol>   
+        </li> 
+        <li> <p> Find the given inverse transform. You must also include Mathematica code for 
+        verifying your answers. </p>
+        <ol>
+            <li> <p> <m>\mathscr{L}^{-1}\left\{\frac{1}{s^7}\right\}</m>  </p> </li>
+            <li>  <p> <m>\mathscr{L}{-1}\left\{\frac{4s+5}{s^2-4s-5}\right\} </m>  </p>  </li>
+            <li> <p> <m>\mathscr{L}^{-1}\left\{\frac{3s-4}{s^4-6s^2+8}\right\}</m>     </p> </li>
+        </ol>
+        </li>
+        <li> <p>Solve each of IVPs using the Laplace transform and its inverses.</p>
+            <ol>
+                <li> <p> <m>y''+9y=e^t, y(0)=1, y'(0)=-1</m>  </p>    </li>
+                <li> <p>  <m>y''-4y'+3y=2\cos(4t), y(0)=1, y'(0)=2</m>            </p></li>
+            </ol>
+        </li>
+
+
+    </ol>
+</p>
+  
+</worksheet>

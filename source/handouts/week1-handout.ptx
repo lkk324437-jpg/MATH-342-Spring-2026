@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="week1-handout">
+  <title>Week 1 Handout- Introduction to MATH 342 and Laplace Transform</title>
+
+    <introduction>
+    <p>
+      This is an outline of the topics we covered in the first week of class. 
+      You should have <url href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook"> Jupyter Notebook</url>, 
+      <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html"> MATHEMATICA</url>,
+      and <url href="https://octave.org/download"> Octave</url> ready before the 2nd week for practicing and doing assignments.
+              
+    </p>
+    </introduction>
+
+          <ul>
+        <li> <p> Overview </p>
+          <ul>
+            <li> Investigating high dimensional systems using vector analysis </li>
+            <li> Constructing complicated functions using series expansion </li>
+            <li> Modeling and  studying natural phenomena via partial differential
+              equations (PDE) </li>
+            <li> Solving PDEs algebraically and numerically </li>
+            <li> Utilizing appropriate software packages 
+              (<url href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook"> Jupyter Notebook</url>,
+               <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html"> MATHEMATICA</url>, 
+               <url href="https://octave.org/download"> Octave</url> ) 
+              for suitable tasks </li>
+          </ul>
+        </li>
+        <li> Why do we need models? </li>
+        <li> <term>All models are wrong. Some are useful. </term>      </li>
+        <li> <p>Steps to create models: </p> 
+      
+          <ol>
+            <li> Observing and recording the system </li>
+            <li> Describe how the system behaves (verbally and mathematically)-create a model </li>
+            <li> Verify whether that model behaves similar (or close enough) to what you observe. If not, modify it.</li>
+            <li> Investigate/Study the system under different conditions using the model</li>
+          </ol>  
+        </li>
+        <li> <p><url href="https://www.comap.com/contests/mcm-icm">COMAP</url> </p></li>
+        <li> <p> Laplace Transform: Definitions, Theorems, Examples, MATHEMATICA       </p>
+        </li>
+      </ul>  
+  
+    <definition xml:id="def-laplace">
+      <statement>
+        <p> If <m>f</m> is a function defined for <m> t\geq 0</m>, then the integral 
+          <m>\mathscr{L}\{f(t)\}=\int_0^\infty e^{-st}f(t)dt</m> is the <term>Laplace transform </term> of <m> f, </m>
+          provided the integral converges. </p>
+
+          <p> Sufficient conditions for existence:
+            <ul>
+              <li>
+                <p> <m>f</m> must be piecewise continuous on <m>[0,\infty]</m>             
+                </p>
+              </li>
+              <li>
+                <p><m>f</m> must be of exponential order for <m>t > T</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-exponential-order">
+      <statement>
+        <p>A function <m>f</m> is said to be <term>exponential order</term> if there exists
+          constants <m>c, M\gt 0,</m> and <m>T\gt 0</m> such that <md>
+            |f(t)|\leq M e^{ct}, \text{for all }t\gt T.
+          </md>
+          
+          
+        </p>
+      </statement>
+    </definition>
+
+    <remark> 
+      <p>
+        <m>\mathscr{L}</m> is a linear transform, i.e.,
+        <m> \mathscr{L}\{\alpha f(t)+ \beta g(t)\}=\alpha\mathscr{L}\{f(t)\}+\beta\mathscr{L}\{g(t)\}.</m>
+      </p>
+    </remark> 
+
+    <example>
+    <statement>
+      <p>    <ol>
+      <li>
+        <p>Evaluate <m> \mathscr{L}\{t\}.</m>      
+        </p> 
+      </li>
+      <li>
+        <p> Evaluate  <m>\mathscr{L}\{f(t)\},</m>       
+          where <m>   f(t) = \begin{cases}   0, &amp; 0\leq t\lt 3 \\  2, &amp; t\geq 3 \end{cases}  </m>
+          <figure xml:id="fig-piecewise-graph">
+            <caption>Graph of a piecewise function</caption>
+            <image xml:id="graph-piecewise" width="60%">
+            <shortdescription>The graph of a piecewise function with two horizontal segments. From t equals 0 to t equals 3, 
+              the graph is on the t-axis at y equals 0, ending with an open circle 
+              at (3, 0). For t greater than or equal to 3, the graph is a horizontal 
+              line at y equals 2, starting with a closed circle at (3, 2).</shortdescription>
+            <latex-image>
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis x line=middle,
+                  axis y line=middle,
+                  xlabel={$t$},
+                  ylabel={$y$},
+                  ymin=-0.5, ymax=2.5,
+                  xmin=0, xmax=5
+                  ]
+                  <!-- First piece: y = 0 for x < 3 -->
+                  \addplot[domain=0:3, blue, thick] {0};
+          
+                  <!-- Second piece: y = 2 for x >= 2 -->
+                  \addplot[domain=3:5, red, thick] {2};
+
+                  <!-- Optional: Add open/closed circles for continuity -->
+                  \draw[blue, fill=white] (axis cs:3,0) circle (2pt); <!-- open circle --> 
+                  \draw[red, fill=red] (axis cs:3,2) circle (2pt); <!-- close circle -->
+                \end{axis}
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+        </p>
+      </li>
+    </ol>          
+    </p>
+    </statement>    
+    <solution component="inst">
+      <p> 
+        <ol>
+          <li>
+            <p>
+              <m> \mathscr{L}\{t\}=\int_0^\infty t e^{-st}dt=\left.-\frac{-te^{-st}}{s}\right|_0^{\infty}+\frac{1}{s}\int_0^\infty e^{-st}dt=\frac{1}{s^2}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathscr{L}\{f(t)\}=\int_0^3e^{-st}\cdot 0dt+\int_3^\infty e^{-st}\cdot 2 dt=\frac{2e^{-3s}}{s}, s>0</m>
+            </p>
+          </li>
+        </ol>
+        
+      </p>
+    </solution>
+    </example>
+
+
+    
+
+
+    <definition xml:id="def-laplace-inverse">
+      <statement>
+        <p> If <m>F(s)</m> represents the Laplace transform of a function <m>f(t),</m>
+          then <m>f(t)</m> is the <term>inverse Laplace transform</term> of <m>F(s),</m>
+          <md>             f(t)=\mathscr{L}^{-1}\left\{F(s)\right\} </md>
+        </p>
+
+        <p>
+          <m>\mathscr{L}^{-1}</m> is a linear transform,
+          <md>\mathscr{L}^{-1}\left\{\alpha F(s)+\beta G(s)\right\}
+          =\alpha\mathscr{L}^{-1}\left\{F(s)\right\}+\beta G(s)\mathscr{L}^{-1}\left\{G(s)\right\}</md>
+        </p>
+      </statement>
+    </definition>
+
+  <theorem xml:id="thm-laplace-inverse">
+    <statement>
+      <p><ol>
+        <li> <p> <m>1=\mathscr{L}^{-1}\left\{\frac{1}{s}\right\}</m> </p> </li>
+        <li> <p> <m>t^n=\mathscr{L}^{-1}\left\{\frac{n!}{s^{n+1}}\right\}, n=1,2,3,\ldots</m> </p></li>
+        <li> <p> <m>e^{at}=\mathscr{L}^{-1}\left\{\frac{1}{s-a}\right\}</m></p></li>
+        <li> <p> <m>\sin kt=\mathscr{L}^{-1}\left\{\frac{k}{s^2+k^2}\right\}</m></p></li>
+        <li> <p> <m>\cos kt=\mathscr{L}^{-1}\left\{\frac{s}{s^2+k^2}\right\}</m></p></li>
+        <li> <p> <m>\sinh kt=\mathscr{L}^{-1}\left\{\frac{k}{s^2-k^2}\right\}</m></p> </li>
+        <li> <p> <m>\cosh kt=\mathscr{L}^{-1}\left\{\frac{s}{s^2-k^2}\right\}</m>  </p> </li>
+      </ol>
+        
+      </p>
+    </statement> 
+  </theorem>
+  
+  <example>
+    <statement> Use Theorem <xref ref="thm-laplace-inverse"/> to find each of the followings:
+    <ol>
+      <li> <p> <m>\mathscr{L}^{-1}\left\{\frac{1}{s^4}\right\}</m></p> </li>
+      <li> <p> <m>\mathscr{L}^{-1}\left\{\frac{5s}{s^2+6}\right\}</m> </p> </li>
+    </ol>
+    </statement>
+    <solution component="inst">
+      <p> <ol>
+        <li> <p>   Using (b) in Theorem <xref ref="thm-laplace-inverse"/>,<m>n</m> should be 3. Thus 
+        <md>\frac{1}{s^4}=\frac{1}{3!}\cdot\frac{3!}{s^{3+1}}\Rightarrow \mathscr{L}^{-1}\left\{\frac{1}{s^4}\right\}=
+          \frac{1}{3!}\mathscr{L}^{-1}\left\{\frac{3!}{s^{3+1}}\right\}=\frac{1}{3!}t^3.</md>  </p>  </li>
+        <li> <p>   Using (e) in Theorem <xref ref="thm-laplace-inverse"/>, <m>k</m> is <m>\sqrt{6}.</m>  Thus
+        <md> \mathscr{L}^{-1}\left\{\frac{5s}{s^2+6}\right\}=5\mathscr{L}^{-1}\left\{\frac{s}{s^2+\sqrt{6}^2}\right\}
+          =5\cos\sqrt{6}t </md> </p> </li>
+      </ol>
+        
+      </p>
+    </solution>
+  </example>
+
+
+  <example> <statement>
+    <p> Find <m>\mathscr{L}^{-1}\left\{\dfrac{2s+8}{s^2-9}\right\}.</m> </p>
+  </statement> 
+  <solution component="inst"> <p> <m>\frac{2s+8}{s^2-9}</m> can be written into two expressions:
+    <ul>
+      <li> <p> <m>\frac{2s+8}{s^2-9}=\frac{2s}{s^2-9}+\frac{8}{s^2-9} </m> 
+        <md>\Rightarrow \mathscr{L}^{-1}\left\{\dfrac{2s+8}{s^2-9}\right\}=2\cosh 3t+\frac{8}{3}\sinh 3t </md>  </p>  </li>
+      <li> <p> <m> \frac{2s+8}{s^2-9}=\frac{2(s+3)}{s^2-9}+\frac{2}{s^2-9}=\frac{2}{s-3}+\frac{2}{s^2-9}</m>
+      <md>\Rightarrow \mathscr{L}^{-1}\left\{\dfrac{2s+8}{s^2-9}\right\}= 2e^{3t}+\frac{2}{3}\sinh 3t</md></p> </li>   
+      
+      </ul>  
+    </p>
+  </solution>  
+  </example>
+
+  <remark> <statement> Conceptually, the original DE is transformed to another equation in a different space. 
+  Ideally, this new equation is easier to solve in the new space. Finally, the solution in the new space is transformed back to 
+  the original space using the inverse transformation. 
+
+</statement>
+<figure xml:id="fig-laplace-process">
+	<caption>Steps in solving an IVP by the Laplace transform</caption>
+	<image width="70%">
+      <latex-image >
+        \begin{tikzpicture}
+          \definecolor{myorange}{rgb}{1,0.8,0} 
+          \node[rectangle,draw, text width=3cm, minimum height=2cm] (A) at (0,0) {Solution $y(t)$ of original IVP};
+          \node[rectangle,draw, text width=3cm, minimum height=2cm, fill=myorange] (B) at (7,0) {Solve transformed equation for $Y(s)$};
+          \node[rectangle,draw, text width=3cm, minimum height=2cm,fill=myorange] (C) at (7,4) {Transformed DE becomes an algebraic equation in $Y(s)$};
+          \node[rectangle,draw, text width=3cm, minimum height=2cm] (D) at (0,4) {Find unknown $y(t)$ that satisfies a DE and initial conditions};
+          \draw[draw=red, line width=2.5pt] (D) edge[->] node[text=blue, font=\large\ttfamily,above] {Apply $L$} (C);
+          \draw[draw=red, line width=2.5pt] (B) edge[->] node[text=blue, font=\large\ttfamily,above] {Apply $L^{-1}$} (A);
+          \draw[draw=red, line width=2.5pt] (C) edge[->] (B);
+        \end{tikzpicture}
+      </latex-image>
+	</image>
+</figure>
+<p>
+There are many other transformations and each one is considering a different space, 
+which also means each one is more suitable for solving some particular types of DEs. This is a 
+typical issue for most of algebraic approaches for solving ODEs or PDEs.</p>
+</remark>
+<theorem xml:id="thm-laplace-properties">
+  <statement>
+    <p>Suppose <m>f, f', \ldots, f^{(n-1)}</m> are continuous on <m>[0,\infty)</m>, <m>f^{(n)}</m> is piecewise 
+      continuous on <m>[0,\infty),</m> and <m>f, f', \ldots, f^{(n-1)}, f^{(n)}</m> are of 
+      exponential order with <m>c</m> as specified in <xref ref="def-exponential-order"/>. Then for <m>s\gt c,</m>
+      <md>
+        \mathscr{L}\left\{f^{(n)}(t)\right\}=s^nF(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\cdots-f^{(n-1)}(0),
+      </md>
+      where <m>F(s)=\mathscr{L}\left\{f(t)\right\}.</m>
+    </p>
+  </statement>
+</theorem>
+
+<example> <p>
+  Use the Laplace transform to solve the IVP <md>
+    y''-4y'+y=6e^{3t}-3e^{-t}, y(0)=1, y'(0)=-1
+  </md> </p>
+ <solution component="inst">
+
+ </solution>
+</example>
+
+  <remark><title><alert>MATHEMATICA</alert></title>
+    <statement>  <p> <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica"/></p>
+
+    <p> You should be familiar with using <alert> MATHEMATICA</alert> to verify your algebraic work.</p>
+
+  <ul>
+    <li> <p> <alert>LaplaceTransform[f(t),t,s]</alert>
+
+        <example> <p>Find <m>\mathscr{L}\left\{\cos(4t-5)\right\}</m> using MATHEMATICA.</p>
+          <program language="text" >
+           LaplaceTransform[Cos[4*t - 5], t, s]
+          </program>  
+       </example>
+      </p>
+      </li>
+      <li><p><alert>InverseLaplaceTransform[F[s],s,t]</alert>  
+        <example><p> Find <m>\mathscr{L}^{-1}\left\{\frac{5s-1}{s^2+7}\right\}</m> using MATHEMATICA.</p>
+          <program language="text" >
+           InverseLaplaceTransform[((5*s-1)/(s^2+7), s, t]
+          </program>  
+        </example>
+      </p>
+      </li>
+    </ul>
+
+    </statement>
+  </remark>
+
+</worksheet>
