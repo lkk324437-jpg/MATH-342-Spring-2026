@@ -133,7 +133,16 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Week 2 Handout- Vector Calculus- Part 1",
-  "body": " Week 2 Handout- Vector Calculus- Part 1   This is an outline of the topics we covered in Week 2. You should have Jupyter Notebook , MATHEMATICA , and Octave ASAP.   "
+  "body": " Week 2 Handout- Vector Calculus- Part 1     We will discuss vector calculus (Chap 9 in the textbook) in the next couple of weeks.    You should have Jupyter Notebook , MATHEMATICA , and Octave ASAP.     "
+},
+{
+  "id": "week2-handout-2-1-1-1",
+  "level": "2",
+  "url": "week2-handout.html#week2-handout-2-1-1-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "vector calculus (Chap 9 in the textbook) "
 },
 {
   "id": "hw1",
