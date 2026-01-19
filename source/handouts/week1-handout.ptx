@@ -75,7 +75,31 @@
         </p>
       </statement>
     </definition>
-
+    <example>
+      <statement>
+        <p> Determine whether the Laplace transform of each of the functions exists. Justify your answer.
+          <ol>
+            <li>  <p> <m> f(t)=\sqrt[3]{t} </m>           </p>       </li>
+            <li> <p><m>f(t)=e^{t^2}</m>     </p>       </li>
+            <li> <p><m> f(t)=\tan t</m>          </p>       </li>
+            <li> <p> <m>f(t)=\frac{1}{t}</m>        </p>
+            </li>
+          </ol>
+          
+        </p>
+      </statement>
+      <solution component="inst">
+        <p> <ol>
+          <li>   <p> <m>\int_0^\infty \sqrt[3]{t}e^{-st}dt</m> </p>         </li>
+          <li>  <p> <m>\int_0^\infty e^{t^2}e^{-st}dt</m>      </p>   </li>
+          <li> <p> <m>\int_0^\infty \tan te^{-st}dt</m>      </p>   </li>
+          <li><p> <m> \int_0^\infty \frac{1}{t}\cdot e^{-st}dt</m>     </p></li> 
+        
+        </ol>
+          
+        </p>
+      </solution>
+    </example>
     <remark> 
       <p>
         <m>\mathscr{L}</m> is a linear transform, i.e.,
@@ -311,7 +335,7 @@ typical issue for most of algebraic approaches for solving ODEs or PDEs.</p>
         <mrow>\left(s^2-4s+1\right)Y(s)-s+5 \amp =6\frac{1}{s-3}-3\frac{1}{s+1} </mrow>
         <mrow>Y(s) \amp=\frac{6\frac{1}{s-3}-3\frac{1}{s+1}+s-5}{\left(s^2-4s+1\right)} </mrow>  
         </md>
-      Using Mathematica to find <m>y(t):</m>
+      Next, we need to take inverse laplace transform to find <m>y(t).</m>. Here, we use Mathematica to find <m>y(t):</m>
       <program language="text" >
            InverseLaplaceTransform[(6/(s - 3) - 3/(s + 1) + s - 5)/(s^2 - 4 s + 1), s, t]
           </program>   
