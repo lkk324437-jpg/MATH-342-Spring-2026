@@ -260,14 +260,7 @@ typical issue for most of algebraic approaches for solving ODEs or PDEs.</p>
   </statement>
 </theorem>
 
-<example> <p>
-  Use the Laplace transform to solve the IVP <md>
-    y''-4y'+y=6e^{3t}-3e^{-t}, y(0)=1, y'(0)=-1
-  </md> </p>
- <solution component="inst">
 
- </solution>
-</example>
 
   <remark><title><alert>MATHEMATICA</alert></title>
     <statement>  <p> <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica"/></p>
@@ -296,5 +289,38 @@ typical issue for most of algebraic approaches for solving ODEs or PDEs.</p>
 
     </statement>
   </remark>
+<example> <p>
+  Use the Laplace transform to solve the IVP <md>
+    y''-4y'+y=6e^{3t}-3e^{-t}, y(0)=1, y'(0)=-1
+  </md> </p>
+ <solution component="inst">
+  <statement>
+    <p> Take Laplace transformation to the entire equation and let <m>Y(s)=\mathscr{L}\{y\}.</m>
+      <md>
+        <mrow> \mathscr{L}\left\{y''\right\} \amp =  s^2Y(s)-sy(0)-y'(0)=s^2Y(s)-s+1</mrow>
+        <mrow> \mathscr{L}\left\{y'\right\} \amp = sY(s)-y(0)=sY(s)-1</mrow>
+      </md>
+       <md>
+        <mrow> \mathscr{L}\left\{y''-4y'+y\right\} \amp =\mathscr{L}\left\{y''\right\}-4\mathscr{L}\{y'\}+\mathscr{L}\{y\}.</mrow>
+        <mrow> \amp =s^2Y(s)-s+1-4\left(sY(s)-1\right)+Y(s)</mrow>
+        <mrow> \amp =\left(s^2-4s+1\right)Y(s)-s+5</mrow>
+        <mrow> \mathscr{L}\left\{6e^{3t}-3e^{-t}\right\} \amp =6\frac{1}{s-3}-3\frac{1}{s+1} </mrow>
+        </md> 
+       
+        <md>
+        <mrow>\left(s^2-4s+1\right)Y(s)-s+5 \amp =6\frac{1}{s-3}-3\frac{1}{s+1} </mrow>
+        <mrow>Y(s) \amp=\frac{6\frac{1}{s-3}-3\frac{1}{s+1}+s-5}{\left(s^2-4s+1\right)} </mrow>  
+        </md>
+      Using Mathematica to find <m>y(t):</m>
+      <program language="text" >
+           InverseLaplaceTransform[(6/(s - 3) - 3/(s + 1) + s - 5)/(s^2 - 4 s + 1), s, t]
+          </program>   
+        <md>\Rightarrow y(t)=-\frac{e^{-t}}{2}-3e^{3t}+\frac{\sqrt{3}}{4}\left(e^{(2-\sqrt{3})t}+3\sqrt{3}e^{(2-\sqrt{3})t}
+          -e^{(2+\sqrt{3})t}+3\sqrt{3}e^{(2+\sqrt{3})t}\right)
+        </md>
+        </p>
 
+  </statement>
+ </solution>
+</example>
 </worksheet>
