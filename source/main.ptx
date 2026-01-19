@@ -31,7 +31,7 @@
       <!-- Remove or comment out the sample and replace with your own handouts -->
       <!-- You can also comment out the entire chapter on Handouts until you are ready to include them -->
       <xi:include href="./handouts/week1-handout.ptx"/>
-      <xi:include href="./handouts/week2-handout.ptx"/>
+      <!--   <xi:include href="./handouts/week2-handout.ptx"/> -->
     </chapter>
 
     <chapter xml:id="homework">
