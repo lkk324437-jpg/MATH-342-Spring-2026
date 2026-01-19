@@ -432,50 +432,50 @@ f(t)=\mathscr{L}^{-1}\left\{F(s)\right\}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-laplace-properties-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 12"><a href="#thm-laplace-properties" title="Copy heading and permalink for Theorem 12" aria-label="Copy heading and permalink for Theorem 12">🔗</a></div></article><details id="week1-handout-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week1-handout-14-1">
+<div class="autopermalink" data-description="Theorem 12"><a href="#thm-laplace-properties" title="Copy heading and permalink for Theorem 12" aria-label="Copy heading and permalink for Theorem 12">🔗</a></div></article><article class="remark remark-like" id="week1-handout-14"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><em class="alert">MATHEMATICA</em>.</span>
+</h3>
+<div class="para" id="week1-handout-14-2-1">
+<a class="external" href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica" target="_blank"><code class="code-inline tex2jax_ignore">https://www.iup.edu/itsupportcenter/get-support/software/mathematica</code></a><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="week1-handout-14-2-2">You should be familiar with using <em class="alert">MATHEMATICA</em> to verify your algebraic work.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="week1-handout-14-2-3">
+<li id="week1-handout-14-2-3-1">
+<div class="para" id="week1-handout-14-2-3-1-1">
+<em class="alert">LaplaceTransform[f(t),t,s]</em> <details id="week1-handout-14-2-3-1-1-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="week1-handout-14-2-3-1-1-2-1">Find <span class="process-math">\(\mathscr{L}\left\{\cos(4t-5)\right\}\)</span> using MATHEMATICA.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-none">LaplaceTransform[Cos[4*t - 5], t, s]
+</code></pre></div>
+<div class="autopermalink" data-description="Example 14"><a href="#week1-handout-14-2-3-1-1-2" title="Copy heading and permalink for Example 14" aria-label="Copy heading and permalink for Example 14">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week1-handout-14-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week1-handout-14-2-3-2">
+<div class="para" id="week1-handout-14-2-3-2-1">
+<em class="alert">InverseLaplaceTransform[F[s],s,t]</em> <details id="week1-handout-14-2-3-2-1-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="week1-handout-14-2-3-2-1-2-1">Find <span class="process-math">\(\mathscr{L}^{-1}\left\{\frac{5s-1}{s^2+7}\right\}\)</span> using MATHEMATICA.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-none">InverseLaplaceTransform[((5*s-1)/(s^2+7), s, t]
+</code></pre></div>
+<div class="autopermalink" data-description="Example 15"><a href="#week1-handout-14-2-3-2-1-2" title="Copy heading and permalink for Example 15" aria-label="Copy heading and permalink for Example 15">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week1-handout-14-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Remark 13: MATHEMATICA"><a href="#week1-handout-14" title="Copy heading and permalink for Remark 13: MATHEMATICA" aria-label="Copy heading and permalink for Remark 13: MATHEMATICA">🔗</a></div></article><details id="week1-handout-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week1-handout-15-1">
 <div class="para">Use the Laplace transform to solve the IVP</div>
-<div class="displaymath process-math" id="week1-handout-14-1-1">
+<div class="displaymath process-math" id="week1-handout-15-1-1">
 \begin{equation*}
 y''-4y'+y=6e^{3t}-3e^{-t}, y(0)=1, y'(0)=-1
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 13"><a href="#week1-handout-14" title="Copy heading and permalink for Example 13" aria-label="Copy heading and permalink for Example 13">🔗</a></div></article></details><article class="remark remark-like" id="week1-handout-15"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><em class="alert">MATHEMATICA</em>.</span>
-</h3>
-<div class="para" id="week1-handout-15-2-1">
-<a class="external" href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica" target="_blank"><code class="code-inline tex2jax_ignore">https://www.iup.edu/itsupportcenter/get-support/software/mathematica</code></a><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="week1-handout-15-2-2">You should be familiar with using <em class="alert">MATHEMATICA</em> to verify your algebraic work.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ul class="disc" id="week1-handout-15-2-3">
-<li id="week1-handout-15-2-3-1">
-<div class="para" id="week1-handout-15-2-3-1-1">
-<em class="alert">LaplaceTransform[f(t),t,s]</em> <details id="week1-handout-15-2-3-1-1-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="week1-handout-15-2-3-1-1-2-1">Find <span class="process-math">\(\mathscr{L}\left\{\cos(4t-5)\right\}\)</span> using MATHEMATICA.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="code-box"><pre class="program clipboardable"><code class="language-none">LaplaceTransform[Cos[4*t - 5], t, s]
-</code></pre></div>
-<div class="autopermalink" data-description="Example 15"><a href="#week1-handout-15-2-3-1-1-2" title="Copy heading and permalink for Example 15" aria-label="Copy heading and permalink for Example 15">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#week1-handout-15-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="week1-handout-15-2-3-2">
-<div class="para" id="week1-handout-15-2-3-2-1">
-<em class="alert">InverseLaplaceTransform[F[s],s,t]</em> <details id="week1-handout-15-2-3-2-1-2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="week1-handout-15-2-3-2-1-2-1">Find <span class="process-math">\(\mathscr{L}^{-1}\left\{\frac{5s-1}{s^2+7}\right\}\)</span> using MATHEMATICA.<div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-3-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="code-box"><pre class="program clipboardable"><code class="language-none">InverseLaplaceTransform[((5*s-1)/(s^2+7), s, t]
-</code></pre></div>
-<div class="autopermalink" data-description="Example 16"><a href="#week1-handout-15-2-3-2-1-2" title="Copy heading and permalink for Example 16" aria-label="Copy heading and permalink for Example 16">🔗</a></div></article></details><div class="autopermalink" data-description="Paragraph"><a href="#week1-handout-15-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item"><a href="#week1-handout-15-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Remark 14: MATHEMATICA"><a href="#week1-handout-15" title="Copy heading and permalink for Remark 14: MATHEMATICA" aria-label="Copy heading and permalink for Remark 14: MATHEMATICA">🔗</a></div></article><div class="autopermalink" data-description="Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform"><a href="#week1-handout" title="Copy heading and permalink for Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform" aria-label="Copy heading and permalink for Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform">🔗</a></div></section>
+<div class="autopermalink" data-description="Example 16"><a href="#week1-handout-15" title="Copy heading and permalink for Example 16" aria-label="Copy heading and permalink for Example 16">🔗</a></div></article></details><div class="autopermalink" data-description="Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform"><a href="#week1-handout" title="Copy heading and permalink for Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform" aria-label="Copy heading and permalink for Worksheet: Week 1 Handout- Introduction to MATH 342 and Laplace Transform">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="handouts.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="homework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
