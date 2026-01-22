@@ -11,6 +11,8 @@
             <li> <p> Calculus of scalar functions that have more than one variables </p>   </li>
             <li> <p> Calculus of vector functions   </p>        </li>
           </ul></p>  </li>
+          <li>  <p> In Week 2, we mainly discuss calculus of vector functions of one variable.  (Section 9.1 - Section 9.3) </p></li>
+          <li> <p> Review Section 9.4 Partial Derivative  and Section 9.5 Directional Derivative for Week 3.   </p> </li>
         <li>
           <p> You should have <url href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook"> Jupyter Notebook</url>, 
       <url href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html"> MATHEMATICA</url>,
@@ -62,30 +64,36 @@
             <image  width="60%">
             <shortdescription>The graph of the 2-D cartesian plane with range of [0,8] by [0,8]</shortdescription>
             <latex-image>
-              \begin{tikzpicture}
-                \begin{axis}[
-                  grid=both,
-                  minor x tick num = 1,
-                  minor y tick num = 1,
-                  axis x line=middle,
-                  axis y line=middle,
-                  xlabel={$x$},
-                  ylabel={$y$},
-                  ymin=0, ymax=8,
-                  xmin=0, xmax=8
-                  ]
-                \end{axis}
+              \begin{tikzpicture}             
+                 % Grid
+                  \draw[step=1cm,gray!30,very thin] (-1,-1) grid (8,8);
+
+                 % Axes
+                  \draw[->] (-1,0) -- (8,0) node[right] {$x$};
+                  \draw[->] (0,-1) -- (0,8) node[above] {$y$};
+                
+                % X-axis ticks and labels at integers
+                  \foreach \x in {-1,0,1,2,3,4,5,6,7,8}{
+                      \draw (\x,0.08) -- (\x,-0.08);              % tick mark
+                      \node[below=4pt] at (\x,0) {\small $\x$};    % label
+                              }
+
+                % Y-axis ticks and labels at integers
+                  \foreach \y in {-1,0,1,2,3,4,5,6,7,8}{
+                    \draw (0.08,\y) -- (-0.08,\y);              % tick mark
+                     \node[left=4pt] at (0,\y) {\small $\y$};    % label
+                             }
               \end{tikzpicture}
             </latex-image>
           </image>
-        </figure>     
+        </figure> 
     </p>
     </statement>    
 
     <solution component="inst">
       <p>
         <ol>
-          <li>     <p>Add to graph.       </p>        </li>
+          <li>     <p> Check graph           </p>        </li>
           <li> <p> <m>\overrightarrow{P_1P_2}=\lt 2-1, 4-6\gt=\lt 1, -2\gt .</m> Thus, 
             <md>\left\|\overrightarrow{P_1P_2}\right\|=\|\lt 1, -2\gt\|=\sqrt{(1)^2+(-2)^2}=\sqrt{5}</md>           </p>
           </li>
@@ -121,22 +129,28 @@
         </li>
       </ol>
           <figure  xml:id="fig-vector-ex3" unnumbered="yes">
-            <image  width="70%">
-            <shortdescription>The graph of the 2-D cartesian plane with range of [-10,10] by [-10,10]</shortdescription>
+ <image  width="60%">
+            <shortdescription>The graph of the 2-D cartesian plane with range of [-10,10] by [10,10]</shortdescription>
             <latex-image>
-              \begin{tikzpicture}
-                \begin{axis}[
-                  grid=both,
-                  xtick={-10, -8,...,10},
-                  ytick={-10,-8,...,10},
-                  axis x line=middle,
-                  axis y line=middle,
-                  xlabel={$x$},
-                  ylabel={$y$},
-                  ymin=-10, ymax=10,
-                  xmin=-10, xmax=10
-                  ]
-                \end{axis}
+              \begin{tikzpicture}             
+                 % Grid
+                  \draw[step=2cm,gray!30,very thin] (-10,-10) grid (10,10);
+
+                 % Axes
+                  \draw[->] (-10,0) -- (10,0) node[right] {$x$};
+                  \draw[->] (0,-10) -- (0,10) node[above] {$y$};
+                
+                % X-axis ticks and labels at integers
+                  \foreach \x in {-10,-8,-6,-4,-2,2,4,6,8,10}{
+                      \draw (\x,0.08) -- (\x,-0.08);              % tick mark
+                      \node[below=4pt] at (\x,0) {\small $\x$};    % label
+                              }
+
+                % Y-axis ticks and labels at integers
+                  \foreach \y in {-10,-8,-6,-4,-2,2,4,6,8,10}{
+                    \draw (0.08,\y) -- (-0.08,\y);              % tick mark
+                     \node[left=4pt] at (0,\y) {\small $\y$};    % label
+                             }
               \end{tikzpicture}
             </latex-image>
           </image>
@@ -157,7 +171,7 @@
 Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\leq 4\pi</m> in green and then draw a black point 
 <m>P</m> at <m>t_0=\frac{\pi}{5}</m> and the red vector <m>\textbf{r}(t_0)</m> on the same graph.
         <program language="text" >
-          curve[t_] := {Cos[t], Sin[t], t/2}
+          curve[t_] := {Cos[t], -Sin[t], t/2}
           t0 = Pi/5;
           point = curve[t0];
           Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]],
@@ -193,7 +207,7 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
     </remark>
     <example>
       <statement> 
-        <p> Consider <md>\textbf{r}(t)=\frac{\cos(4t-2)}{t}\textbf{i}+(t-3)^4\textbf{j}+3t\ln(t)\textbf{k}.</md>
+        <p> Consider <md>\textbf{r}(t)=t*\cos(4t-2)\textbf{i}+(t-3)^2\textbf{j}+t\ln(t)\textbf{k}.</md>
         Answer each of the followings. If the answer doesn't exist, explain why.
         <ol> 
           <li>  <p> Find <m>\lim_{t\rightarrow 0}\textbf{r}(t).</m>        </p> </li>
@@ -208,6 +222,10 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
           
         </p>
       </statement>
+      <solution>
+        <p> See Example26.nb </p>
+      </solution>
+
     </example>
     <remark> <statement><p>Review and practice using Chain Rule and Rules of differentiation in the textbook: Theorem 9.1.3 and Theorem 9.1.4.
     </p></statement>
@@ -229,13 +247,47 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
         </ol>
       </p>
     </statement> 
+    <solution>
+      <p>
+        <ol>
+          <li> <p><m>\textbf{r}(t)=(4t+c_1)\textbf{i}+\left(\frac{3t^2}{2}+c_2\right)\textbf{j}
+            +\left(\frac{5t^3}{3}+c_3\right)\textbf{k}.</m> By <m>\textbf{r}(0)</m>, we can obtain 
+            <m>c_1=3, c_2=-1, c_3=2.</m> Thus, <md>\textbf{r}(t)=(4t+3)\textbf{i}+\left(\frac{3t^2}{2}-1\right)\textbf{j}
+            +\left(\frac{5t^3}{3}+2\right)\textbf{k}.</md> 
+             </p>  </li>
+             <li> <p> <m>\textbf{r}'(t)=\left(6t^2+c_1\right)\textbf{i}+\left(-2t^{1/2}+c_2\right)\textbf{j}+(t+1)\textbf{k}.</m>
+              With <m>\textbf{r}'(1)=2\textbf{j},</m> we can set and solve the following equations:
+            <md>
+              <mrow>6+c_1 \amp= 0 \Rightarrow c_1=-6</mrow>
+              <mrow>-2+c_2 \amp=2 \Rightarrow c_2=-4</mrow>
+              <mrow>1+c_3 \amp=0 \Rightarrow c_3=-1</mrow>
+              <mrow> \Rightarrow \textbf{r}'(t)\amp =(6t^2-6)\textbf{i}+(-2t^{1/2}-4)\textbf{j}+(t-1)\textbf{k}.</mrow>
+              <mrow>\Rightarrow \textbf{r}(t) \amp =(2t^3-6t+d_1)\textbf{i}+\left(-2\cdot\frac{2}{3}t^{3/2}-4t+d_2\right)\textbf{j}
+                +\left(\frac{1}{2}t^2-t+d_3\right)\textbf{k} </mrow>
+            </md> 
+            With <m> \textbf{r}(1)=\textbf{i}-2\textbf{k}</m>, we have
+            <md>
+              <mrow>2-6+d_1 \amp = 1 \Rightarrow d_1=5 </mrow>
+              <mrow> \frac{-4}{3}-4+d_2 \amp = 0 \Rightarrow d_2=\frac{-16}{3}</mrow>
+              <mrow> \frac{1}{2}-1+d_3 \amp = -2 \Rightarrow d_3=-\frac{3}{2}</mrow>
+              <mrow>\Rightarrow \textbf{r}(t) \amp = (2t^3-6t+5)\textbf{i}+\left(-\frac{4}{3}t^{3/2}-4t-\frac{16}{3}\right)\textbf{j}
+                +\left(\frac{1}{2}t^2-t-\frac{3}{2}\right)\textbf{k} </mrow>
+            </md>
+            
+          
+          
+          
+          </p>       </li>
+        </ol>
+      </p>
+    </solution>
     </example>
     <example> <statement>
       <p> Consider  <m>\textbf{r}(t)=t\textbf{i}+\sqrt{2}t^2\textbf{j}+\frac{1}{3}t^3\textbf{k}; 0\leq t\leq 1.</m>
         <ol>
           <li>  <p> Find the length of the curve traced by <m>\textbf{r}(t)</m> on the indicated interval.       </p>
           </li>
-          <li>  <p>Express \textbf{r}(t) as a function of arc length <m>s.</m>         </p>    </li>
+          <li>  <p>Express <m>\textbf{r}(t)</m> as a function of arc length <m>s.</m>         </p>    </li>
         </ol>        
       </p>
     </statement>

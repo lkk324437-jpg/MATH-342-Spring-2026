@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="week3-handout">
+  <title>Week 3 Handout- Vector Calculus- Part 2</title>
+
+    <introduction>
+      <ul>
+        <li>
+          <p>  <term> Vector calculus (Chap 9 in the textbook)</term> contains two parts:
+          <ul>
+            <li> <p> Calculus of scalar functions that have more than one variables </p>   </li>
+            <li> <p> Calculus of vector functions   </p>        </li>
+          </ul></p>  </li>
+          <li><p> In Week 3, we mainly discuss calculus of functions of two or more variables. (Section 9.6 - Section 9.8)    </p>
+          </li>
+      </ul>
+    </introduction>
+    
+    <definition xml:id="def-gradient">
+        <statement>
+            <p>When the <term>vector differential operator</term>, 
+                <md>\nabla=\textbf{i}\frac{\partial}{\partial x}+\textbf{j}\frac{\partial}{\partial y}\textbf{k}\frac{\partial}{\partial z},</md>                
+                is applied to a differentiable function <m>w=f(x,y,z),</m> we say that the vector
+                <md>
+                    \nabla f(x,y,z)=\frac{\partial f}{\partial x}\textbf{i}+\frac{\partial f}{\partial y}\textbf{j}+\frac{\partial f}{\partial z}\textbf{k},
+                </md>
+                is the <term>gradient</term> of the respective function <m>f(x,y,z).</m>
+
+            </p>
+        </statement>
+    </definition>
+   
+</worksheet>
