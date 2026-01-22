@@ -182,7 +182,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="highlight-workspace-option">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="highlight-workspace-option">
 <label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
 </div></details>
 </div>
@@ -214,12 +217,22 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item"><a href="#week2-handout-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="week2-handout-2-1-2">
-<div class="para" id="week2-handout-2-1-2-1">You should have <a class="external" href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook" target="_blank">Jupyter Notebook</a>, <a class="external" href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html" target="_blank">MATHEMATICA</a>, and <a class="external" href="https://octave.org/download" target="_blank">Octave</a> ASAP.<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="week2-handout-2-1-2-1">In Week 2, we mainly discuss calculus of vector functions of one variable.  (Section 9.1 - Section 9.3)<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#week2-handout-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
+<li id="week2-handout-2-1-3">
+<div class="para" id="week2-handout-2-1-3-1">Review Section 9.4 Partial Derivative  and Section 9.5 Directional Derivative for Week 3.<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week2-handout-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week2-handout-2-1-4">
+<div class="para" id="week2-handout-2-1-4-1">You should have <a class="external" href="https://www.anaconda.com/docs/psm/on-prem/6.8.0/user/notebook" target="_blank">Jupyter Notebook</a>, <a class="external" href="https://www.iup.edu/itsupportcenter/get-support/software/mathematica/index.html" target="_blank">MATHEMATICA</a>, and <a class="external" href="https://octave.org/download" target="_blank">Octave</a> ASAP.<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week2-handout-2-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul></section><article class="definition definition-like" id="def-scalar-vec"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-scalar-vec-1-1">
 <div class="para">There are two types of quantities: <dfn class="terminology">scalars</dfn> and <dfn class="terminology">vectors</dfn>.</div>
@@ -237,8 +250,8 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-scalar-vec-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 17"><a href="#def-scalar-vec" title="Copy heading and permalink for Definition 17" aria-label="Copy heading and permalink for Definition 17">🔗</a></div></article><article class="definition definition-like" id="def-vec-notation"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 18"><a href="#def-scalar-vec" title="Copy heading and permalink for Definition 18" aria-label="Copy heading and permalink for Definition 18">🔗</a></div></article><article class="definition definition-like" id="def-vec-notation"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-vec-notation-1-1">
 <div class="para">There are several sets of notations to describe a vector or properties related to a vector:</div>
@@ -275,8 +288,8 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-vec-notation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 18"><a href="#def-vec-notation" title="Copy heading and permalink for Definition 18" aria-label="Copy heading and permalink for Definition 18">🔗</a></div></article><details id="week2-handout-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 19"><a href="#def-vec-notation" title="Copy heading and permalink for Definition 19" aria-label="Copy heading and permalink for Definition 19">🔗</a></div></article><details id="week2-handout-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para" id="week2-handout-5-1-1">Given the point <span class="process-math">\(P_1 (1,6)\)</span> and <span class="process-math">\(P_2(2, 4).\)</span> Complete the followings:<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="week2-handout-5-1-2">
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-5-1-2-1">
@@ -302,11 +315,11 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ol>
 <div class="para"><figure class="figure figure-like" id="fig-vector-ex"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-vector-ex-1.svg" role="img" class="contained" alt="The graph of the 2-D cartesian plane with range of [0,8] by [0,8]"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 20"><a href="#fig-vector-ex" title="Copy heading and permalink for Figure 20" aria-label="Copy heading and permalink for Figure 20">🔗</a></div></figcaption></figure></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 21"><a href="#fig-vector-ex" title="Copy heading and permalink for Figure 21" aria-label="Copy heading and permalink for Figure 21">🔗</a></div></figcaption></figure></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-5-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 19"><a href="#week2-handout-5" title="Copy heading and permalink for Example 19" aria-label="Copy heading and permalink for Example 19">🔗</a></div></article></details><details id="week2-handout-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 20"><a href="#week2-handout-5" title="Copy heading and permalink for Example 20" aria-label="Copy heading and permalink for Example 20">🔗</a></div></article></details><details id="week2-handout-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content">Consider <span class="process-math">\(\textbf{v}=\left[\begin{array}{c}-4\cr 3\end{array}\right]\)</span> and  <span class="process-math">\(\textbf{w}=\left[\begin{array}{c}2\cr 5\end{array}\right].\)</span> Answer each of the followings: <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-6-1-3">
 <li id="week2-handout-6-1-3-1">
 <div class="para" id="week2-handout-6-1-3-1-1">Find <span class="process-math">\(\|\textbf{v}\|.   \)</span><div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-6-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -329,8 +342,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item d"><a href="#week2-handout-6-1-3-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Example 21"><a href="#week2-handout-6" title="Copy heading and permalink for Example 21" aria-label="Copy heading and permalink for Example 21">🔗</a></div></article></details><article class="definition definition-like" id="def-vector-fun"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 22"><a href="#week2-handout-6" title="Copy heading and permalink for Example 22" aria-label="Copy heading and permalink for Example 22">🔗</a></div></article></details><article class="definition definition-like" id="def-vector-fun"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-vector-fun-1-1">
 <div class="para">A 3D vector function <span class="process-math">\(\textbf{r}\)</span> has components that are functions of a parameter <span class="process-math">\(t\text{,}\)</span> i.e.,</div>
@@ -343,9 +356,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-vector-fun-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 22"><a href="#def-vector-fun" title="Copy heading and permalink for Definition 22" aria-label="Copy heading and permalink for Definition 22">🔗</a></div></article><details id="week2-handout-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="week2-handout-8-1-1">Graph <span class="process-math">\(\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle\)</span> for <span class="process-math">\(0\leq t\leq 4\pi\)</span> in green and then draw a black point <span class="process-math">\(P\)</span> at <span class="process-math">\(t_0=\frac{\pi}{5}\)</span> and the red vector <span class="process-math">\(\textbf{r}(t_0)\)</span> on the same graph. <div class="code-box"><pre class="program clipboardable"><code class="language-none">curve[t_] := {Cos[t], Sin[t], t/2}
+<div class="autopermalink" data-description="Definition 23"><a href="#def-vector-fun" title="Copy heading and permalink for Definition 23" aria-label="Copy heading and permalink for Definition 23">🔗</a></div></article><details id="week2-handout-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="week2-handout-8-1-1">Graph <span class="process-math">\(\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle\)</span> for <span class="process-math">\(0\leq t\leq 4\pi\)</span> in green and then draw a black point <span class="process-math">\(P\)</span> at <span class="process-math">\(t_0=\frac{\pi}{5}\)</span> and the red vector <span class="process-math">\(\textbf{r}(t_0)\)</span> on the same graph. <div class="code-box"><pre class="program clipboardable"><code class="language-none">curve[t_] := {Cos[t], -Sin[t], t/2}
 t0 = Pi/5;
 point = curve[t0];
 Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]],
@@ -355,8 +368,8 @@ Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]],
 </code></pre></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 23"><a href="#week2-handout-8" title="Copy heading and permalink for Example 23" aria-label="Copy heading and permalink for Example 23">🔗</a></div></article></details><article class="definition definition-like" id="def-vector-calculus"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 24"><a href="#week2-handout-8" title="Copy heading and permalink for Example 24" aria-label="Copy heading and permalink for Example 24">🔗</a></div></article></details><article class="definition definition-like" id="def-vector-calculus"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-vector-calculus-1-1">
 <ul class="disc" id="def-vector-calculus-1-1-1">
@@ -411,18 +424,18 @@ Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]],
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-vector-calculus-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 24"><a href="#def-vector-calculus" title="Copy heading and permalink for Definition 24" aria-label="Copy heading and permalink for Definition 24">🔗</a></div></article><article class="remark remark-like" id="week2-handout-10"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 25"><a href="#def-vector-calculus" title="Copy heading and permalink for Definition 25" aria-label="Copy heading and permalink for Definition 25">🔗</a></div></article><article class="remark remark-like" id="week2-handout-10"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="week2-handout-10-1-1">When the component functions of a vector function <span class="process-math">\(\textbf{r}\)</span> have continuous first derivatives and <span class="process-math">\(\textbf{r}'(t)\neq \textbf{0}\)</span> for all <span class="process-math">\(t \)</span> in the open interval <span class="process-math">\((a,b),\)</span> then <span class="process-math">\(\textbf{r}\)</span> is said to be a <em class="alert">smooth function</em> and the curve <span class="process-math">\(C\)</span> traced by <span class="process-math">\(\textbf{r}\)</span> is called a <em class="alert">smooth curve.</em><div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 25"><a href="#week2-handout-10" title="Copy heading and permalink for Remark 25" aria-label="Copy heading and permalink for Remark 25">🔗</a></div></article><details id="week2-handout-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Remark 26"><a href="#week2-handout-10" title="Copy heading and permalink for Remark 26" aria-label="Copy heading and permalink for Remark 26">🔗</a></div></article><details id="week2-handout-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-11-1-1">
 <div class="para">Consider</div>
 <div class="displaymath process-math" id="week2-handout-11-1-1-1">
 \begin{equation*}
-\textbf{r}(t)=\frac{\cos(4t-2)}{t}\textbf{i}+(t-3)^4\textbf{j}+3t\ln(t)\textbf{k}.
+\textbf{r}(t)=t*\cos(4t-2)\textbf{i}+(t-3)^2\textbf{j}+t\ln(t)\textbf{k}.
 \end{equation*}
 </div>
 <div class="para">Answer each of the followings. If the answer doesn’t exist, explain why.</div>
@@ -470,13 +483,18 @@ Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]],
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 26"><a href="#week2-handout-11" title="Copy heading and permalink for Example 26" aria-label="Copy heading and permalink for Example 26">🔗</a></div></article></details><article class="remark remark-like" id="week2-handout-12"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="solutions"><details id="week2-handout-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="week2-handout-11-2-1">See Example26.nb<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 27.1"><a href="#week2-handout-11-2" title="Copy heading and permalink for Solution 27.1" aria-label="Copy heading and permalink for Solution 27.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 27"><a href="#week2-handout-11" title="Copy heading and permalink for Example 27" aria-label="Copy heading and permalink for Example 27">🔗</a></div></article></details><article class="remark remark-like" id="week2-handout-12"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="week2-handout-12-1-1">Review and practice using Chain Rule and Rules of differentiation in the textbook: Theorem 9.1.3 and Theorem 9.1.4.<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 27"><a href="#week2-handout-12" title="Copy heading and permalink for Remark 27" aria-label="Copy heading and permalink for Remark 27">🔗</a></div></article><article class="definition definition-like" id="def-length-curve"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Remark 28"><a href="#week2-handout-12" title="Copy heading and permalink for Remark 28" aria-label="Copy heading and permalink for Remark 28">🔗</a></div></article><article class="definition definition-like" id="def-length-curve"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-length-curve-1-1">
 <div class="para">If <span class="process-math">\(\textbf{r}(t)=f(t)\textbf{i}+g(t)\textbf{j}+h(t)\textbf{k}\)</span> is a smooth function, the <dfn class="terminology">length</dfn> of the smooth curve traced by <span class="process-math">\(\textbf{r}\)</span> is given by</div>
@@ -489,8 +507,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-length-curve-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 28"><a href="#def-length-curve" title="Copy heading and permalink for Definition 28" aria-label="Copy heading and permalink for Definition 28">🔗</a></div></article><details id="week2-handout-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 29"><a href="#def-length-curve" title="Copy heading and permalink for Definition 29" aria-label="Copy heading and permalink for Definition 29">🔗</a></div></article><details id="week2-handout-14" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-14-1-1">
 <div class="para">Find a vector function <span class="process-math">\(\textbf{r}\)</span> that satisfies the indicated conditions.</div>
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-14-1-1-2">
@@ -509,8 +527,59 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 29"><a href="#week2-handout-14" title="Copy heading and permalink for Example 29" aria-label="Copy heading and permalink for Example 29">🔗</a></div></article></details><details id="week2-handout-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="solutions"><details id="week2-handout-14-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="week2-handout-14-2-1">
+<ol class="lower-alpha lower-alpha-level-1" id="week2-handout-14-2-1-1">
+<li id="week2-handout-14-2-1-1-1">
+<div class="para logical" id="week2-handout-14-2-1-1-1-1">
+<div class="para">
+<span class="process-math">\(\textbf{r}(t)=(4t+c_1)\textbf{i}+\left(\frac{3t^2}{2}+c_2\right)\textbf{j}
++\left(\frac{5t^3}{3}+c_3\right)\textbf{k}.\)</span> By <span class="process-math">\(\textbf{r}(0)\text{,}\)</span> we can obtain <span class="process-math">\(c_1=3, c_2=-1, c_3=2.\)</span> Thus,</div>
+<div class="displaymath process-math" id="week2-handout-14-2-1-1-1-1-4">
+\begin{equation*}
+\textbf{r}(t)=(4t+3)\textbf{i}+\left(\frac{3t^2}{2}-1\right)\textbf{j}
++\left(\frac{5t^3}{3}+2\right)\textbf{k}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-14-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week2-handout-14-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week2-handout-14-2-1-1-2">
+<div class="para logical" id="week2-handout-14-2-1-1-2-1">
+<div class="para">
+<span class="process-math">\(\textbf{r}'(t)=\left(6t^2+c_1\right)\textbf{i}+\left(-2t^{1/2}+c_2\right)\textbf{j}+(t+1)\textbf{k}.\)</span> With <span class="process-math">\(\textbf{r}'(1)=2\textbf{j},\)</span> we can set and solve the following equations:</div>
+<div class="displaymath process-math" id="week2-handout-14-2-1-1-2-1-3">
+\begin{align*}
+6+c_1 \amp= 0 \Rightarrow c_1=-6\\
+-2+c_2 \amp=2 \Rightarrow c_2=-4\\
+1+c_3 \amp=0 \Rightarrow c_3=-1\\
+\Rightarrow \textbf{r}'(t)\amp =(6t^2-6)\textbf{i}+(-2t^{1/2}-4)\textbf{j}+(t-1)\textbf{k}.\\
+\Rightarrow \textbf{r}(t) \amp =(2t^3-6t+d_1)\textbf{i}+\left(-2\cdot\frac{2}{3}t^{3/2}-4t+d_2\right)\textbf{j}
++\left(\frac{1}{2}t^2-t+d_3\right)\textbf{k} 
+\end{align*}
+</div>
+<div class="para">With <span class="process-math">\(\textbf{r}(1)=\textbf{i}-2\textbf{k}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="week2-handout-14-2-1-1-2-1-5">
+\begin{align*}
+2-6+d_1 \amp = 1 \Rightarrow d_1=5 \\
+\frac{-4}{3}-4+d_2 \amp = 0 \Rightarrow d_2=\frac{-16}{3}\\
+\frac{1}{2}-1+d_3 \amp = -2 \Rightarrow d_3=-\frac{3}{2}\\
+\Rightarrow \textbf{r}(t) \amp = (2t^3-6t+5)\textbf{i}+\left(-\frac{4}{3}t^{3/2}-4t-\frac{16}{3}\right)\textbf{j}
++\left(\frac{1}{2}t^2-t-\frac{3}{2}\right)\textbf{k} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-14-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week2-handout-14-2-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-14-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 30.1"><a href="#week2-handout-14-2" title="Copy heading and permalink for Solution 30.1" aria-label="Copy heading and permalink for Solution 30.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 30"><a href="#week2-handout-14" title="Copy heading and permalink for Example 30" aria-label="Copy heading and permalink for Example 30">🔗</a></div></article></details><details id="week2-handout-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-15-1-1">
 <div class="para">Consider  <span class="process-math">\(\textbf{r}(t)=t\textbf{i}+\sqrt{2}t^2\textbf{j}+\frac{1}{3}t^3\textbf{k}; 0\leq t\leq 1.\)</span>
 </div>
@@ -521,15 +590,15 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 <div class="autopermalink" data-description="Item a"><a href="#week2-handout-15-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="week2-handout-15-1-1-2-2">
-<div class="para" id="week2-handout-15-1-1-2-2-1">Express \textbf{r}(t) as a function of arc length <span class="process-math">\(s.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-15-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="week2-handout-15-1-1-2-2-1">Express <span class="process-math">\(\textbf{r}(t)\)</span> as a function of arc length <span class="process-math">\(s.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-15-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item b"><a href="#week2-handout-15-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 30"><a href="#week2-handout-15" title="Copy heading and permalink for Example 30" aria-label="Copy heading and permalink for Example 30">🔗</a></div></article></details><article class="definition definition-like" id="def-motion-curve"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 31"><a href="#week2-handout-15" title="Copy heading and permalink for Example 31" aria-label="Copy heading and permalink for Example 31">🔗</a></div></article></details><article class="definition definition-like" id="def-motion-curve"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def-motion-curve-1-1">For a body moving along a curve, <div class="para logical" id="def-motion-curve-1-1-1">
 <dl class="description-list wide">
@@ -567,8 +636,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-motion-curve-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 31"><a href="#def-motion-curve" title="Copy heading and permalink for Definition 31" aria-label="Copy heading and permalink for Definition 31">🔗</a></div></article><details id="week2-handout-17" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 32"><a href="#def-motion-curve" title="Copy heading and permalink for Definition 32" aria-label="Copy heading and permalink for Definition 32">🔗</a></div></article><details id="week2-handout-17" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-17-1-1">
 <div class="para">Graph the curve described by <span class="process-math">\(\textbf{r}(t)\)</span> over the given interval and graph the velocity and accleration vectors at the indicated time.</div>
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-17-1-1-2">
@@ -587,8 +656,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 32"><a href="#week2-handout-17" title="Copy heading and permalink for Example 32" aria-label="Copy heading and permalink for Example 32">🔗</a></div></article></details><details id="week2-handout-18" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 33"><a href="#week2-handout-17" title="Copy heading and permalink for Example 33" aria-label="Copy heading and permalink for Example 33">🔗</a></div></article></details><details id="week2-handout-18" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-18-1-1">
 <div class="para">Suppose <span class="process-math">\(\textbf{r}(t)=(t^2-1)\textbf{i}+(t^3-3t^2+t)\textbf{j}+(t^2-6t)\textbf{k}\)</span> is the position vector of a moving particle.</div>
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-18-1-1-2">
@@ -605,8 +674,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 33"><a href="#week2-handout-18" title="Copy heading and permalink for Example 33" aria-label="Copy heading and permalink for Example 33">🔗</a></div></article></details><article class="definition definition-like" id="def-curvature"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 34"><a href="#week2-handout-18" title="Copy heading and permalink for Example 34" aria-label="Copy heading and permalink for Example 34">🔗</a></div></article></details><article class="definition definition-like" id="def-curvature"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-curvature-1-1">
 <div class="para">Let <span class="process-math">\(\textbf{r}(t)\)</span> be a vector function defining a smooth curve <span class="process-math">\(C.\)</span> If <span class="process-math">\(s\)</span> is the arc length parameter and <span class="process-math">\(\textbf{T}=\frac{d\textbf{r}}{ds}\)</span> is the <dfn class="terminology">unit tangent vector,</dfn> then the <dfn class="terminology">curvature</dfn> of <span class="process-math">\(C\)</span> at point is</div>
@@ -642,8 +711,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#def-curvature-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 34"><a href="#def-curvature" title="Copy heading and permalink for Definition 34" aria-label="Copy heading and permalink for Definition 34">🔗</a></div></article><article class="remark remark-like" id="week2-handout-20"><h3 class="heading">
-<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 35"><a href="#def-curvature" title="Copy heading and permalink for Definition 35" aria-label="Copy heading and permalink for Definition 35">🔗</a></div></article><article class="remark remark-like" id="week2-handout-20"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="week2-handout-20-1-1">
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-20-1-1-1">
@@ -682,8 +751,8 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Remark 35"><a href="#week2-handout-20" title="Copy heading and permalink for Remark 35" aria-label="Copy heading and permalink for Remark 35">🔗</a></div></article><details id="week2-handout-21" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Remark 36"><a href="#week2-handout-20" title="Copy heading and permalink for Remark 36" aria-label="Copy heading and permalink for Remark 36">🔗</a></div></article><details id="week2-handout-21" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week2-handout-21-1-1">
 <div class="para">Given <span class="process-math">\(\textbf{r}(t)=t^2\textbf{i}+(t^3-1)\textbf{j}+\frac{1}{2}\ln(1+t^2)\textbf{k}\)</span> as the position vector of a moving particle.</div>
 <ol class="lower-alpha lower-alpha-level-1" id="week2-handout-21-1-1-2">
@@ -705,7 +774,7 @@ s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2d
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#week2-handout-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 36"><a href="#week2-handout-21" title="Copy heading and permalink for Example 36" aria-label="Copy heading and permalink for Example 36">🔗</a></div></article></details><div class="autopermalink" data-description="Worksheet: Week 2 Handout- Vector Calculus- Part 1"><a href="#week2-handout" title="Copy heading and permalink for Worksheet: Week 2 Handout- Vector Calculus- Part 1" aria-label="Copy heading and permalink for Worksheet: Week 2 Handout- Vector Calculus- Part 1">🔗</a></div></section>
+<div class="autopermalink" data-description="Example 37"><a href="#week2-handout-21" title="Copy heading and permalink for Example 37" aria-label="Copy heading and permalink for Example 37">🔗</a></div></article></details><div class="autopermalink" data-description="Worksheet: Week 2 Handout- Vector Calculus- Part 1"><a href="#week2-handout" title="Copy heading and permalink for Worksheet: Week 2 Handout- Vector Calculus- Part 1" aria-label="Copy heading and permalink for Worksheet: Week 2 Handout- Vector Calculus- Part 1">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="week1-handout.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="homework.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
