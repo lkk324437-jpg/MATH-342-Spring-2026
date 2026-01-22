@@ -36,14 +36,14 @@
       <p> There are several sets of notations to describe a vector or properties related to a vector:
         <ul>
           <li> <p> <m>\overrightarrow{AB}</m>: A vector whose initial point is <m>A</m> and whose terminal point is <m>B.</m>  </p>   </li>
-          <li> <p>  <m>\textbf{a}=\langle a_1,a_2,\ldots,a_n \rangle</m> is a vector in <m>R^n,</m> where <m>a_i</m> are scalars and said to be the 
-            <term>components</term> of the vector <m>\textbf{a}</m>. In mathematics, it is often written as a column vector, i.e.,
-          <m>\left[\begin{array}{c} a_1\cr a_2\cr\vdots\cr a_n\end{array}\right].</m> In 2-D, <m>\textbf{a}</m> can also be written as <m>a_1\textbf{i}+a_2\textbf{j}.</m> In 3-D, <m>\textbf{a}</m> can also be 
-            written as <m>a_1\textbf{i}+a_2\textbf{j}+a_3\textbf{k}.</m>    </p>
+          <li> <p>  <m>\textbf{u}=\langle u_1,u_2,\ldots,u_n \rangle</m> is a vector in <m>R^n,</m> where <m>u_i</m> are scalars and said to be the 
+            <term>components</term> of the vector <m>\textbf{u}</m>. In mathematics, it is often written as a column vector, i.e.,
+          <m>\left[\begin{array}{c} u_1\cr u_2\cr\vdots\cr u_n\end{array}\right].</m> In 2-D, <m>\textbf{u}</m> can also be written as <m>u_1\textbf{i}+u_2\textbf{j}.</m> In 3-D, <m>\textbf{u}</m> can also be 
+            written as <m>u_1\textbf{i}+u_2\textbf{j}+u_3\textbf{k}.</m>    </p>
           </li>
-          <li> <p> The <term>magnitude</term>, <term>length</term>, or <term>norm</term> of a vector <term>a</term> is denoted by <m>\|a\|</m>.
+          <li> <p> The <term>magnitude</term>, <term>length</term>, or <term>norm</term> of a vector <term>u</term> is denoted by <m>\|u\|</m>.
           A common norm defined in <m>R^n</m> is <md>
-            \|\overrightarrow{a}\|=\sqrt{\sum_{i=1}^n |a_i|^2}.  </md></p> </li>
+            \|\overrightarrow{u}\|=\sqrt{\sum_{i=1}^n |u_i|^2}.  </md></p> </li>
           <li> <p>A vector that has a magnitude of 1 is called a <term>unit vector</term>.       </p>
           </li>
         </ul>
