@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- Include common macros etc: -->
+  <xi:include href="../docinfo.ptx" />
+<article>  
 <worksheet xml:id="week3-handout">
   <title>Week 3 Handout- Vector Calculus- Part 2</title>
 
@@ -29,5 +34,143 @@
             </p>
         </statement>
     </definition>
-   
+    <definition xml:id="def-directional">
+      <statement>
+        <p> The <term>directional derivative</term> of <m>z=f(x,y)</m> in the direction of a unit vector 
+          <m>\textbf{u}=\cos\theta\textbf{i}+\sin\theta\textbf{j}</m> is 
+          <md>D_\textbf{u}f(x,y)=\lim_{h\rightarrow 0}\frac{f(x+h\cos\theta,y+h\sin\theta)-f(x,y)}{h}  </md>
+          provided the limit exists.          
+        </p>
+      </statement>
+    </definition>
+    <theorem xml:id="thm-compu-directional">
+      <statement>
+        <p>If <m>z=f(x,y)</m> is a differentiable function of <m>x</m> and <m>y</m> and 
+          <m>\textbf{u}=\cos\theta\textbf{i}+\sin\theta\textbf{j},</m> then
+          <md>D_\textbf{u}f(x,y)=\nabla f(x,y)\cdot\textbf{u}.       
+          </md>
+          Similarly, for a function <m>m=F(x,y,z)</m> and <m>\textbf{u}=\cos\alpha\textbf{i}+\cos\beta\textbf{j}+\cos\gamma\textbf{k},</m>
+          where <m>\alpha, \beta,</m> and <m>\gamma</m> are the direction angles of the unit vector <m>\textbf{u}</m>
+          measured relative to the positive <m>x-, y-</m> and <m>z-</m>axes, respectively, it can be shown that 
+          <md>
+            D_\textbf{u}F(x,y,z)=\nabla F(x,y,z)\cdot\textbf{u}.
+          </md>
+          </p>
+      </statement>
+    </theorem>
+    <remark>
+      <statement>
+        <p>The gradient vector <m>\nabla f</m> points in the direction in which <m>f</m> increases most rapidly,
+          whereas <m>-\nabla f</m> points in the direction of the most rapid decrease of <m>f.</m>
+        </p>
+      </statement>
+    </remark>
+    <example>
+      <statement>
+        <p>
+          The temperature in a rectangular box is approximated by <md>
+            T(x,y,z)=xyz(2-x)(3-y)(2-z), 0\leq x\leq 2, 0\leq y\leq 3,0\leq z\leq 2.
+          </md>
+          If a mosquito is located at <m>\left(1,\frac{1}{2},1\right),</m> in which direction should it fly to cool
+          off as rapidly as possible?
+        </p>
+      </statement>
+      <solution component="inst">
+        <statement>
+          <p>Section 9.5 Example 8       </p>      </statement>
+        
+      </solution>
+    </example>
+    <example>
+      <statement>
+        <p>
+          The temperature <m>T</m> at a point <m>(x,y,z)</m> in space is inversely proportional to the square of the distance from 
+          <m>(x,y,z)</m> to the origin. It is known that <m>T(0,0,1)=500.</m> Find the rate of change of <m>T</m> at 
+          <m>(2,3,3)</m> in the direction of <m>(3,1,1).</m> In which direction form <m>(2,3,3)</m> does the temperature 
+          <m>T</m> increase most rapidly? At <m>(2,3,3)</m> what is the maximum rate of change of <m>T</m>?
+        </p>
+      </statement>
+      <solution component="inst">
+        <statement>
+          <p>              Section 9.5, #42          </p>        </statement>
+        
+      </solution>
+    </example>
+    <remark>
+      <statement>
+        <p>
+          Let <m>F(x,y,z)=c</m> be the <alert>level surface</alert> of a differentiable function <m>w=F(x,y,z)</m>
+           that passes through <m>P(x_0, y_0, z_0).</m>  If the differentiable function <m>\textbf{r}(t)=\langle x=f(t), y=g(t), z=h(t)\rangle</m>
+           are the parametric equation of a curve <m>C</m> on the surface for which <m>x_0=f(t_0), y_0=g(t_0),z_0=h(t_0).</m>  The derivative of
+           <m>F(f(t),g(t),h(t))=0</m> implies that 
+           <md>
+            \nabla F(x_0,y_0,z_0)\cdot\textbf{r}'(t_0)=0,
+           </md>
+           i.e., <term><m>\nabla F</m> is normal to the level surface at <m>P.</m></term>
+          </p>
+      </statement>
+    </remark>
+    <theorem xml:id="thm-tangent-plane">
+      <statement>
+        <p> Let <m>P(x_0,y_0,z_0)</m> be a point on the graph of <m>F(x,y,z)=c,</m> where <m>\nabla F</m> is not <m>\textbf{0}.</m>
+          Then an equation of the tangent plane at <m>P</m> is
+          <md>
+            F_x(x_0,y_0,z_0)(x-x_0)+F_y(x_0,y_0,z_0)(y-y_0)+F_z(x_0,y_0,z_0)(z-z_0)=0
+          </md>
+          Furthermore, the line containing <m>P</m> that is parallel to <m>\nabla F</m> is called the <term>normal line</term>        
+          to the surface at P, which can be expressed as <term>symmetric equations</term>
+          <md>
+            \frac{x-x_0}{F_x(x_0,y_0,z_0)}=\frac{y-y_0}{F_y(x_0,y_0,z_0)}=\frac{z-z_0}{F_z(x_0,y_0,z_0)},
+          </md>
+          or <term>parametric equations</term>
+          <md>
+            x=F_x(x_0,y_0,z_0)t+x_0, y=F_y(x_0,y_0,z_0)t+y_0, z=F_z(x_0,y_0,z_0)t+z_0.
+          </md>
+          
+          
+        </p>
+      </statement>
+    </theorem>
+    <example>
+      <statement>
+        <p> Given <m>F(x,y,z)=x^2+y^2-z</m> and <m>P(1,1,4).</m>  Answer the followings:
+          <ol>
+            <li> <p>Sketch the level surface passing through the indicated point. </p>     </li>
+            <li> <p> Sketch the gradient at the point.    </p>    </li>
+            <li> <p> Find an equation of the tangent plane at the indicated point.      </p>    </li>
+            <li><p> Find parametric equations and symmetric equations for the normal line at the indicated point      </p>   </li>
+          </ol>
+        </p>
+      </statement>      
+    </example>
+    <definition xml:id="def-vector-fields">
+      <statement>
+        <p> Vector functions of two and three variables,
+          <md> 
+            <mrow>\textbf{F}(x,y) \amp P(x,y)\textbf{i}+Q(x,y)\textbf{j} </mrow>
+            <mrow>\textbf{F}(x,y,z) \amp P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k} </mrow>
+            are also called <term>vector fields.</term>
+          </md>         
+        </p>
+      </statement>
+      </definition>
+      <definition> <statement>
+        <p>The <term>curl</term> of a vector field <m>\textbf{F}=P\textbf{i}+Q\textbf{j}+R\textbf{k}</m> 
+          is the vector field
+          <md>
+            curl \textbf{ F}=\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\textbf{i}
+            +\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\textbf{j}
+            +\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\textbf{k}.
+          </md>
+          It can be computed from the cross product,
+          <md>
+            curl \textbf{ F}=\nabla \times \textbf{F}=
+            \left|\begin{array}{ccc}\textbf{i}\amp \textbf{j}\amp \textbf{k}\\
+            \frac{\partial}{\partial x}\amp \frac{\partial}{\partial y}\amp\frac{\partial}{\partial z}\\
+            P\amp Q \amp R \end{array}\right|</md>         
+        </p>
+      </statement>
+    </definition>
 </worksheet>
+</article>
+</pretext>

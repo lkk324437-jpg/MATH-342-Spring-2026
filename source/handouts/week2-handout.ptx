@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- Include common macros etc: -->
+  <xi:include href="../docinfo.ptx" />
+<article>  
 <worksheet xml:id="week2-handout">
   <title>Week 2 Handout- Vector Calculus- Part 1</title>
+  
+  <counter name="definition" value="0"/>
+  <counter name="theorem" value="0"/>
+  <counter name="figure" value="0"/>
+  <counter name="table" value="0"/>
+  <counter name="example" value="0"/>
+  <counter name="exercise" value="0"/>
+
 
     <introduction>
       <ul>
@@ -401,3 +414,5 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
       
     </example>
 </worksheet>
+</article>
+</pretext>
