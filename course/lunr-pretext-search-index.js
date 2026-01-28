@@ -1,193 +1,121 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "week2-handout",
+  "id": "week3-handout",
   "level": "1",
-  "url": "week2-handout.html",
+  "url": "week3-handout.html",
   "type": "Worksheet",
   "number": "",
-  "title": "Week 2 Handout- Vector Calculus- Part 1",
-  "body": " Week 2 Handout- Vector Calculus- Part 1            Vector calculus (Chap 9 in the textbook) contains two parts:   Calculus of scalar functions that have more than one variables    Calculus of vector functions      In Week 2, we mainly discuss calculus of vector functions of one variable. (Section 9.1 - Section 9.3)   Review Section 9.4 Partial Derivative and Section 9.5 Directional Derivative for Week 3.    You should have Jupyter Notebook , MATHEMATICA , and Octave ASAP.       There are two types of quantities: scalars and vectors .   A scalar is a real number or a quantity that has magnitude.     A vector is usually described as a quantity that has both magnitude and direction. In different spaces, we might need different number of components to describe a direction. Furthermore, the magnitude of a vecto may required additional calculations from the vector to obtain.         There are several sets of notations to describe a vector or properties related to a vector:    : A vector whose initial point is and whose terminal point is      is a vector in where are scalars and said to be the components of the vector . In mathematics, it is often written as a column vector, i.e., In 2-D, can also be written as In 3-D, can also be written as     The magnitude , length , or norm of a vector u is denoted by . A common norm defined in is    A vector that has a magnitude of 1 is called a unit vector .         Given the point and Complete the followings:     Draw the vector on the graph.    Calculate     Find two pairs of points that produce the same vector as    Find the unit vector of       The graph of the 2-D cartesian plane with range of [0,8] by [0,8]        Consider and Answer each of the followings:  Find     Find algebraically and graphically.   Find algebraically and graphically.    Find the unit vecotr of .        A 3D vector function has components that are functions of a parameter , i.e., For a given value of , is the position vector of a point on a curve       Graph for in green and then draw a black point at and the red vector on the same graph. curve[t_] := {Cos[t], -Sin[t], t\/2} t0 = Pi\/5; point = curve[t0]; Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]], Black, PointSize[Large], Point[point], Red, Arrow[{{0, 0, 0}, point}]}, Axes -> True, AxesLabel -> {\"x\", \"y\", \"z\"}, Boxed -> True]          If limits of the component functions exist,    For all for which the limit exists,   If the components are differentiable,   If the components are integrable,       When the component functions of a vector function have continuous first derivatives and for all in the open interval then is said to be a smooth function and the curve traced by is called a smooth curve.     Consider Answer each of the followings. If the answer doesn't exist, explain why.   Find     Find     Find     Find     Find    Graph the curve that is described by and graph at the   Find parametric equations of the tangent line to the graph of the curve at    Find      See Example26.nb     Review and practice using Chain Rule and Rules of differentiation in the textbook: Theorem 9.1.3 and Theorem 9.1.4.     If is a smooth function, the length of the smooth curve traced by is given by A curve in the plane or in space can be parameterized in terms of the arc length .     Find a vector function that satisfies the indicated conditions.                   By , we can obtain Thus,      With we can set and solve the following equations: With , we have          Consider    Find the length of the curve traced by on the indicated interval.    Express as a function of arc length          For a body moving along a curve,    Position      Velocity       Acceleration       For circular motion in a plane,    Position      Centripetal Acceleration            Graph the curve described by over the given interval and graph the velocity and accleration vectors at the indicated time.                Suppose is the position vector of a moving particle.  At what points does the particle pass through the -plane? What are its velocity and acceleration at these points?   At what points does the particle pass through the -plane? What are its velocity and acceleration at these points?         Let be a vector function defining a smooth curve If is the arc length parameter and is the unit tangent vector, then the curvature of at point is The radius of curvature  is  Furthermore, the velocity of the particle moving along the curve is , whereas its speed is The acceleration can be written in the following formats:        where The scalar functions and are called tangential and normal components of the acceleration, respectively.                         at point on a curve is the radius of a circle that best fits the curve   The circle is the circle of curvature     the center is the center of curvature             Given as the position vector of a moving particle.  Find and     Find the tangential and normal components of the acceleratin.    Graph the curve described by over , including unit tangents at , and the unit tangent, the principal normal, and the circle of the curvature at       "
+  "title": "Week 3 Handout- Vector Calculus- Part 2",
+  "body": " Week 3 Handout- Vector Calculus- Part 2      Vector calculus (Chap 9 in the textbook) contains two parts:   Calculus of scalar functions that have more than one variables    Calculus of vector functions     In Week 3, we mainly discuss calculus of functions of two or more variables. (Section 9.6 - Section 9.8)       When the vector differential operator , is applied to a differentiable function we say that the vector is the gradient of the respective function       The directional derivative of in the direction of a unit vector is provided the limit exists.      If is a differentiable function of and and then Similarly, for a function and where and are the direction angles of the unit vector measured relative to the positive and axes, respectively, it can be shown that       The gradient vector points in the direction in which increases most rapidly, whereas points in the direction of the most rapid decrease of       The temperature in a rectangular box is approximated by If a mosquito is located at in which direction should it fly to cool off as rapidly as possible?      The temperature at a point in space is inversely proportional to the square of the distance from to the origin. It is known that Find the rate of change of at in the direction of In which direction form does the temperature increase most rapidly? At what is the maximum rate of change of ?      Let be the level surface of a differentiable function that passes through If the differentiable function are the parametric equation of a curve on the surface for which The derivative of implies that i.e., is normal to the level surface at       Let be a point on the graph of where is not Then an equation of the tangent plane at is Furthermore, the line containing that is parallel to is called the normal line to the surface at P, which can be expressed as symmetric equations  or parametric equations        Given and Answer the followings:   Sketch the level surface passing through the indicated point.    Sketch the gradient at the point.    Find an equation of the tangent plane at the indicated point.   Find parametric equations and symmetric equations for the normal line at the indicated point         Vector functions of two and three variables,       The curl of a vector field is the vector field It can be computed from the cross product,     "
 },
 {
-  "id": "week2-handout-8-1-1-1",
+  "id": "week3-handout-2-1-1-1",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-8-1-1-1",
+  "url": "week3-handout.html#week3-handout-2-1-1-1",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Vector calculus (Chap 9 in the textbook) "
 },
 {
-  "id": "def-scalar-vec",
+  "id": "def-gradient",
   "level": "2",
-  "url": "week2-handout.html#def-scalar-vec",
+  "url": "week3-handout.html#def-gradient",
   "type": "Definition",
   "number": "1",
   "title": "",
-  "body": "  There are two types of quantities: scalars and vectors .   A scalar is a real number or a quantity that has magnitude.     A vector is usually described as a quantity that has both magnitude and direction. In different spaces, we might need different number of components to describe a direction. Furthermore, the magnitude of a vecto may required additional calculations from the vector to obtain.      "
+  "body": "  When the vector differential operator , is applied to a differentiable function we say that the vector is the gradient of the respective function    "
 },
 {
-  "id": "def-vec-notation",
+  "id": "def-directional",
   "level": "2",
-  "url": "week2-handout.html#def-vec-notation",
+  "url": "week3-handout.html#def-directional",
   "type": "Definition",
   "number": "2",
   "title": "",
-  "body": "  There are several sets of notations to describe a vector or properties related to a vector:    : A vector whose initial point is and whose terminal point is      is a vector in where are scalars and said to be the components of the vector . In mathematics, it is often written as a column vector, i.e., In 2-D, can also be written as In 3-D, can also be written as     The magnitude , length , or norm of a vector u is denoted by . A common norm defined in is    A vector that has a magnitude of 1 is called a unit vector .      "
+  "body": "  The directional derivative of in the direction of a unit vector is provided the limit exists.   "
 },
 {
-  "id": "week2-handout-11",
+  "id": "thm-compu-directional",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-11",
-  "type": "Example",
+  "url": "week3-handout.html#thm-compu-directional",
+  "type": "Theorem",
   "number": "3",
   "title": "",
-  "body": "  Given the point and Complete the followings:     Draw the vector on the graph.    Calculate     Find two pairs of points that produce the same vector as    Find the unit vector of       The graph of the 2-D cartesian plane with range of [0,8] by [0,8]       "
+  "body": "  If is a differentiable function of and and then Similarly, for a function and where and are the direction angles of the unit vector measured relative to the positive and axes, respectively, it can be shown that    "
 },
 {
-  "id": "week2-handout-12",
+  "id": "week3-handout-6",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-12",
+  "url": "week3-handout.html#week3-handout-6",
+  "type": "Remark",
+  "number": "4",
+  "title": "",
+  "body": "  The gradient vector points in the direction in which increases most rapidly, whereas points in the direction of the most rapid decrease of    "
+},
+{
+  "id": "week3-handout-7",
+  "level": "2",
+  "url": "week3-handout.html#week3-handout-7",
   "type": "Example",
   "number": "5",
   "title": "",
-  "body": "Consider and Answer each of the followings:  Find     Find algebraically and graphically.   Find algebraically and graphically.    Find the unit vecotr of .     "
+  "body": "  The temperature in a rectangular box is approximated by If a mosquito is located at in which direction should it fly to cool off as rapidly as possible?   "
 },
 {
-  "id": "def-vector-fun",
+  "id": "week3-handout-8",
   "level": "2",
-  "url": "week2-handout.html#def-vector-fun",
-  "type": "Definition",
+  "url": "week3-handout.html#week3-handout-8",
+  "type": "Example",
   "number": "6",
   "title": "",
-  "body": "  A 3D vector function has components that are functions of a parameter , i.e., For a given value of , is the position vector of a point on a curve    "
+  "body": "  The temperature at a point in space is inversely proportional to the square of the distance from to the origin. It is known that Find the rate of change of at in the direction of In which direction form does the temperature increase most rapidly? At what is the maximum rate of change of ?   "
 },
 {
-  "id": "week2-handout-14",
+  "id": "week3-handout-9",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-14",
-  "type": "Example",
+  "url": "week3-handout.html#week3-handout-9",
+  "type": "Remark",
   "number": "7",
   "title": "",
-  "body": "  Graph for in green and then draw a black point at and the red vector on the same graph. curve[t_] := {Cos[t], -Sin[t], t\/2} t0 = Pi\/5; point = curve[t0]; Graphics3D[{Thick, Green, Line[Table[curve[t], {t, 0, 4*Pi, 0.01}]], Black, PointSize[Large], Point[point], Red, Arrow[{{0, 0, 0}, point}]}, Axes -> True, AxesLabel -> {\"x\", \"y\", \"z\"}, Boxed -> True]    "
+  "body": "  Let be the level surface of a differentiable function that passes through If the differentiable function are the parametric equation of a curve on the surface for which The derivative of implies that i.e., is normal to the level surface at    "
 },
 {
-  "id": "def-vector-calculus",
+  "id": "thm-tangent-plane",
   "level": "2",
-  "url": "week2-handout.html#def-vector-calculus",
-  "type": "Definition",
+  "url": "week3-handout.html#thm-tangent-plane",
+  "type": "Theorem",
   "number": "8",
   "title": "",
-  "body": "     If limits of the component functions exist,    For all for which the limit exists,   If the components are differentiable,   If the components are integrable,      "
+  "body": "  Let be a point on the graph of where is not Then an equation of the tangent plane at is Furthermore, the line containing that is parallel to is called the normal line to the surface at P, which can be expressed as symmetric equations  or parametric equations     "
 },
 {
-  "id": "week2-handout-16",
+  "id": "week3-handout-11",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-16",
-  "type": "Remark",
+  "url": "week3-handout.html#week3-handout-11",
+  "type": "Example",
   "number": "9",
   "title": "",
-  "body": "When the component functions of a vector function have continuous first derivatives and for all in the open interval then is said to be a smooth function and the curve traced by is called a smooth curve.  "
+  "body": "  Given and Answer the followings:   Sketch the level surface passing through the indicated point.    Sketch the gradient at the point.    Find an equation of the tangent plane at the indicated point.   Find parametric equations and symmetric equations for the normal line at the indicated point      "
 },
 {
-  "id": "week2-handout-17",
+  "id": "def-vector-fields",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-17",
-  "type": "Example",
+  "url": "week3-handout.html#def-vector-fields",
+  "type": "Definition",
   "number": "10",
   "title": "",
-  "body": "  Consider Answer each of the followings. If the answer doesn't exist, explain why.   Find     Find     Find     Find     Find    Graph the curve that is described by and graph at the   Find parametric equations of the tangent line to the graph of the curve at    Find      See Example26.nb   "
+  "body": "  Vector functions of two and three variables,    "
 },
 {
-  "id": "week2-handout-18",
+  "id": "week3-handout-13",
   "level": "2",
-  "url": "week2-handout.html#week2-handout-18",
-  "type": "Remark",
+  "url": "week3-handout.html#week3-handout-13",
+  "type": "Definition",
   "number": "11",
   "title": "",
-  "body": " Review and practice using Chain Rule and Rules of differentiation in the textbook: Theorem 9.1.3 and Theorem 9.1.4.  "
-},
-{
-  "id": "def-length-curve",
-  "level": "2",
-  "url": "week2-handout.html#def-length-curve",
-  "type": "Definition",
-  "number": "12",
-  "title": "",
-  "body": "  If is a smooth function, the length of the smooth curve traced by is given by A curve in the plane or in space can be parameterized in terms of the arc length .   "
-},
-{
-  "id": "week2-handout-20",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-20",
-  "type": "Example",
-  "number": "13",
-  "title": "",
-  "body": " Find a vector function that satisfies the indicated conditions.                   By , we can obtain Thus,      With we can set and solve the following equations: With , we have       "
-},
-{
-  "id": "week2-handout-21",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-21",
-  "type": "Example",
-  "number": "14",
-  "title": "",
-  "body": "  Consider    Find the length of the curve traced by on the indicated interval.    Express as a function of arc length       "
-},
-{
-  "id": "def-motion-curve",
-  "level": "2",
-  "url": "week2-handout.html#def-motion-curve",
-  "type": "Definition",
-  "number": "15",
-  "title": "",
-  "body": "  For a body moving along a curve,    Position      Velocity       Acceleration       For circular motion in a plane,    Position      Centripetal Acceleration          "
-},
-{
-  "id": "week2-handout-23",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-23",
-  "type": "Example",
-  "number": "16",
-  "title": "",
-  "body": " Graph the curve described by over the given interval and graph the velocity and accleration vectors at the indicated time.              "
-},
-{
-  "id": "week2-handout-24",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-24",
-  "type": "Example",
-  "number": "17",
-  "title": "",
-  "body": " Suppose is the position vector of a moving particle.  At what points does the particle pass through the -plane? What are its velocity and acceleration at these points?   At what points does the particle pass through the -plane? What are its velocity and acceleration at these points?      "
-},
-{
-  "id": "def-curvature",
-  "level": "2",
-  "url": "week2-handout.html#def-curvature",
-  "type": "Definition",
-  "number": "18",
-  "title": "",
-  "body": "  Let be a vector function defining a smooth curve If is the arc length parameter and is the unit tangent vector, then the curvature of at point is The radius of curvature  is  Furthermore, the velocity of the particle moving along the curve is , whereas its speed is The acceleration can be written in the following formats:        where The scalar functions and are called tangential and normal components of the acceleration, respectively.          "
-},
-{
-  "id": "week2-handout-26",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-26",
-  "type": "Remark",
-  "number": "19",
-  "title": "",
-  "body": "              at point on a curve is the radius of a circle that best fits the curve   The circle is the circle of curvature     the center is the center of curvature          "
-},
-{
-  "id": "week2-handout-27",
-  "level": "2",
-  "url": "week2-handout.html#week2-handout-27",
-  "type": "Example",
-  "number": "20",
-  "title": "",
-  "body": "  Given as the position vector of a moving particle.  Find and     Find the tangential and normal components of the acceleratin.    Graph the curve described by over , including unit tangents at , and the unit tangent, the principal normal, and the circle of the curvature at      "
+  "body": "  The curl of a vector field is the vector field It can be computed from the cross product,    "
 }
 ]
 
