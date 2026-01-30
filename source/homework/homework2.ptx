@@ -34,7 +34,7 @@
         
         Use the given result to show that the given surfaces are orthogonal at a point of intersection and create
         a graph to show the two surfaces, the intersection point, and the normal lines at the intersection point.
-        <md> f(x,y,z)=x^2-y^2+z^2-4, g(x,y,z)=z-\frac{1}{xy^2} </md>         
+        <md> f(x,y,z)=x^2-y^2+z^2-4, \textbf{ }g(x,y,z)=z-\frac{1}{xy^2} </md>         
         </p>    </li>
         <li> <p> Verify the given identify. Assume <m>f </m> as a scalar function, <m>\textbf{F}</m> as a vector function, 
           and continuity of all partial derivatives .  
