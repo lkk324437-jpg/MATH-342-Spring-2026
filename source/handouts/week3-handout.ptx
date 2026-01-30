@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <!-- Include common macros etc: -->
-  <xi:include href="../docinfo.ptx" />
-<article>  
 <worksheet xml:id="week3-handout">
   <title>Week 3 Handout- Vector Calculus- Part 2</title>
 
@@ -147,13 +145,20 @@
       <statement>
         <p> Vector functions of two and three variables,
           <md> 
-            <mrow>\textbf{F}(x,y) \amp P(x,y)\textbf{i}+Q(x,y)\textbf{j} </mrow>
-            <mrow>\textbf{F}(x,y,z) \amp P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k} </mrow>
+            <mrow>\textbf{F}(x,y)= \amp P(x,y)\textbf{i}+Q(x,y)\textbf{j} </mrow>
+            <mrow>\textbf{F}(x,y,z)= \amp P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k} </mrow>
             are also called <term>vector fields.</term>
           </md>         
         </p>
       </statement>
       </definition>
+          <example>
+      <statement>
+        <p>Graph the 2-dimensional vector field <m>\textbf{F}(x,y)=-(y+1)\textbf{i}+(x-2)\textbf{j}.</m>
+          
+        </p>
+      </statement>
+    </example>
       <definition> <statement>
         <p>The <term>curl</term> of a vector field <m>\textbf{F}=P\textbf{i}+Q\textbf{j}+R\textbf{k}</m> 
           is the vector field
@@ -171,6 +176,63 @@
         </p>
       </statement>
     </definition>
+    <definition xml:id="def-divergence">
+      <statement>
+        <p>The <term>divergence</term> of a vector field <m>\textbf{F}=P\textbf{i}+Q\textbf{j}+R\textbf{k}</m> 
+          is the scalar function <md>
+            div \textbf{ F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z},
+          </md>
+         which can also be written as 
+         <md>
+          div \textbf{ F}=\nabla \cdot \textbf{F}.
+         </md>         
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <statement>
+        <p> Suppose that <m>\textbf{F}</m> is the velocity field of a flowing fluid. At a point <m>P(x,y,z)</m>
+          <ol>
+            <li><p><m>curl \textbf{ F}(P)</m>  represents the <term>tendency</term> of particles at <m>P</m> to 
+              <term> rotate </term> about the axis that points in the direction of <m>curl \textbf{ F}.</m> </p>  </li>
+            <li> <p>If <m>curl \textbf{ F}(P)=\textbf{0},</m>  then the fluid is called <term>irrotational.</term></p></li>
+            <li><p> If <m>\textbf{F}</m> is a <term>conservative vector field</term>, then <m>curl \textbf{ F}=\textbf{0}.</m></p></li>
+            <li> <p> If <m>\textbf{F}</m> is defined on the entire <m>R^3</m> whose components have continuous 1st order partial derivative
+              and <m>curl \textbf{ F}=\textbf{0},</m> then <m>\textbf{F}</m> is a <term>conservative vector field</term>.  </p></li>
+            <li> <p>  <m>div \left(curl \textbf{ F}\right)=0</m>    </p>    </li>
+            <li> <p>  <m>div \textbf{ F}(P)</m> represents the <term>net rate of change</term> of the mass of the fluid 
+              flowing from the point <m>P</m> per unit volumne, i.e., the <term>tendency</term> of a fluid to 
+            <term>diverge</term> from the point.          </p>   </li>
+            <li>  <p>
+              <ul>
+                 <li>  <p> If <m>div \textbf{ F}(P)=0,</m> then <m>\textbf{F}</m> is called <term>incompressible</term> near <m>P.</m> </p></li>
+                 <li>  <p> If <m>div \textbf{ F}(P)\gt0,</m> then <m>P</m> is said to be a <term>source</term> of <m>\textbf{F}.</m>  </p></li>
+                 <li>  <p> If <m>div \textbf{ F}(P)\lt 0,</m> then <m>P</m> is said to be a <term>sink</term> pf <m>\textbf{F}.</m> </p></li>
+              </ul>
+              
+                </p>     </li>
+
+          </ol>
+          
+        </p>
+      </statement>
+    </remark>
+    <example>
+      <statement>
+        <p> The velocity vector field for the 2-D flow of an ideal fluid around a cylinder is given by
+          <md>
+            \textbf{F}(x,y)=A\left[\left(1-\frac{x^2-y^2}{x^2+y^2}\right)\textbf{i}-\frac{2xy}{x^2+y^2}\textbf{j}\right]
+          </md>
+          for some positive constant <m>A.</m>
+          <ol>
+            <li><p>  Create a plot in Mathematica to show the vector field for each of <m>A=-2, -0.5, 0.5, 2</m>.    </p></li>
+            <li> <p> Show that when the point <m>(x,y)</m> is far from the origin, <m>\textbf{F}(x,y)\approx A \textbf{i}.</m>    </p>    </li>
+            <li> <p> Show that <m>\textbf{F}</m> is irrotational.       </p>  </li>
+            <li> <p>  Show that <m>\textbf{F}</m> is incompressible.    </p>     </li>
+          </ol>
+          
+        </p>
+      </statement>
+    </example>
 </worksheet>
-</article>
-</pretext>
+

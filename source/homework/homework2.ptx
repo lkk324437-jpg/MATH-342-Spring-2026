@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Written by Sarah Sparks, Fall 2025 -->
+
+<worksheet xml:id="hw2">
+  <title>Homework 2</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Submit your work by uploading a <alert>single PDF</alert> and 
+      a <alert> single Mathematica notebook </alert> to D2L.  
+      For the algebraic work, it can either be a scan of handwritten solutions or a PDF you created by 
+      typing your solutions. Clearly label each problem and include your reference to which definition, remark, theorem and/or 
+      which part of theorem in <alert>which week's handout</alert> is used for each step.   You can use Mathematica to 
+      help you with algebraic work, however, you must show the steps and include explanation and reasoning. In Mathematica, 
+      you must include text to clearly label your code and graphs. 
+    </p>
+
+  </introduction>
+
+  <p>
+    <ol> 
+      <li> <p> <m>\textbf{r}(t)</m> is the position vector of a moving particle. Find the tangential and normal 
+        components of the acceleration at any <m>t</m> and create a graph of the Curve <m>C</m> described 
+        by <m>\textbf{r}(t)</m> consisted of the acceleration vector, and the tangential and normal components of acceleration
+        at the given point.
+      <ol>
+        <li> <p> <m>\textbf{r}(t)=2\cos t\textbf{i}+2\sin t\textbf{j}+t^2\textbf{k},   t=\frac{\pi}{4} </m>    </p> </li>
+        <li> <p> <m>\textbf{r}(t)=t^2\textbf{i}-t^3\textbf{j}+t^4\textbf{k}, t=\frac{4}{3}</m>  </p>  </li>
+      </ol> </p>
+    </li>
+        <li>  <p> Two surfaces are said to be <term>orthogonal </term> at a point <m>P</m> of intersection if their normal lines
+         at <m>P</m> are orthogonal, i.e., two surfaces given by <m> f(x,y,z)=0</m> and <m>g(x,y,z)=0</m> are orthogonal
+        at <m>P</m> if and only if 
+        <md> f_xg_x+f_yg_y+f_zg_z=0. </md>       
+        
+        Use the given result to show that the given surfaces are orthogonal at a point of intersection and create
+        a graph to show the two surfaces, the intersection point, and the normal lines at the intersection point.
+        <md> f(x,y,z)=x^2-y^2+z^2-4, g(x,y,z)=z-\frac{1}{xy^2} </md>         
+        </p>    </li>
+        <li> <p> Verify the given identify. Assume <m>f </m> as a scalar function, <m>\textbf{F}</m> as a vector function, 
+          and continuity of all partial derivatives .  
+          <ol>
+            <li>  <p> <m>div (curl \textbf{ F})=0</m>   </p>    </li>
+            <li> <p> <m>\nabla \cdot (f \textbf{F})=f\left(\nabla \cdot\textbf{F}\right)+\textbf{F}\cdot\nabla f</m>    </p> </li>
+          </ol>
+        </p>
+        </li>
+        <li> <p> Any scalar function <m>f</m> for which <m>\nabla ^2 f=0</m> is said to be <term>harmonic.</term> 
+          Determine whether each of the following scalar functions is harmonic.
+        <ol>
+          <li>  <p> <m> f(x,y,z)=\left(x^2+y^2+z^2\right)^{-1/2}</m>     </p>   </li>
+          <li>  <p> <m>f(x,y)=\tan^{-1}\left(\frac{2y}{x^2+y^2-1}\right), x^2+y^2\neq 1</m></p>  </li>
+        </ol>   
+       </p></li>
+
+    </ol>
+</p>
+  
+</worksheet>

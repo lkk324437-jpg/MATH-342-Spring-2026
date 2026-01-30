@@ -12,19 +12,19 @@
     <target name="web-inst" source="main.ptx" format="html"
             publication="publication-inst.ptx" />
 
-        <target name="week1" source="week1.ptx" format="html"
+    <target name="week1" source="week1.ptx" format="html"
             publication="publication.ptx" deploy-dir="course" />
-        <target name="week1-inst" source="week1.ptx" format="html"
+    <target name="week1-inst" source="week1.ptx" format="html"
             publication="publication-inst.ptx" />            
 
-        <target name="week2" source="./handouts/week2.ptx" format="html"
+    <target name="week2" source="week2.ptx" format="html"
             publication="publication.ptx" deploy-dir="course" />
-        <target name="week2-inst" source="week2.ptx" format="html"
+    <target name="week2-inst" source="week2.ptx" format="html"
             publication="publication-inst.ptx" /> 
             
-        <target name="week3" source="./handouts/week3.ptx" format="html"
+    <target name="week3" source="week3.ptx" format="html"
             publication="publication.ptx" deploy-dir="course" />
-        <target name="week3-inst" source="week3.ptx" format="html"
+    <target name="week3-inst" source="week3.ptx" format="html"
             publication="publication-inst.ptx" />  
 
   <!-- The following targets are used to create stand-alone documents, which could be additional slide decks, pdfs, or SCORM archives. Run with `pretext build slides -i source/slides/[filename.ptx]`, for example. -->

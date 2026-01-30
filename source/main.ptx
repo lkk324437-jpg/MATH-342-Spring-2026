@@ -40,6 +40,7 @@
 
       <!-- Remove or comment out the sample and replace with your own homework -->
       <xi:include href="./homework/homework1.ptx"/>
+      <xi:include href="./homework/homework2.ptx"/>
 
     </chapter>
 

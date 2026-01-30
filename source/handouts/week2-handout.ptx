@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <!-- Include common macros etc: -->
-  <xi:include href="../docinfo.ptx" />
-<article>  
+
+
 <worksheet xml:id="week2-handout">
   <title>Week 2 Handout- Vector Calculus- Part 1</title>
   
@@ -235,7 +235,7 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
           
         </p>
       </statement>
-      <solution>
+      <solution component="inst">
         <p> See Example26.nb </p>
       </solution>
 
@@ -260,7 +260,7 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
         </ol>
       </p>
     </statement> 
-    <solution>
+    <solution component="inst">
       <p>
         <ol>
           <li> <p><m>\textbf{r}(t)=(4t+c_1)\textbf{i}+\left(\frac{3t^2}{2}+c_2\right)\textbf{j}
@@ -414,5 +414,4 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
       
     </example>
 </worksheet>
-</article>
-</pretext>
+
