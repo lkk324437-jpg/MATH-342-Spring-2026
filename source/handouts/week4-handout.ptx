@@ -3,8 +3,8 @@
 <!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
 
   <!-- Include common macros etc: -->
-<worksheet xml:id="week3-handout">
-  <title>Week 3 Handout- Vector Calculus- Part 2</title>
+<worksheet xml:id="week4-handout">
+  <title>Week 4 Handout- Vector Calculus- Part 3</title>
 
     <introduction>
       <ul>
@@ -14,10 +14,7 @@
             <li> <p> Calculus of scalar functions that have more than one variables </p>   </li>
             <li> <p> Calculus of vector functions   </p>        </li>
           </ul></p>  </li>
-          <li><p> In Week 3, we mainly discuss calculus of functions of two or more variables. (Section 9.6 - Section 9.8)    </p>
-          </li>
-          <li>
-            <p>In Week 4, we will discuss a few important theorems in vector calculus. (Section 9.12, 9.14, 9.16)    </p>
+          <li><p> In Week 4, we mainly discuss a few important theorems in vector calculus. (Section 9.12, 9.14, 9.16)    </p>
           </li>
       </ul>
     </introduction>
