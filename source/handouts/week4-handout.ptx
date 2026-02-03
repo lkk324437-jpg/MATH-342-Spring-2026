@@ -14,347 +14,52 @@
             <li> <p> Calculus of scalar functions that have more than one variables </p>   </li>
             <li> <p> Calculus of vector functions   </p>        </li>
           </ul></p>  </li>
-          <li><p> In Week 4, we mainly discuss a few important theorems in vector calculus. (Section 9.12, 9.14, 9.16)    </p>
+          <li><p> On Tuesday, we mainly discuss a few important theorems in vector calculus (Section 9.12, 9.14, 9.16). 
+            On Thursday, No class in the morning and Exam 1 is between 3:45pm-5:45pm in STRGT 320.    </p>
+          </li>
+          <li>
+            <p> In Week 5, we will start Series Solution (Chap 5) and Fourier Series (Chap 12).
+                
+            </p>
           </li>
       </ul>
     </introduction>
+    <theorem xml:id="thm-greens">
+      <statement>
+        <p>  Suppose that <m>C</m> is a piecewise-smooth simple closed curve bounding a simply connected region <m>R.</m>
+          If <m>P,</m> <m>Q,</m> <m>\partial P/\partial y</m>, and <m>\partial Q/\partial x</m> are continuous on <m>R,</m>
+          then <md>
+            \oint_C Pdx+Qdy=\iint_R \left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dA.
+          </md>          
+        </p>
+      </statement>
+    </theorem>
+    <theorem xml:id="thm-stokes">
+      <statement>
+        <p> Let <m>S</m> be a piecewise-smooth orientable surface bounded by a piecewise-smooth simple closed
+          curve <m>C.</m>  Let <m>\textbf{F}(x,y,z)=P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k}</m> be 
+          a vector field for which <m>P,</m> <m>Q,</m> and <m>R</m> are continuous and have coninuous first partial derivatives in a region of 
+          3-space containing <m>S.</m> If <m>C</m> is traversed in the positive direction, then
+          <md>
+            \oint_C \textbf{F}\cdot d\textbf{r}=\oint_C\textbf{F}\cdot\textbf{T }dS=\iint_S (curl \textbf{ F})\cdot \textbf{n }dS,
+          </md>
+          where <m>\textbf{T}</m> is a unit tangent vector to <m>C</m> that points in the positive direction and 
+          <m>\textbf{n}</m> is a unit normal to <m>S</m> in the direction of orientation of <m>S.</m>         
+        </p>
+      </statement>
+    </theorem>
+    <theorem xml:id="thm-divergence">
+      <statement>
+        <p> Let <m>D</m> be a closed and bounded region in 3-space with a piecewise-smooth boundary <m>S</m> that
+          is oriented outward. Let <m>\textbf{F}(x,y,z)=P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k}</m>
+          be a vector field for which <m>P,</m> <m>Q,</m> and <m>R</m> are continuous and have coninuous first partial derivatives in a region of 
+          3-space containing <m>D.</m> 
+          <md> \iint_S (\textbf{F}\cdot\textbf{n })dS=\iiint_D div \textbf{ F }dV.    </md>
+          
+        </p>
+      </statement>
+    </theorem>
     
-    <definition xml:id="def-gradient">
-        <statement>
-            <p>When the <term>vector differential operator</term>, 
-                <md>\nabla=\textbf{i}\frac{\partial}{\partial x}+\textbf{j}\frac{\partial}{\partial y}\textbf{k}\frac{\partial}{\partial z},</md>                
-                is applied to a differentiable function <m>w=f(x,y,z),</m> we say that the vector
-                <md>
-                    \nabla f(x,y,z)=\frac{\partial f}{\partial x}\textbf{i}+\frac{\partial f}{\partial y}\textbf{j}+\frac{\partial f}{\partial z}\textbf{k},
-                </md>
-                is the <term>gradient</term> of the respective function <m>f(x,y,z).</m>
-
-            </p>
-        </statement>
-    </definition>
-    <definition xml:id="def-directional">
-      <statement>
-        <p> The <term>directional derivative</term> of <m>z=f(x,y)</m> in the direction of a unit vector 
-          <m>\textbf{u}=\cos\theta\textbf{i}+\sin\theta\textbf{j}</m> is 
-          <md>D_\textbf{u}f(x,y)=\lim_{h\rightarrow 0}\frac{f(x+h\cos\theta,y+h\sin\theta)-f(x,y)}{h}  </md>
-          provided the limit exists.          
-        </p>
-      </statement>
-    </definition>
-    <theorem xml:id="thm-compu-directional">
-      <statement>
-        <p>If <m>z=f(x,y)</m> is a differentiable function of <m>x</m> and <m>y</m> and 
-          <m>\textbf{u}=\cos\theta\textbf{i}+\sin\theta\textbf{j},</m> then
-          <md>D_\textbf{u}f(x,y)=\nabla f(x,y)\cdot\textbf{u}.       
-          </md>
-          Similarly, for a function <m>m=F(x,y,z)</m> and <m>\textbf{u}=\cos\alpha\textbf{i}+\cos\beta\textbf{j}+\cos\gamma\textbf{k},</m>
-          where <m>\alpha, \beta,</m> and <m>\gamma</m> are the direction angles of the unit vector <m>\textbf{u}</m>
-          measured relative to the positive <m>x-, y-</m> and <m>z-</m>axes, respectively, it can be shown that 
-          <md>
-            D_\textbf{u}F(x,y,z)=\nabla F(x,y,z)\cdot\textbf{u}.
-          </md>
-          </p>
-      </statement>
-    </theorem>
-    <remark>
-      <statement>
-        <p>The gradient vector <m>\nabla f</m> points in the direction in which <m>f</m> increases most rapidly,
-          whereas <m>-\nabla f</m> points in the direction of the most rapid decrease of <m>f.</m>
-        </p>
-      </statement>
-    </remark>
-    <example>
-      <statement>
-        <p>
-          The temperature in a rectangular box is approximated by <md>
-            T(x,y,z)=xyz(2-x)(3-y)(2-z), 0\leq x\leq 2, 0\leq y\leq 3,0\leq z\leq 2.
-          </md>
-          If a mosquito is located at <m>\left(1,\frac{1}{2},1\right),</m> in which direction should it fly to cool
-          off as rapidly as possible?
-        </p>
-      </statement>
-      <solution component="inst">
-        <statement>
-          <p>Section 9.5 Example 8       </p>      </statement>
-        
-      </solution>
-    </example>
-    <example>
-      <statement>
-        <p>
-          The temperature <m>T</m> at a point <m>(x,y,z)</m> in space is inversely proportional to the square of the distance from 
-          <m>(x,y,z)</m> to the origin. It is known that <m>T(0,0,1)=500.</m> Find the rate of change of <m>T</m> at 
-          <m>(2,3,3)</m> in the direction of <m>(3,1,1).</m> In which direction form <m>(2,3,3)</m> does the temperature 
-          <m>T</m> increase most rapidly? At <m>(2,3,3)</m> what is the maximum rate of change of <m>T</m>?
-        </p>
-      </statement>
-      <solution component="inst">
-        <statement>
-          <p>              Section 9.5, #42          </p>        </statement>
-        
-      </solution>
-    </example>
-    <remark>
-      <statement>
-        <p>
-          Let <m>F(x,y,z)=c</m> be the <alert>level surface</alert> of a differentiable function <m>w=F(x,y,z)</m>
-           that passes through <m>P(x_0, y_0, z_0).</m>  If the differentiable function <m>\textbf{r}(t)=\langle x=f(t), y=g(t), z=h(t)\rangle</m>
-           are the parametric equation of a curve <m>C</m> on the surface for which <m>x_0=f(t_0), y_0=g(t_0),z_0=h(t_0).</m>  The derivative of
-           <m>F(f(t),g(t),h(t))=0</m> implies that 
-           <md>
-            \nabla F(x_0,y_0,z_0)\cdot\textbf{r}'(t_0)=0,
-           </md>
-           i.e., <term><m>\nabla F</m> is normal to the level surface at <m>P.</m></term>
-          </p>
-      </statement>
-    </remark>
-    <theorem xml:id="thm-tangent-plane">
-      <statement>
-        <p> Let <m>P(x_0,y_0,z_0)</m> be a point on the graph of <m>F(x,y,z)=c,</m> where <m>\nabla F</m> is not <m>\textbf{0}.</m>
-          Then an equation of the tangent plane at <m>P</m> is
-          <md>
-            F_x(x_0,y_0,z_0)(x-x_0)+F_y(x_0,y_0,z_0)(y-y_0)+F_z(x_0,y_0,z_0)(z-z_0)=0
-          </md>
-          Furthermore, the line containing <m>P</m> that is parallel to <m>\nabla F</m> is called the <term>normal line</term>        
-          to the surface at P, which can be expressed as <term>symmetric equations</term>
-          <md>
-            \frac{x-x_0}{F_x(x_0,y_0,z_0)}=\frac{y-y_0}{F_y(x_0,y_0,z_0)}=\frac{z-z_0}{F_z(x_0,y_0,z_0)},
-          </md>
-          or <term>parametric equations</term>
-          <md>
-            x=F_x(x_0,y_0,z_0)t+x_0, y=F_y(x_0,y_0,z_0)t+y_0, z=F_z(x_0,y_0,z_0)t+z_0.
-          </md>
-          
-          
-        </p>
-      </statement>
-    </theorem>
-    <example>
-      <statement>
-        <p> Given <m>F(x,y,z)=x^2+y^2-z</m> and <m>P(1,1,4).</m>  Answer the followings:
-          <ol>
-            <li> <p>Sketch the level surface passing through the indicated point. </p>     </li>
-            <li> <p> Sketch the gradient at the point.    </p>    </li>
-            <li> <p> Find an equation of the tangent plane at the indicated point.      </p>    </li>
-            <li><p> Find parametric equations and symmetric equations for the normal line at the indicated point      </p>   </li>
-          </ol>
-        </p>
-      </statement>      
-    </example>
-    <definition xml:id="def-vector-fields">
-      <statement>
-        <p> Vector functions of two and three variables,
-          <md> 
-            <mrow>\textbf{F}(x,y)= \amp P(x,y)\textbf{i}+Q(x,y)\textbf{j} </mrow>
-            <mrow>\textbf{F}(x,y,z)= \amp P(x,y,z)\textbf{i}+Q(x,y,z)\textbf{j}+R(x,y,z)\textbf{k} </mrow>
-            are also called <term>vector fields.</term>
-          </md>         
-        </p>
-      </statement>
-      </definition>
-          <example>
-      <statement>
-        <p>Graph the 2-dimensional vector field <m>\textbf{F}(x,y)=-(y+1)\textbf{i}+(x-2)\textbf{j}.</m>
-          
-        </p>
-      </statement>
-    </example>
-      <definition> <statement>
-        <p>The <term>curl</term> of a vector field <m>\textbf{F}=P\textbf{i}+Q\textbf{j}+R\textbf{k}</m> 
-          is the vector field
-          <md>
-            curl \textbf{ F}=\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\textbf{i}
-            +\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\textbf{j}
-            +\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\textbf{k}.
-          </md>
-          It can be computed from the cross product,
-          <md>
-            curl \textbf{ F}=\nabla \times \textbf{F}=
-            \left|\begin{array}{ccc}\textbf{i}\amp \textbf{j}\amp \textbf{k}\\
-            \frac{\partial}{\partial x}\amp \frac{\partial}{\partial y}\amp\frac{\partial}{\partial z}\\
-            P\amp Q \amp R \end{array}\right|</md>         
-        </p>
-      </statement>
-    </definition>
-    <definition xml:id="def-divergence">
-      <statement>
-        <p>The <term>divergence</term> of a vector field <m>\textbf{F}=P\textbf{i}+Q\textbf{j}+R\textbf{k}</m> 
-          is the scalar function <md>
-            div \textbf{ F}=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z},
-          </md>
-         which can also be written as 
-         <md>
-          div \textbf{ F}=\nabla \cdot \textbf{F}.
-         </md>         
-        </p>
-      </statement>
-    </definition>
-    <remark>
-      <statement>
-        <p> Suppose that <m>\textbf{F}</m> is the velocity field of a flowing fluid. At a point <m>P(x,y,z)</m>
-          <ol>
-            <li><p><m>curl \textbf{ F}(P)</m>  represents the <term>tendency</term> of particles at <m>P</m> to 
-              <term> rotate </term> about the axis that points in the direction of <m>curl \textbf{ F}.</m> </p>  </li>
-            <li> <p>If <m>curl \textbf{ F}(P)=\textbf{0},</m>  then the fluid is called <term>irrotational.</term></p></li>
-            <li><p> If <m>\textbf{F}</m> is a <term>conservative vector field</term>, then <m>curl \textbf{ F}=\textbf{0}.</m></p></li>
-            <li> <p> If <m>\textbf{F}</m> is defined on the entire <m>R^3</m> whose components have continuous 1st order partial derivative
-              and <m>curl \textbf{ F}=\textbf{0},</m> then <m>\textbf{F}</m> is a <term>conservative vector field</term>.  </p></li>
-            <li> <p>  <m>div \left(curl \textbf{ F}\right)=0</m>    </p>    </li>
-            <li> <p>  <m>div \textbf{ F}(P)</m> represents the <term>net rate of change</term> of the mass of the fluid 
-              flowing from the point <m>P</m> per unit volumne, i.e., the <term>tendency</term> of a fluid to 
-            <term>diverge</term> from the point.          </p>   </li>
-            <li>  <p>
-              <ul>
-                 <li>  <p> If <m>div \textbf{ F}(P)=0,</m> then <m>\textbf{F}</m> is called <term>incompressible</term> near <m>P.</m> </p></li>
-                 <li>  <p> If <m>div \textbf{ F}(P)\gt0,</m> then <m>P</m> is said to be a <term>source</term> of <m>\textbf{F}.</m>  </p></li>
-                 <li>  <p> If <m>div \textbf{ F}(P)\lt 0,</m> then <m>P</m> is said to be a <term>sink</term> pf <m>\textbf{F}.</m> </p></li>
-              </ul>
-              
-                </p>     </li>
-
-          </ol>
-          
-        </p>
-      </statement>
-    </remark>
-    <example>
-      <statement>
-        <p> The velocity vector field for the 2-D flow of an ideal fluid around a cylinder is given by
-          <md>
-            \textbf{F}(x,y)=A\left[\left(1-\frac{x^2-y^2}{x^2+y^2}\right)\textbf{i}-\frac{2xy}{x^2+y^2}\textbf{j}\right]
-          </md>
-          for some positive constant <m>A.</m>
-          <ol>
-            <li><p>  Create a plot in Mathematica to show the vector field for each of <m>A=-2, -0.5, 0.5, 2</m>.    </p></li>
-            <li> <p> Show that when the point <m>(x,y)</m> is far from the origin, <m>\textbf{F}(x,y)\approx A \textbf{i}.</m>    </p>    </li>
-            <li> <p> Show that <m>\textbf{F}</m> is irrotational.       </p>  </li>
-            <li> <p>  Show that <m>\textbf{F}</m> is incompressible.    </p>     </li>
-          </ol>
-          
-        </p>
-      </statement>
-    </example>
-    <definition xml:id="def-shapes">
-      <statement>
-        <p> Suppose <m>C</m> is a curve parameterized by <m>x=f(t),</m> <m>y=g(t)</m>, <m>a\leq t\leq b</m>, and 
-          <m>A</m> and <m>B</m> are the points <m>\left(f(a),g(a)\right)</m> and <m>\left(f(b), g(b)\right)</m>, 
-          respectively.
-          <ol>
-            <li> <p> <m>C</m> is a <alert>smooth curve</alert> if <m>f'</m> and <m>g'</m> are continuous on the closed 
-              interval <m>[a,b]</m> and not simultaneously zero on the open intervals <m>(a,b).</m>   </p>     </li>
-            <li><p> <m>C</m> is a <alert>closed curve </alert> if <m>A=B.</m>    </p></li>
-          </ol>  </p>
-      </statement>
-    </definition>
-    <definition xml:id="def-line-integral">
-      <statement>  <p>  Let <m>G</m> be a function of two variables <m>x</m> and <m>y</m> defined on a region of the plane containing 
-        a smooth curve <m>C.</m>
-        <ol>
-          <li> <p>The <alert>line integral of G along C from A to B w.r.t x</alert> is
-          <md>\int_C G(x,y)dx=\lim_{\|P\|\rightarrow 0} \sum_{k=1}^n G(x_k^*, y_k^*)\Delta x_k.    </md>      </p> </li>
-          <li> <p>The <alert>line integral of G along C from A to B w.r.t y</alert> is
-          <md>\int_C G(x,y)dy=\lim_{\|P\|\rightarrow 0} \sum_{k=1}^n G(x_k^*, y_k^*)\Delta y_k.    </md>      </p> </li>
-          <li> <p>The <alert>line integral of G along C from A to B w.r.t arc length</alert> is
-          <md>\int_C G(x,y)ds=\lim_{\|P\|\rightarrow 0} \sum_{k=1}^n G(x_k^*, y_k^*)\Delta s_k.    </md>      </p> </li>
-        </ol>
-         <m>\|P\|</m> is the <term>norm</term> of the partition of the length of the longest subarc. 
-        </p>
-      </statement>
-    </definition>
-    <remark>
-      <statement>
-        <p> In many applications, line integral appear as a sum
-          <md> \int_C P(x,y)dx+ Q(x,y)dy.       </md>
-          A line integral along a <alert>closed curve</alert> <m>C</m> is often denoted by
-          <md>         \oint_C Pdx+Qdy.    </md>      </p>
-      </statement>     
-    </remark>
-    <example>
-      <statement>
-        <p> Evalute <m>\int_C (2x+y)dx+xydy</m> on the given curve <m>C</m> between <m>(-1,2)</m> and <m>(2,5).</m>
-          
-        <figure xml:id="fig-path1">
-        <caption>A curve <m> C </m> between <m>(-1, 2)</m> and <m>(2,5).</m></caption>
-        <image width="40%">
-        <latex-image>
-          \begin{tikzpicture}[scale=0.4]
-          % Set a comfortable viewing window
-          \clip (-2,-1) rectangle (4,6);
-
-          % Axes
-          \draw[->, thick] (-2,0) -- (4,0) node[anchor=west] {$x$};
-          \draw[->, thick] (0,-1) -- (0,6) node[anchor=south] {$y$};
-
-          % Ticks and labels (adjust as you like)
-          \foreach \x in {-1,1,2,3}
-          \draw (\x,0) -- (\x,0.12) node[above=1pt, scale=0.4] {\x};
-          \foreach \y in {-1,1,2,3,4,5}
-          \draw (0,\y) -- (0.12,\y) node[right=1pt, scale=0.4] {\y};
-
-
-
-          % The requested arrows
-          \draw[->, thick] (-1,2) -- (-1,0);
-          \draw[->,  thick] (-1,0) -- (2,0);
-          \draw[->,  thick] (2,0) -- (2,5);
-
-          % Optional: mark the points
-          \fill (-1,2) circle (2pt) node[above=0pt] {\tiny $(-1,2)$};
-          \fill (-1,0) circle (2pt) node[below=0pt] {\tiny $(-1,0)$};
-          \fill (2,0)  circle (2pt) node[below=0pt] {\tiny $(2,0)$};
-          \fill (2,5)  circle (2pt) node[above=0pt] {\tiny $(2,5)$};
-          \end{tikzpicture}
-        
-        </latex-image>
-      </image>
-      </figure>
-
-        </p>
-      </statement>
-    </example>
-    <example>
-      <statement>
-        <p> Evaluate <m>\oint_C x^2y^3dx-xy^2dy</m> on the given closed curve <m>C.</m>
-          
-        <figure xml:id="fig-ccw-triangle-segments">
-          <caption>A closed curve <m>C </m>, a counterclockwise triangle with vertices <m>(0,0), (0,4), (-2,4)</m>.</caption>
-          <image width="40%">
-          <latex-image>
-            \begin{tikzpicture}[scale=1.2]
-            % Optional tight viewing window to reduce whitespace
-            
-            % Axes
-            \draw[->, thick] (-2.6,0) -- (0.8,0) node[anchor=south] {$x$};
-            \draw[->, thick] (0,-0.6) -- (0,4.6) node[anchor=south] {$y$};
-
-            % Ticks and labels
-            \foreach \x in {-2,-1}
-            \draw (\x,0) -- (\x,0.1) node[below=2pt, scale=0.85] {\x};
-            \foreach \y in {1,2,3,4}
-            \draw (0,\y) -- (0.1,\y) node[right=1pt, scale=0.85] {\y};
-
-            \clip (-2.4,-0.4) rectangle (0.6,4.6);
-             % Vertices
-            \coordinate (A) at (0,0);
-            \coordinate (B) at (0,4);
-            \coordinate (C) at (-2,4);
-
-            % Counterclockwise arrows
-            \draw[->, very thick] (A) -- (B);   % Up
-            \draw[->, very thick] (B) -- (C);   % Left
-            \draw[->, very thick] (C) -- (A);   % Down-right
-
-            % Optional: vertex markers and labels
-            \fill (A) circle (1pt) node[below] {\tiny $(0,0)$};
-            \fill (B) circle (1pt) node[above left] {\tiny $(0,4)$};
-            \fill (C) circle (1pt) node[above] {\tiny $(-2,4)$};
-          \end{tikzpicture}
-          </latex-image>
-          </image>
-        </figure>
-
-        </p>
-      </statement>
-    </example>
+    
 </worksheet>
 

@@ -33,6 +33,7 @@
       <xi:include href="./handouts/week1-handout.ptx"/>
       <xi:include href="./handouts/week2-handout.ptx"/> 
       <xi:include href="./handouts/week3-handout.ptx"/> 
+      <xi:include href="./handouts/week4-handout.ptx"/> 
     </chapter>
 
     <chapter xml:id="homework">
