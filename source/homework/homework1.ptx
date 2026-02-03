@@ -50,14 +50,27 @@
 
 
     </ol>
-</p>
-<solution component="inst">
+    <solution component="inst">
     <p>
         <ol>
-            <li>  <p>      </p>
+            <li>  <p> 
+                <md>
+                    <mrow>f(t) =\amp e^{t-2}\sin (2t) </mrow>
+                    <mrow> = \amp \frac{e^{t}\sin(2t)}{e^2}</mrow>
+                    <mrow> \leq \amp \frac{e^t}{e^2}\cdot \max_t |\sin(2t)| </mrow>
+                </md>
+                Since <m>\max_{t\in R} \sin(2t)=1,</m>
+                <md>
+                    |f(t)|\leq \frac{e^t}{e^2}, \mbox{ for all} t\geq 0
+                </md>
+                Thus by Definition 1 in Week 1 Handout, where <m>M=\frac{1}{e^2}</m> <m>c=1,</m>  
+                and <m>T=0</m>, <m>f(t)</m> is of exponential order.
+                  </p>
             </li>
         </ol>
         
     </p>
 </solution>
+</p>
+
 </worksheet>
