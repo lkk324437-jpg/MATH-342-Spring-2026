@@ -6,6 +6,7 @@
     <!-- Main course for html or pdf -->
     <target name="web" source="main.ptx" format="html"
             publication="publication.ptx" deploy-dir="course" />
+
     <target name="print" source="main.ptx" format="pdf"
             output-filename="course.pdf" publication="publication.ptx" />
 
@@ -13,21 +14,22 @@
             publication="publication-inst.ptx" />
 
     <target name="week1" source="week1.ptx" format="html"
-            publication="publication.ptx" deploy-dir="course" />
+            publication="publication.ptx" deploy-dir="week1" />
+
     <target name="week1-inst" source="week1.ptx" format="html"
             publication="publication-inst.ptx" />            
 
     <target name="week2" source="week2.ptx" format="html"
-            publication="publication.ptx" deploy-dir="course" />
+            publication="publication.ptx" deploy-dir="week2" />
     <target name="week2-inst" source="week2.ptx" format="html"
             publication="publication-inst.ptx" /> 
             
     <target name="week3" source="week3.ptx" format="html"
-            publication="publication.ptx" deploy-dir="course" />
+            publication="publication.ptx" deploy-dir="week3" />
     <target name="week3-inst" source="week3.ptx" format="html"
             publication="publication-inst.ptx" />  
     <target name="hw2" source="hw2.ptx" format="html"
-            publication="publication.ptx" deploy-dir="course" />
+            publication="publication.ptx" deploy-dir="hw2" />
   <!-- The following targets are used to create stand-alone documents, which could be additional slide decks, pdfs, or SCORM archives. Run with `pretext build slides -i source/slides/[filename.ptx]`, for example. -->
   <target name="pdf" standalone="yes" format="pdf"
           output-dir="pdfs" publication="publication_standalone.ptx"/>
