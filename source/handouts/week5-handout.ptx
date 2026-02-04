@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+<worksheet xml:id="week5-handout">
+  <title>Week 5 Handout- Series Solution-Part 1</title>
+
+    <introduction>
+        <statement> <p>
+        We will discuss the following topics related to <term> Series Solution</term>:
+      <ul>
+        <li> <p> Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
+        <li> <p> Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)  </p> </li>
+
+      </ul>           
+                
+            </p>
+        </statement>
+
+    </introduction>
+    
+    
+</worksheet>
+
