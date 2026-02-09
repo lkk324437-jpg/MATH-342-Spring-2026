@@ -10,16 +10,308 @@
         <statement> <p>
         We will discuss the following topics related to <term> Series Solution</term>:
       <ul>
-        <li> <p> Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
-        <li> <p> Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)  </p> </li>
+        <li> <p>Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
+        <li> <p>Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)  </p> </li>
 
-      </ul>           
-                
-            </p>
+      </ul>  </p>
         </statement>
 
     </introduction>
-    
-    
+  <definition xml:id="def-power-series">
+    <statement>
+      <p> A <term>power series</term> in <m>x-a</m> is an <alert>infinite series</alert> of the form
+        <md>
+          \sum_{n=0}^\infty c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\cdots.
+        </md>
+        It is also called a <term>power series centered at <m>a</m>.</term>
+      </p>
+    </statement>
+  </definition>
+  <remark>
+    <statement>
+      <p>
+    A few issues are important to consider when using a series:
+    <ul>
+      <li> <p> Is the series <alert>convergent</alert>?  </p> </li>
+      <li> <p> If the series is convergent,
+        <ul>
+          <li> <p> What is the radius of convergence? 
+            That is the same question as "What is the interval of convergence?".   </p>     </li>
+          <li> <p> Is it convergent absolutely? Is it convergent pointwisely?  </p>    </li>
+          <li> <p> Is it convergent to the function we are looking for? 
+            Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives
+          of the function we are looking for?</p>  </li>
+        </ul>   </p> </li>
+      </ul>    
+      </p>
+    </statement>
+  </remark>
+  <definition xml:id="def-analytic">
+    <statement>
+      <p>A function <m>f</m> is said to be <alert>analytic at a point <m>a</m></alert>
+     if it can be represented by a power series in <m>x-a</m> with either a positive 
+     or an infinite radius of convergence.   </p></statement>
+    </definition>
+  <example>
+    <statement>
+      <p>Find the radius of convergence and interval of convergence for the given power series.
+      <ol>
+        <li> <p>      <m> \sum_{n=1}^\infty \frac{3^n}{n}x^{n-1}</m>     </p>    </li>
+        <li> <p>      <m>\sum_{m=1}^\infty \frac{2^m}{(m-1)!}(x+1)^{m+2}</m> </p> </li>
+      </ol>
+      </p>
+    </statement>
+    <solution component="inst">
+      <p>
+        <ol>
+          <li> <p> Use Ratio Test: <m>\frac{a_{k+1}}{a_k}</m>:   
+          <md>
+            \frac{a_{k+1}}{a_k}=\frac{\frac{3^{k+1}}{k+1}x^{(k+1)-1}}{\frac{3^k}{k}x^{k-1}}=\frac{3kx}{k+1}
+          </md>
+          <md>
+            \lim_{k\rightarrow\infty}\left|\frac{3kx}{k+1}\right|=|3x|
+          </md>
+          For an infinite geometric series to converge, the magnitude of the ratio must be less than 1.
+          Thus, <m>|3x|\lt 1.</m>  That gives us the radius of convergence of <m>\frac{1}{3}.</m>
+          <md>|x|\lt \frac{1}{3}\Rightarrow \frac{-1}{3}\lt x\lt \frac{1}{3}.</md>
+          Next, check whether the series converges at <m>x=\frac{-1}{3}</m> and <m>x=\frac{1}{3}.</m>
+          <ul>
+            <li> <p> At <m>x=\frac{-1}{3},</m> the series becomes
+            <md>
+              <mrow>
+              \sum_{n=1}^{\infty}\frac{3^n}{n}\left(\frac{-1}{3}\right)^{n-1}=\amp 3\sum_{n=1}^{\infty}\frac{ (-1)^{n-1}}{n}</mrow>
+              <mrow>=\amp 3\left(\frac{1}{1}-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\cdots\right)  </mrow>
+            </md>
+            By the <term>Alternating Series Test</term>, the series converges.
+                  </p> </li>
+            <li><p>   At <m>x=\frac{1}{3}</m>, the series becomes
+            <md>  \sum_{n=1}^{\infty}\frac{3^n}{n}\left(\frac{1}{3}\right)^{n-1}=3\sum_{n=1}^\infty \frac{1}{n}
+            </md>
+            By the <term>Direct Comparison Test</term>, the series diverges.
+                 </p>   </li>
+          </ul>
+          Thus the convergence interval is <m>\left[-\frac{1}{3},\frac{1}{3}\right).</m> </p> </li>
+          <li> <p><md>
+            \frac{\frac{2^{m+1}}{m!}(x+1)^{m+3}}{\frac{2^m}{(m-1)!}(x+1)^{m+2}}=\frac{2(x+1)}{m}</md> 
+            Since <m> \lim_{m\rightarrow\infty} \left|\frac{2}{m}\right|=0  </m>, the radius of convergence is <m>\infty</m> 
+            and the interval of convergence is <m>(-\infty,\infty).</m> </p> </li>
+        </ol>
+        
+      </p>
+    </solution>
+  </example>
+  <remark xml:id="rem-power-series">
+    <statement>
+      <p>  <alert>Taylor series</alert> centered at <m>a=0</m> is also called <alert>Maclaurin series</alert>.
+        The five functions below are <term>analytic</term> at <m>a=0.</m> 
+        
+          <title>Power Series of Basic Functions</title>
+          <tabular>
+            <row>
+              <cell><alert>Power Series</alert></cell> <cell><alert>Interval of Convergence</alert></cell>
+            </row>
+            <row>
+              <cell><m>e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\cdots=\sum_{n=0}^\infty \frac{x^n}{n!}</m></cell>
+               <cell><m>(-\infty, \infty)</m></cell>
+            </row>
+            <row>
+              <cell><m>\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n}}{(2n)!}</m></cell>
+              <cell><m>(-\infty,\infty)</m></cell>
+            </row>
+            <row>
+              <cell><m>\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1)!}</m></cell>
+              <cell><m>(-\infty,\infty)</m></cell>
+            </row>
+            <row>
+              <cell><m>\ln(x+1)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots=\sum_{n=1}^\infty\frac{(-1)^{n+1}x^n}{n}</m></cell>
+              <cell><m> (-1,1]</m></cell>
+            </row>
+            <row>
+              <cell><m>\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=1}^\infty x^n</m></cell>
+              <cell><m>(-1,1)</m></cell>
+            </row>
+          </tabular>
+        </p>
+    </statement>
+  </remark>
+  <example>
+    <statement>
+      <p> Using the power series in the Remark, find the first 4 terms 
+        of a power series in <m>x</m> for each function below.
+        <ol>
+          <li> <p>  <m>\sin x \cos x</m>      </p>    </li>
+          <li> <p>  <m>\frac{1}{\sin x}</m>     </p> </li>
+        </ol>
+      </p>
+    </statement>
+    <solution component="inst">
+      <p><ol>
+        <li><p> Expanding the product, it becomes
+          <md>
+            <mrow>\sin x\cos x =\amp\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\right)
+              \left(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots\right) </mrow>
+            <mrow>=\amp x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots-\frac{x^3}{2!}+\frac{x^5}{2!3!}-\frac{x^7}{2!5!}+\cdots </mrow>
+            <mrow>=\amp x+\left(-\frac{1}{6}-\frac{1}{2}\right)x^3+\left(\frac{1}{5!}+\frac{1}{2!3!}+\frac{1}{4!}\right)x^5</mrow>
+            <mrow> \amp \left(-\frac{1}{7!}-\frac{1}{2!5!}-\frac{1}{4!3!}\right)x^7+\cdots </mrow>
+
+          </md>  </p>       </li>
+          <li>
+            <p> Cannot directly do division, need other method.
+              
+            </p>
+          </li>
+      </ol>
+        
+      </p>
+    </solution>
+  </example>
+  <example>
+    <statement>
+      <p>Verify by direct substituion that the given power series 
+        is a particular solution of the indicated differential equation.
+        <md>y=\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}x^{n}, (x+1)y''+y'=0</md>
+      </p>
+    </statement>
+    <solution component="inst">
+      <p>
+        
+      </p>
+    </solution>
+  </example>
+  <definition xml:id="def-ordinary-point">
+    <statement>
+      <p>The standard form of a linear second order differential equation is defined as
+        <equation xml:id="eq-DE-standard"> 
+        <md>
+          y''+P(x)y'+Q(x)y=0.
+        </md> 
+      </equation>  
+        A point <m>x_0</m> is said to be an <term>ordinary point</term> of the differential equation
+        if both <m>P(x)</m> and <m>Q(x)</m> in the standard form are <term>analytic</term> at <m>x_0.</m>
+        A point that is not an ordinary point is said to be a <term>singular point</term> of the equation.
+      </p>
+    </statement>
+  </definition>
+  <example>
+    <statement>
+      <p>Identify all ordinary points and singular points of  <md>(x^2-4x+5)y''+2xy'+3y=0.</md></p>
+    </statement>
+  </example>
+  <theorem xml:id="thm-existence-power-solution">
+    <statement>
+      <p>If <m>x=x_0</m> is an ordinary point of a 2nd order linear differential equation, 
+        we can always find 2 linearly independent solutions in the form of 
+        a power series centered at <m>x_0</m>; that is <m>y=\sum_{n=0}^\infty c_n(x-x_0)^n,</m> 
+        called <alert>a solution about the ordinary point <m>x_0.</m></alert> 
+
+        A series solution converges at least on some interval defined by 
+        <m>|x-x_0|\lt R,</m> where <m>R</m> is the distance from <m>x_0</m> 
+        to be the closest singular point.   </p>
+    </statement>
+  </theorem>
+  <example>
+    <statement>
+      <p>Find a power series solution of each given differential equation about the ordinary point 
+        <m>x=0</m> and a lower bound for the radius of convergence.
+        <ol>
+          <li> <p> <m>y''+x^2y'+xy=0</m>    </p>     </li>
+          <li> <p> <m>(x^2+2)y''+3xy'-y=0</m>      </p>
+          </li>
+        </ol>      </p>
+       </statement>
+  </example>
+
+  <definition xml:id="def-regular-singular">
+    <statement>
+      <p>A singular point <m>x_0</m> is said to be a <alert>regular singular point</alert>
+         of the 2nd order linear differential equation if <term> the functions <m>p(x)=(x-x_0)P(x)</m>
+           and <m>q(x)=(x-x_0)^2Q(x)</m> are both analytic at <m>x_0.</m></term>
+            A singular point is <term> not regular</term> is said to be an  <term>irregular singular point</term>
+             of the equation.  </p>
+    </statement>
+  </definition>
+  <example> <statement>
+    <p>Determine the singular points of each given differential equation. 
+      Classify each singular point as regular or irregular.
+      <ol>
+        <li> <p> <m>x^3y''+3x^2y'+6y=0</m>      </p>   </li>
+        <li> <p> <m>(x^2-16)^2y''+(x-4)y'+5y=0</m>     </p> </li>
+      </ol>
+    </p>
+  </statement>   
+  </example>
+  <theorem xml:id="thm-Frobenius">
+    <statement>
+      <p>If <m>x=x_0</m> is a regular singular point of the 2nd order linear differential equation, 
+        then there exists at least one nonzero solution of the form 
+      <equation xml:id="froben">
+        <md> y=(x-x_0)^r\sum_{n=0}^\infty c_n(x-x_0)^n=\sum_{n=0}^\infty c_n(x-x_0)^{n+r},</md>
+      </equation>
+        where the number <m>r</m> is a constant to be determined. 
+        The series will converge at least on some interval defined by <m>0\lt x-x_0\lt R.</m>
+        
+      </p>
+    </statement>
+  </theorem>
+  <example>
+    <statement>
+      <p>Find a solution of the form <m>y=\sum_{n=0}^\infty c_nx^{n+r}</m> for
+        <md> 4xy''+2y'-y=0</md>      
+      </p>
+    </statement>
+  </example>
+  <definition xml:id="def-indicial">
+    <statement>
+      <p>After substituting <m>y=\sum_{n=0}^\infty c_nx^{n+r}</m>
+         into the given differential equation and simplifying, the <term>indicial equation</term>
+          is a equation in <m>r</m> that results from equating the total coefficient 
+          of the lowest power of <m>x</m> to zero. The solutions to the indicial equation 
+          are called <term>indicial roots</term>, or <term>exponents</term> of 
+          the singularity <m>x=0.</m>
+
+          When the given differential equations are in the standard form of the 2nd order DE, 
+          the indicial equation is quadratic.        
+      </p>
+    </statement>
+  </definition>
+  <remark>
+    <statement>
+      <p> 3 Cases of <m>r_1</m> and <m>r_2</m>:
+        <ul> <li>  <p><term>Case I:</term> <m>r_1</m> and <m>r_2</m> are distinct 
+                  and do not differ by an integer</p>    </li>
+              <li><p><term>Case II:</term> <m>r_1-r_2=N</m>, where <m>N</m> is a positive integer </p>  </li>    
+              <li><p><term>Case III:</term>  <m>r_1=r_2</m>     </p></li>
+        </ul>
+      </p>
+    </statement>
+  </remark>
+  <example>
+    <statement>
+      <p> For each given differential equations, show that the indicial roots of 
+        the singularity do not differ by an integer, use the method of Frobenius to 
+        obtain 2 linearly independent series solution about <m>x=0,</m> and 
+        form the general solution on the interval <m>(0,\infty).</m>
+          <ol>
+            <li>   <p>  <m>3xy''+(2-x)y'-y=0</m>       </p>  </li>
+            <li>  <p><m>9x^2y''+9x^2y'+2y=0</m>        </p>     </li>
+          </ol>
+      </p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p> The differential equation (DE) <m>x^4y''+\lambda y=0</m> has an irregular 
+        singular point at <m>x=0.</m> 
+        <ol>
+          <li><p>  Show that the substitution <m>t=\frac{1}{x}</m> yields the DE 
+            <md> \frac{d^2 y}{dt^2}+\frac{2}{t}\frac{dy}{dt}+\lambda y=0</md>
+             which now has a regular singular point at <m>t=0.</m></p>   </li>
+          <li> <p>Find two series solutions of the above equation about the 
+            singular point <m>t=0.</m>         </p>    </li>
+          <li>   <p> Express each solution of the original equation in terms of elementary functions.  </p></li>
+          </ol>
+      </p>
+    </statement>
+  </example>
 </worksheet>
 
