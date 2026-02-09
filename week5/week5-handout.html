@@ -100,7 +100,7 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.12';
+eBookConfig.runestone_version = '7.11.13';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
@@ -174,18 +174,335 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">We will discuss the following topics related to <dfn class="terminology">Series Solution</dfn>:</div>
 <ul class="disc" id="week5-handout-2-1-1-2">
 <li id="week5-handout-2-1-1-2-1">
-<div class="para" id="week5-handout-2-1-1-2-1-1">Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="week5-handout-2-1-1-2-1-1">Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#week5-handout-2-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="week5-handout-2-1-1-2-2">
-<div class="para" id="week5-handout-2-1-1-2-2-1">Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="week5-handout-2-1-1-2-2-1">Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#week5-handout-2-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><div class="autopermalink" data-description="Worksheet: Week 5 Handout- Series Solution-Part 1"><a href="#week5-handout" title="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1" aria-label="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1">🔗</a></div></section>
+</div></section><article class="definition definition-like" id="def-power-series"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-power-series-1-1">
+<div class="para">A <dfn class="terminology">power series</dfn> in <span class="process-math">\(x-a\)</span> is an <em class="alert">infinite series</em> of the form</div>
+<div class="displaymath process-math" id="def-power-series-1-1-4">
+\begin{equation*}
+\sum_{n=0}^\infty c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\cdots.
+\end{equation*}
+</div>
+<div class="para">It is also called a <dfn class="terminology">power series centered at <span class="process-math">\(a\text{.}\)</span></dfn>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-power-series-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1"><a href="#def-power-series" title="Copy heading and permalink for Definition 1" aria-label="Copy heading and permalink for Definition 1">🔗</a></div></article><article class="remark remark-like" id="week5-handout-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="week5-handout-4-1-1">
+<div class="para">A few issues are important to consider when using a series:</div>
+<ul class="disc" id="week5-handout-4-1-1-1">
+<li id="week5-handout-4-1-1-1-1">
+<div class="para" id="week5-handout-4-1-1-1-1-1">Is the series <em class="alert">convergent</em>?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2">
+<div class="para logical" id="week5-handout-4-1-1-1-2-1">
+<div class="para">If the series is convergent,</div>
+<ul class="circle" id="week5-handout-4-1-1-1-2-1-1">
+<li id="week5-handout-4-1-1-1-2-1-1-1">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-1-1">What is the radius of convergence? That is the same question as "What is the interval of convergence?".<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2-1-1-2">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-2-1">Is it convergent absolutely? Is it convergent pointwisely?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2-1-1-3">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-3-1">Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2"><a href="#week5-handout-4" title="Copy heading and permalink for Remark 2" aria-label="Copy heading and permalink for Remark 2">🔗</a></div></article><article class="definition definition-like" id="def-analytic"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-analytic-1-1">A function <span class="process-math">\(f\)</span> is said to be <em class="alert">analytic at a point <span class="process-math">\(a\)</span></em> if it can be represented by a power series in <span class="process-math">\(x-a\)</span> with either a positive or an infinite radius of convergence.<div class="autopermalink" data-description="Paragraph"><a href="#def-analytic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3"><a href="#def-analytic" title="Copy heading and permalink for Definition 3" aria-label="Copy heading and permalink for Definition 3">🔗</a></div></article><details id="week5-handout-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-6-1-1">
+<div class="para">Find the radius of convergence and interval of convergence for the given power series.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-6-1-1-1">
+<li id="week5-handout-6-1-1-1-1">
+<div class="para" id="week5-handout-6-1-1-1-1-1">
+<span class="process-math">\(\displaystyle \sum_{n=1}^\infty \frac{3^n}{n}x^{n-1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-6-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-6-1-1-1-2">
+<div class="para" id="week5-handout-6-1-1-1-2-1">
+<span class="process-math">\(\displaystyle \sum_{m=1}^\infty \frac{2^m}{(m-1)!}(x+1)^{m+2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-6-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4"><a href="#week5-handout-6" title="Copy heading and permalink for Example 4" aria-label="Copy heading and permalink for Example 4">🔗</a></div></article></details><article class="remark remark-like" id="rem-power-series"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="rem-power-series-1-1">
+<em class="alert">Taylor series</em> centered at <span class="process-math">\(a=0\)</span> is also called <em class="alert">Maclaurin series</em>. The five functions below are <dfn class="terminology">analytic</dfn> at <span class="process-math">\(a=0.\)</span>  <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><em class="alert">Power Series</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="alert">Interval of Convergence</em></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\cdots=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n}}{(2n)!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1)!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ln(x+1)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots=\sum_{n=1}^\infty\frac{(-1)^{n+1}x^n}{n}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1]\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=1}^\infty x^n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1)\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Paragraph: Power Series of Basic Functions"><a href="#rem-power-series-1-1" title="Copy heading and permalink for Paragraph: Power Series of Basic Functions" aria-label="Copy heading and permalink for Paragraph: Power Series of Basic Functions">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 5"><a href="#rem-power-series" title="Copy heading and permalink for Remark 5" aria-label="Copy heading and permalink for Remark 5">🔗</a></div></article><details id="week5-handout-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-8-1-1">
+<div class="para">Using the power series in the Remark, find the first 4 terms of a power series in <span class="process-math">\(x\)</span> for each function below.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-8-1-1-2">
+<li id="week5-handout-8-1-1-2-1">
+<div class="para" id="week5-handout-8-1-1-2-1-1">
+<span class="process-math">\(\displaystyle \sin x \cos x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-8-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-8-1-1-2-2">
+<div class="para" id="week5-handout-8-1-1-2-2-1">
+<span class="process-math">\(\displaystyle \frac{1}{\sin x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-8-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6"><a href="#week5-handout-8" title="Copy heading and permalink for Example 6" aria-label="Copy heading and permalink for Example 6">🔗</a></div></article></details><details id="week5-handout-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-9-1-1">
+<div class="para">Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.</div>
+<div class="displaymath process-math" id="week5-handout-9-1-1-1">
+\begin{equation*}
+y=\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}x^{n}, (x+1)y''+y'=0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7"><a href="#week5-handout-9" title="Copy heading and permalink for Example 7" aria-label="Copy heading and permalink for Example 7">🔗</a></div></article></details><article class="definition definition-like" id="def-ordinary-point"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-ordinary-point-1-1">The standard form of a linear second order differential equation is defined as <div class="displaymath process-math" id="eq-DE-standard-1">
+\begin{equation*}
+y''+P(x)y'+Q(x)y=0.
+\end{equation*}
+</div> A point <span class="process-math">\(x_0\)</span> is said to be an <dfn class="terminology">ordinary point</dfn> of the differential equation if both <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(x)\)</span> in the standard form are <dfn class="terminology">analytic</dfn> at <span class="process-math">\(x_0.\)</span> A point that is not an ordinary point is said to be a <dfn class="terminology">singular point</dfn> of the equation.<div class="autopermalink" data-description="Paragraph"><a href="#def-ordinary-point-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 8"><a href="#def-ordinary-point" title="Copy heading and permalink for Definition 8" aria-label="Copy heading and permalink for Definition 8">🔗</a></div></article><details id="week5-handout-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-11-1-1">
+<div class="para">Identify all ordinary points and singular points of</div>
+<div class="displaymath process-math" id="week5-handout-11-1-1-1">
+\begin{equation*}
+(x^2-4x+5)y''+2xy'+3y=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 9"><a href="#week5-handout-11" title="Copy heading and permalink for Example 9" aria-label="Copy heading and permalink for Example 9">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-existence-power-solution"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-existence-power-solution-1-1">If <span class="process-math">\(x=x_0\)</span> is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at <span class="process-math">\(x_0\text{;}\)</span> that is <span class="process-math">\(y=\sum_{n=0}^\infty c_n(x-x_0)^n,\)</span> called <em class="alert">a solution about the ordinary point <span class="process-math">\(x_0.\)</span></em> A series solution converges at least on some interval defined by <span class="process-math">\(|x-x_0|\lt R,\)</span> where <span class="process-math">\(R\)</span> is the distance from <span class="process-math">\(x_0\)</span> to be the closest singular point.<div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-power-solution-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10"><a href="#thm-existence-power-solution" title="Copy heading and permalink for Theorem 10" aria-label="Copy heading and permalink for Theorem 10">🔗</a></div></article><details id="week5-handout-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-13-1-1">
+<div class="para">Find a power series solution of each given differential equation about the ordinary point <span class="process-math">\(x=0\)</span> and a lower bound for the radius of convergence.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-13-1-1-2">
+<li id="week5-handout-13-1-1-2-1">
+<div class="para" id="week5-handout-13-1-1-2-1-1">
+<span class="process-math">\(\displaystyle y''+x^2y'+xy=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-13-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-13-1-1-2-2">
+<div class="para" id="week5-handout-13-1-1-2-2-1">
+<span class="process-math">\(\displaystyle (x^2+2)y''+3xy'-y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-13-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 11"><a href="#week5-handout-13" title="Copy heading and permalink for Example 11" aria-label="Copy heading and permalink for Example 11">🔗</a></div></article></details><article class="definition definition-like" id="def-regular-singular"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-regular-singular-1-1">A singular point <span class="process-math">\(x_0\)</span> is said to be a <em class="alert">regular singular point</em> of the 2nd order linear differential equation if <dfn class="terminology">the functions <span class="process-math">\(p(x)=(x-x_0)P(x)\)</span> and <span class="process-math">\(q(x)=(x-x_0)^2Q(x)\)</span> are both analytic at <span class="process-math">\(x_0.\)</span></dfn> A singular point is <dfn class="terminology">not regular</dfn> is said to be an  <dfn class="terminology">irregular singular point</dfn> of the equation.<div class="autopermalink" data-description="Paragraph"><a href="#def-regular-singular-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12"><a href="#def-regular-singular" title="Copy heading and permalink for Definition 12" aria-label="Copy heading and permalink for Definition 12">🔗</a></div></article><details id="week5-handout-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-15-1-1">
+<div class="para">Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-15-1-1-1">
+<li id="week5-handout-15-1-1-1-1">
+<div class="para" id="week5-handout-15-1-1-1-1-1">
+<span class="process-math">\(\displaystyle x^3y''+3x^2y'+6y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-15-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-15-1-1-1-2">
+<div class="para" id="week5-handout-15-1-1-1-2-1">
+<span class="process-math">\(\displaystyle (x^2-16)^2y''+(x-4)y'+5y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-15-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 13"><a href="#week5-handout-15" title="Copy heading and permalink for Example 13" aria-label="Copy heading and permalink for Example 13">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-Frobenius"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-Frobenius-1-1">If <span class="process-math">\(x=x_0\)</span> is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form <div class="displaymath process-math" id="froben-1">
+\begin{equation*}
+y=(x-x_0)^r\sum_{n=0}^\infty c_n(x-x_0)^n=\sum_{n=0}^\infty c_n(x-x_0)^{n+r},
+\end{equation*}
+</div> where the number <span class="process-math">\(r\)</span> is a constant to be determined. The series will converge at least on some interval defined by <span class="process-math">\(0\lt x-x_0\lt R.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-Frobenius-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 14"><a href="#thm-Frobenius" title="Copy heading and permalink for Theorem 14" aria-label="Copy heading and permalink for Theorem 14">🔗</a></div></article><details id="week5-handout-17" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-17-1-1">
+<div class="para">Find a solution of the form <span class="process-math">\(y=\sum_{n=0}^\infty c_nx^{n+r}\)</span> for</div>
+<div class="displaymath process-math" id="week5-handout-17-1-1-2">
+\begin{equation*}
+4xy''+2y'-y=0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 15"><a href="#week5-handout-17" title="Copy heading and permalink for Example 15" aria-label="Copy heading and permalink for Example 15">🔗</a></div></article></details><article class="definition definition-like" id="def-indicial"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-indicial-1-1">After substituting <span class="process-math">\(y=\sum_{n=0}^\infty c_nx^{n+r}\)</span> into the given differential equation and simplifying, the <dfn class="terminology">indicial equation</dfn> is a equation in <span class="process-math">\(r\)</span> that results from equating the total coefficient of the lowest power of <span class="process-math">\(x\)</span> to zero. The solutions to the indicial equation are called <dfn class="terminology">indicial roots</dfn>, or <dfn class="terminology">exponents</dfn> of the singularity <span class="process-math">\(x=0.\)</span> When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.<div class="autopermalink" data-description="Paragraph"><a href="#def-indicial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 16"><a href="#def-indicial" title="Copy heading and permalink for Definition 16" aria-label="Copy heading and permalink for Definition 16">🔗</a></div></article><article class="remark remark-like" id="week5-handout-19"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="week5-handout-19-1-1">
+<div class="para">3 Cases of <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\text{:}\)</span>
+</div>
+<ul class="disc" id="week5-handout-19-1-1-3">
+<li id="week5-handout-19-1-1-3-1">
+<div class="para" id="week5-handout-19-1-1-3-1-1">
+<dfn class="terminology">Case I:</dfn> <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are distinct and do not differ by an integer<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-19-1-1-3-2">
+<div class="para" id="week5-handout-19-1-1-3-2-1">
+<dfn class="terminology">Case II:</dfn> <span class="process-math">\(r_1-r_2=N\text{,}\)</span> where <span class="process-math">\(N\)</span> is a positive integer<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-19-1-1-3-3">
+<div class="para" id="week5-handout-19-1-1-3-3-1">
+<dfn class="terminology">Case III:</dfn>  <span class="process-math">\(r_1=r_2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 17"><a href="#week5-handout-19" title="Copy heading and permalink for Remark 17" aria-label="Copy heading and permalink for Remark 17">🔗</a></div></article><details id="week5-handout-20" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-20-1-1">
+<div class="para">For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about <span class="process-math">\(x=0,\)</span> and form the general solution on the interval <span class="process-math">\((0,\infty).\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-20-1-1-3">
+<li id="week5-handout-20-1-1-3-1">
+<div class="para" id="week5-handout-20-1-1-3-1-1">
+<span class="process-math">\(\displaystyle 3xy''+(2-x)y'-y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-20-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-20-1-1-3-2">
+<div class="para" id="week5-handout-20-1-1-3-2-1">
+<span class="process-math">\(\displaystyle 9x^2y''+9x^2y'+2y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-20-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 18"><a href="#week5-handout-20" title="Copy heading and permalink for Example 18" aria-label="Copy heading and permalink for Example 18">🔗</a></div></article></details><details id="week5-handout-21" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-21-1-1">
+<div class="para">The differential equation (DE) <span class="process-math">\(x^4y''+\lambda y=0\)</span> has an irregular singular point at <span class="process-math">\(x=0.\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-21-1-1-3">
+<li id="week5-handout-21-1-1-3-1">
+<div class="para logical" id="week5-handout-21-1-1-3-1-1">
+<div class="para">Show that the substitution <span class="process-math">\(t=\frac{1}{x}\)</span> yields the DE</div>
+<div class="displaymath process-math" id="week5-handout-21-1-1-3-1-1-2">
+\begin{equation*}
+\frac{d^2 y}{dt^2}+\frac{2}{t}\frac{dy}{dt}+\lambda y=0
+\end{equation*}
+</div>
+<div class="para">which now has a regular singular point at <span class="process-math">\(t=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-21-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-21-1-1-3-2">
+<div class="para" id="week5-handout-21-1-1-3-2-1">Find two series solutions of the above equation about the singular point <span class="process-math">\(t=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-21-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="week5-handout-21-1-1-3-3">
+<div class="para" id="week5-handout-21-1-1-3-3-1">Express each solution of the original equation in terms of elementary functions.<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#week5-handout-21-1-1-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 19"><a href="#week5-handout-21" title="Copy heading and permalink for Example 19" aria-label="Copy heading and permalink for Example 19">🔗</a></div></article></details><div class="autopermalink" data-description="Worksheet: Week 5 Handout- Series Solution-Part 1"><a href="#week5-handout" title="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1" aria-label="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="handouts.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>

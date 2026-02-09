@@ -568,6 +568,114 @@ var ptx_lunr_docs = [
   "body": "  Let be a closed and bounded region in 3-space with a piecewise-smooth boundary that is oriented outward. Let be a vector field for which  and are continuous and have coninuous first partial derivatives in a region of 3-space containing     "
 },
 {
+  "id": "week5-handout",
+  "level": "1",
+  "url": "week5-handout.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Week 5 Handout- Series Solution-Part 1",
+  "body": " Week 5 Handout- Series Solution-Part 1    We will discuss the following topics related to Series Solution :   Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)         A power series in is an infinite series of the form It is also called a power series centered at .       A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?            A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.     Find the radius of convergence and interval of convergence for the given power series.                   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                             Using the power series in the Remark, find the first 4 terms of a power series in for each function below.                  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.       The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.      Identify all ordinary points and singular points of      If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.    "
+},
+{
+  "id": "week5-handout-2-1-1",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-2-1-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Series Solution "
+},
+{
+  "id": "def-power-series",
+  "level": "2",
+  "url": "week5-handout.html#def-power-series",
+  "type": "Definition",
+  "number": "63",
+  "title": "",
+  "body": "  A power series in is an infinite series of the form It is also called a power series centered at .    "
+},
+{
+  "id": "week5-handout-4",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-4",
+  "type": "Remark",
+  "number": "64",
+  "title": "",
+  "body": "  A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?         "
+},
+{
+  "id": "def-analytic",
+  "level": "2",
+  "url": "week5-handout.html#def-analytic",
+  "type": "Definition",
+  "number": "65",
+  "title": "",
+  "body": "  A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.  "
+},
+{
+  "id": "week5-handout-6",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-6",
+  "type": "Example",
+  "number": "66",
+  "title": "",
+  "body": "  Find the radius of convergence and interval of convergence for the given power series.               "
+},
+{
+  "id": "rem-power-series",
+  "level": "2",
+  "url": "week5-handout.html#rem-power-series",
+  "type": "Remark",
+  "number": "67",
+  "title": "",
+  "body": "   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                          "
+},
+{
+  "id": "week5-handout-8",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-8",
+  "type": "Example",
+  "number": "68",
+  "title": "",
+  "body": "  Using the power series in the Remark, find the first 4 terms of a power series in for each function below.               "
+},
+{
+  "id": "week5-handout-9",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-9",
+  "type": "Example",
+  "number": "69",
+  "title": "",
+  "body": "  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.    "
+},
+{
+  "id": "def-ordinary-point",
+  "level": "2",
+  "url": "week5-handout.html#def-ordinary-point",
+  "type": "Definition",
+  "number": "70",
+  "title": "",
+  "body": "  The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.   "
+},
+{
+  "id": "week5-handout-11",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-11",
+  "type": "Example",
+  "number": "71",
+  "title": "",
+  "body": "  Identify all ordinary points and singular points of   "
+},
+{
+  "id": "thm-existence-power-solution",
+  "level": "2",
+  "url": "week5-handout.html#thm-existence-power-solution",
+  "type": "Theorem",
+  "number": "72",
+  "title": "",
+  "body": "  If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.   "
+},
+{
   "id": "hw1",
   "level": "1",
   "url": "hw1.html",
