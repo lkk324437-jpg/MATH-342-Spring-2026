@@ -3,6 +3,7 @@
 <!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
 
   <!-- Include common macros etc: -->
+
 <worksheet xml:id="week5-handout">
   <title>Week 5 Handout- Series Solution-Part 1</title>
 
@@ -20,7 +21,7 @@
   <definition xml:id="def-power-series">
     <statement>
       <p> A <term>power series</term> in <m>x-a</m> is an <alert>infinite series</alert> of the form
-        <md>
+        <md xml:id="eq-series" number="yes">
           \sum_{n=0}^\infty c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\cdots.
         </md>
         It is also called a <term>power series centered at <m>a</m>.</term>
@@ -169,11 +170,26 @@
     <statement>
       <p>Verify by direct substituion that the given power series 
         is a particular solution of the indicated differential equation.
-        <md>y=\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}x^{n}, (x+1)y''+y'=0</md>
+        <md xml:id="eq2-sub-series" number="yes">
+          y=\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}x^{n}, (x+1)y''+y'=0</md>
       </p>
     </statement>
     <solution component="inst">
-      <p>
+      <p> <md> 
+          <mrow> y=\amp \sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n}x^n\amp= x-\frac{1}{2}x^2+\frac{1}{3}x^3-\frac{1}{4}x^4+\cdots</mrow>
+          <mrow> y'=\amp \sum_{n=0}^{\infty}(-1)^{n}x^n\amp= 1-x+x^2-x^3+x^4-\cdots </mrow>
+          <mrow> y''=\amp \sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)\amp= -1+2x-3x^2+4x^3+\cdots</mrow>
+      </md>
+      <md>
+        <mrow>(x+1)y''+y'= \amp  (x+1)\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
+        <mrow> = \amp \sum_{n=0}^{\infty} (-1)^{n+1}x^{n+1} (n+1)+\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
+        <mrow> = \amp \sum_{k=1}^\infty (-1)^kkx^k+\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
+        <mrow> = \amp \sum_{k=1}^\infty\left[k(-1)^k+(-1)^{k+1}(k+1)+(-1)^k\right]x^k+(-1)^1\cdot 1\cdot x^0+ (-1)^0\cdot x^0</mrow>
+        <mrow> = \amp \sum_{k=1}^\infty(-1)^k\left[k-(k+1)+1\right]x^k+0 </mrow>
+        <mrow> =\amp \sum_{k=1}^\infty (-1)^k\cdot 0\cdot x^k</mrow>
+        <mrow> =\amp 0</mrow>
+      </md>
+      
         
       </p>
     </solution>
@@ -194,8 +210,25 @@
   </definition>
   <example>
     <statement>
-      <p>Identify all ordinary points and singular points of  <md>(x^2-4x+5)y''+2xy'+3y=0.</md></p>
+      <p>Identify all ordinary points and singular points of  <md>(x^2-4x-5)y''+2xy'+3y=0.</md></p>
     </statement>
+    <solution>
+      <p>Convert to the standard form:
+        <md>
+          y''+\frac{2x}{x^2-4x-5}y'+\frac{3}{x^2-4x-5}y=0
+        </md>
+        <md>
+          \Rightarrow P(x)=\frac{2x}{x^2-4x-5} \mbox{ and } Q(x)=\frac{3}{x^2-4x-5}    </md>
+        <md>
+          x^2-4x-5=0\Rightarrow (x-5)(x+1)=0\Rightarrow x=5 \mbox{ or } x=-1
+        </md>
+        <m>P(x)</m> and <m>Q(x)</m> are analytic at all real numbers, except <m>5</m> or <m>-1.</m>
+        Thus singular points for the given DE are <m>\{-1,5\}</m> and the ordinary points are 
+        <m>x\neq -1</m> and <m>x\neq 5,</m> i.e., <m>(-\infty, -1)\bigcup(-1,5)\bigcup(5,\infty).</m>
+
+        
+      </p>
+    </solution>
   </example>
   <theorem xml:id="thm-existence-power-solution">
     <statement>
@@ -219,6 +252,25 @@
           </li>
         </ol>      </p>
        </statement>
+       <solution>
+        <p>
+          <ol>
+            <li> <p> Considering <m>y''+x^2y'+xy=0,</m> <m>x=0</m> is an ordinary point. 
+              By <xref ref="thm-existence-power-solution"/>, there exists a solution <m>y(t)</m>
+              in the form of <md> y(t)=\sum_{n=0}^\infty c_n(x-0)^n=\sum_{n=0}^\infty c_n x^n.</md> 
+                <md> 
+                  <mrow>y'= \amp \sum_{n=1}^\infty c_nnx^{n-1} </mrow>
+                  <mrow>y''=\amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2} </mrow>
+                </md>
+                <md>
+                  <mrow> \amp y''+x^2y'+xy=0 </mrow>
+                  <mrow>\Rightarrow \amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2}+x^2\sum_{n=1}^\infty c_nnx^{n-1}+x\sum_{n=0}^\infty c_n x^n=0 </mrow>
+                  <mrow>\Rightarrow \amp\sum_{n=2}^\infty c_nn(n-1)x^{n-2}+\sum_{n=1}^\infty c_nnx^{n+1}+\sum_{n=0}^\infty c_n x^{n+1}=0  </mrow>
+                  <mrow> \Rightarrow \amp \sum_{k=0}^\infty c_{k+2}(k+2)(k+1)x^k+\sum_{k=2}^\infty (k-1)c_{k-1}x^k+\sum_{k=1}^\infty c_{k-1}x^k=0 </mrow>
+                </md></p>   </li>
+          </ol>
+        </p>
+       </solution>
   </example>
 
   <definition xml:id="def-regular-singular">
@@ -278,9 +330,17 @@
     <statement>
       <p> 3 Cases of <m>r_1</m> and <m>r_2</m>:
         <ul> <li>  <p><term>Case I:</term> <m>r_1</m> and <m>r_2</m> are distinct 
-                  and do not differ by an integer</p>    </li>
-              <li><p><term>Case II:</term> <m>r_1-r_2=N</m>, where <m>N</m> is a positive integer </p>  </li>    
-              <li><p><term>Case III:</term>  <m>r_1=r_2</m>     </p></li>
+                  and do not differ by an integer 
+                <md>y_1(x)=\sum_{n=0}^\infty c_nx^{n+r_1}, y_2(x)=\sum_{n=0}^\infty b_nx^{n+r_2} </md></p>    </li>
+              <li><p><term>Case II:</term> <m>r_1-r_2=N</m>, where <m>N</m> is a positive integer 
+              <md> 
+                <mrow> y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1}, c_0\neq 0 </mrow>
+                <mrow>y_2(x)=\amp c y_1(x)\ln(x)+\sum_{n=0}^\infty b_nx^{n+r_2}, b_0\neq 0, c \mbox{ is a constant.}</mrow> </md></p>  </li>    
+              <li><p><term>Case III:</term>  <m>r_1=r_2</m>    
+              <md> 
+                <mrow>y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1}, c_0\neq 0</mrow>
+                <mrow>y_1(x)=\amp y_1(x)\ln(x)+\sum_{n=0}^\infty b_nx^{n+r_1}</mrow>
+              </md> </p></li>
         </ul>
       </p>
     </statement>
