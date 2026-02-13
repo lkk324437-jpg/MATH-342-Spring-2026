@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Week 5 Handout- Series Solution-Part 1",
-  "body": " Week 5 Handout- Series Solution-Part 1    We will discuss the following topics related to Series Solution :   Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)         A power series in is an infinite series of the form It is also called a power series centered at .       A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?            A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.     Find the radius of convergence and interval of convergence for the given power series.                   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                             Using the power series in the Remark, find the first 4 terms of a power series in for each function below.                  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.       The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.      Identify all ordinary points and singular points of      If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.    "
+  "body": " Week 5 Handout- Series Solution-Part 1    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)         A power series in is an infinite series of the form It is also called a power series centered at .       A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?            A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.     Find the radius of convergence and interval of convergence for the given power series.                   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                             Using the power series in the Remark, find the first 4 terms of a power series in for each function below.                  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.       The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.      Identify all ordinary points and singular points of      If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.      Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.                  A singular point is said to be a regular singular point of the 2nd order linear differential equation if the functions and are both analytic at A singular point is not regular is said to be an irregular singular point of the equation.      Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.                  If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by       Find a solution of the form for       After substituting into the given differential equation and simplifying, the indicial equation is a equation in that results from equating the total coefficient of the lowest power of to zero. The solutions to the indicial equation are called indicial roots , or exponents of the singularity When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.      3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:          For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about and form the general solution on the interval                  The differential equation (DE) has an irregular singular point at   Show that the substitution yields the DE which now has a regular singular point at    Find two series solutions of the above equation about the singular point     Express each solution of the original equation in terms of elementary functions.      "
 },
 {
   "id": "week5-handout-2-1-1",
@@ -674,6 +674,87 @@ var ptx_lunr_docs = [
   "number": "72",
   "title": "",
   "body": "  If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.   "
+},
+{
+  "id": "week5-handout-13",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-13",
+  "type": "Example",
+  "number": "73",
+  "title": "",
+  "body": "  Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.               "
+},
+{
+  "id": "def-regular-singular",
+  "level": "2",
+  "url": "week5-handout.html#def-regular-singular",
+  "type": "Definition",
+  "number": "74",
+  "title": "",
+  "body": "  A singular point is said to be a regular singular point of the 2nd order linear differential equation if the functions and are both analytic at A singular point is not regular is said to be an irregular singular point of the equation.   "
+},
+{
+  "id": "week5-handout-15",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-15",
+  "type": "Example",
+  "number": "75",
+  "title": "",
+  "body": "  Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.               "
+},
+{
+  "id": "thm-Frobenius",
+  "level": "2",
+  "url": "week5-handout.html#thm-Frobenius",
+  "type": "Theorem",
+  "number": "76",
+  "title": "",
+  "body": "  If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by    "
+},
+{
+  "id": "week5-handout-17",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-17",
+  "type": "Example",
+  "number": "77",
+  "title": "",
+  "body": "  Find a solution of the form for    "
+},
+{
+  "id": "def-indicial",
+  "level": "2",
+  "url": "week5-handout.html#def-indicial",
+  "type": "Definition",
+  "number": "78",
+  "title": "",
+  "body": "  After substituting into the given differential equation and simplifying, the indicial equation is a equation in that results from equating the total coefficient of the lowest power of to zero. The solutions to the indicial equation are called indicial roots , or exponents of the singularity When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.   "
+},
+{
+  "id": "week5-handout-19",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-19",
+  "type": "Remark",
+  "number": "79",
+  "title": "",
+  "body": "  3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:       "
+},
+{
+  "id": "week5-handout-20",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-20",
+  "type": "Example",
+  "number": "80",
+  "title": "",
+  "body": "  For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about and form the general solution on the interval               "
+},
+{
+  "id": "week5-handout-21",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-21",
+  "type": "Example",
+  "number": "81",
+  "title": "",
+  "body": "  The differential equation (DE) has an irregular singular point at   Show that the substitution yields the DE which now has a regular singular point at    Find two series solutions of the above equation about the singular point     Express each solution of the original equation in terms of elementary functions.     "
 },
 {
   "id": "hw1",
