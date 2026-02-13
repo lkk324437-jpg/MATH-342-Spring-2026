@@ -331,7 +331,8 @@
       <p> 3 Cases of <m>r_1</m> and <m>r_2</m>:
         <ul> <li>  <p><term>Case I:</term> <m>r_1</m> and <m>r_2</m> are distinct 
                   and do not differ by an integer 
-                <md>y_1(x)=\sum_{n=0}^\infty c_nx^{n+r_1}, y_2(x)=\sum_{n=0}^\infty b_nx^{n+r_2} </md></p>    </li>
+                <md><mrow>y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1},</mrow>
+                  <mrow> y_2(x)=\amp \sum_{n=0}^\infty b_nx^{n+r_2}</mrow> </md></p>    </li>
               <li><p><term>Case II:</term> <m>r_1-r_2=N</m>, where <m>N</m> is a positive integer 
               <md> 
                 <mrow> y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1}, c_0\neq 0 </mrow>
