@@ -43,7 +43,14 @@
             Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives
           of the function we are looking for?</p>  </li>
         </ul>   </p> </li>
-      </ul>    
+      </ul> 
+      
+      Why is constructing a series solution important?
+      <ul>
+        <li><p> Iterative </p></li>
+        <li><p> Truncated Series vs Error </p>
+        </li>
+      </ul>
       </p>
     </statement>
   </remark>
@@ -267,7 +274,23 @@
                   <mrow>\Rightarrow \amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2}+x^2\sum_{n=1}^\infty c_nnx^{n-1}+x\sum_{n=0}^\infty c_n x^n=0 </mrow>
                   <mrow>\Rightarrow \amp\sum_{n=2}^\infty c_nn(n-1)x^{n-2}+\sum_{n=1}^\infty c_nnx^{n+1}+\sum_{n=0}^\infty c_n x^{n+1}=0  </mrow>
                   <mrow> \Rightarrow \amp \sum_{k=0}^\infty c_{k+2}(k+2)(k+1)x^k+\sum_{k=2}^\infty (k-1)c_{k-1}x^k+\sum_{k=1}^\infty c_{k-1}x^k=0 </mrow>
-                </md></p>   </li>
+                  <mrow>\Rightarrow \amp 2c_2+(c_0+6c_3)x+\sum_{k=2}^\infty \left(c_{k-1}\cdot k+(k+2)(k+1)c_{k+2}\right)x^k =0</mrow>
+                </md>
+              <md>
+                <mrow> 2c_2=0 \amp \Rightarrow c_2=0 </mrow>
+                <mrow> c_0+6c_3=0 \amp \Rightarrow c_3=-\frac{1}{6}c_0 </mrow>
+                <mrow> kc_{k-1}+(k+2)(k+1)c_{k+2}=0 \amp \Rightarrow c_{k+2}=-\frac{kc_{k-1}}{(k+2)(k+1)}, k\geq 2 </mrow>
+              </md>
+              From the above relations, there are two free variables <m>c_0</m> and <m>c_1,</m> which
+              generate two sequences of coefficients, <m>\{c_0, c_3,c_6,\ldots\}</m> and 
+              <m>\{c_1, c_4, c_7,\ldots\}.</m>  Thus, we have
+              <md>
+                <mrow>y_1(x)= \amp \sum_{n=0}^\infty c_{3n}x^{3n},\amp \mbox{ where } c_{3(n+1)}=\frac{-(3n+1)c_3n}{(3n+3)(3n+2)},</mrow>
+                <mrow>y_2(x)= \amp \sum_{n=0}^\infty c_{3n+1}x^{3n+1},\amp \mbox{ where } c_{3n+4}=\frac{-(3n+2)c_{3n+1}}{(3n+4)(3n+5)}, </mrow>
+                <mrow>\Rightarrow \amp \mbox{ general solution } \amp y(x)= a_1y_1(x)+a_2y_2(x).\amp</mrow>
+              </md>
+              
+              </p>   </li>
           </ol>
         </p>
        </solution>
@@ -290,7 +313,20 @@
         <li> <p> <m>(x^2-16)^2y''+(x-4)y'+5y=0</m>     </p> </li>
       </ol>
     </p>
-  </statement>   
+  </statement>  
+  <solution component="inst">
+    <p><ol>
+      <li> <p><md> y''+\frac{3x^2}{x^3}y'+\frac{6}{x^3}y=0 \Rightarrow P(x)=\frac{3x^2}{x^3}, Q(x)=\frac{6}{x^3} </md>
+        <m>\Rightarrow x=0</m> is a singular point.  Since <m>x=0</m> is not analytic for <m>x^2Q(x),</m>
+        <m>x=0</m> is an <term>irregular singular point.</term>  </p> </li>
+      <li><p><md>y''+\frac{(x-4)}{(x^2-16)^2}y'+\frac{5}{(x^2-16)^2}y=0 \Rightarrow P(x)=\frac{(x-4)}{(x^2-16)^2}, Q(x)=\frac{5}{(x^2-16)^2}   </md>
+        <m>x=4</m> is a regular singular point and <m>x=-4</m> an irregular singular point.
+            </p>
+      </li>
+    </ol>
+      
+    </p>
+  </solution> 
   </example>
   <theorem xml:id="thm-Frobenius">
     <statement>

@@ -34,8 +34,14 @@
             publication="publication.ptx" deploy-dir="week5" />
      <target name="week5-inst" source="week5.ptx" format="html"
             publication="publication-inst.ptx" />  
+    <target name="week6" source="week6.ptx" format="html"
+            publication="publication.ptx" deploy-dir="week6" />
+     <target name="week6-inst" source="week6.ptx" format="html"
+            publication="publication-inst.ptx" /> 
     <target name="hw2" source="hw2.ptx" format="html"
             publication="publication.ptx" deploy-dir="hw2" />
+        <target name="hw3" source="hw3.ptx" format="html"
+            publication="publication.ptx" deploy-dir="hw3" />
   <!-- The following targets are used to create stand-alone documents, which could be additional slide decks, pdfs, or SCORM archives. Run with `pretext build slides -i source/slides/[filename.ptx]`, for example. -->
   <target name="pdf" standalone="yes" format="pdf"
           output-dir="pdfs" publication="publication_standalone.ptx"/>

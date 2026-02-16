@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+
+<worksheet xml:id="week5-handout">
+  <title>Week 6 Handout- Series Solution-Part 2</title>
+
+    <introduction>
+        <statement> <p>
+        We will discuss the following topics related to <term> Series Solution</term>:
+      <ul>
+        <li> <p>Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
+        <li> <p>Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)  </p> </li>
+
+      </ul>  </p>
+        </statement>
+
+    </introduction>
+  <remark>
+    <title>Review of inner product between two vectors</title>
+    <statement>
+      <p> The inner product of two <m>n\times 1</m> vectors <m>u</m> and <m>v</m> is 
+        defined as <md>(u,v)=u^tv=\sum_{i=1}^n u_iv_i.</md>
+        A key property is <md> u^tv=0\iff u \mbox{ and  }v \mbox{ are perpendicular to each other.}</md>
+        It means if <m>u^tv=0,</m> then the projection of <m>u</m> onto <m>v</m> is 
+        0 and the projection of <m>v</m> onto <m>u</m> is 0. 
+        This makes decomposition of vectors cleaner.       
+      </p>
+    </statement>
+    </remark>
+    <definition xml:id="def-inner-product">
+      <statement>
+        <p>The <term>inner product</term> of two functions <m>f_1</m> and <m>f_2</m>
+           on an interval <m>[a,b]</m> is 
+           <md>(f_1,f_2)=\int_a^b f_1(x)f_2(x)dx.</md>         
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-orthogonal">
+      <statement>
+        <p>Two function <m>f_1</m> and <m>f_2</m> are said to be 
+          <term>orthogonal</term> on an interval <m>[a,b]</m> if 
+          <md>(f_1,f_2)=\int_a^bf_1(x)f_2(x)dx=0.</md>
+          A set of real-valued functions <m>\{\phi_1(x),\phi_2(x),\phi_3(x),\ldots\}</m>
+           is said to be <term> orthogonal</term> on an interval <m>[a,b]</m> if 
+           <md>(\phi_i,\phi_j)=\int_a^b \phi_i(x)\phi_j(x)dx=0, \forall i\neq j.</md>
+          
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>Given <m>S=\left\{1,x,x^2,x^3\right\}.</m> Determine whether <m>S</m>
+           is orthogonal on <m>[-1,1].</m>         
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p> <ol>
+          <li> <p>Show that <m>S=\left\{\sin x,\sin 2x, \sin 3x, \ldots\right\}</m>
+           is orthogonal on <m>[-\pi, \pi].</m>        </p>  </li>
+          <li> <p> Show that <m>f_1(x)=\cos (mx)</m> and <m>f_2(x)=\sin (nx)</m>
+             are orthogonal for any integer $m,n$ on the interval of <m>[-\pi,\pi].</m> </p> </li>
+        </ol>        
+        </p>
+      </statement>
+    </example>
+        <definition xml:id="def-Legendre-de">
+      <statement>
+        <p><term>Legendre's Equation of order </term> <m>n</m> is defined as
+          <md xml:id="equation-legendre-de"  number="yes">
+            (1-x^2)y''-2xy'+n(n+1)y=0.
+          </md>
+          It is named after the French mathematician Adrien-Marie Legendre.         
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p> <ol>
+          <li>  <p>Show that <m>P_2(x)=\frac{1}{2}\left(3x^2-1\right)</m> is a solution to 
+            <xref ref="equation-legendre-de"/> with <m>n=2</m>     </p>  </li>
+          <li><p>Show that <m>P_3(x)=\frac{1}{2}\left(5x^3-3x\right)</m> is a solution to 
+            <xref ref="equation-legendre-de"/> with <m>n=3</m>         </p></li>
+          <li> <p>  Show that <m>P_2(x)</m> and <m>P_3(x)</m> are orthogonal over <m>[-1,1].</m>  </p> </li>
+        </ol>          
+        </p>
+      </statement>
+    </example>
+    <remark>
+      <title>Properties of Legendre Polynomials</title>
+       <statement>  
+        <p>  Let <m>P_n(x)</m> be a solution to <xref ref="equation-legendre-de"/>. <m>P_n(x),</m> 
+         <term>  Legendre Polynomial</term>, satisfies the followings:
+          <ul>
+            <li>  <p> <m>P_n(-x)=(-1)^nP_n(x)</m>      </p>     </li>
+            <li>  <p> <m>P_n(1)=1</m> and <m>P_n(-1)=(-1)^n</m>       </p>    </li>
+            <li>  <p> <m>P_n(0)=0,</m> <m>n</m> odd, and <m>P'_n(0)=0,</m>  <m>n</m> even   </p>   </li>
+            <li> <p> <m>(k+1)P_{k+1}(x)-(2k+1)xP_k(x)+kP_{k-1}(x)=0</m>           </p>  </li>
+          </ul>       
+        </p>
+      </statement>
+    </remark>
+    <example>
+      <statement>
+        <p> 
+          <ol>
+            <li>  <p> Given <m>P_0(x)=1</m> and <m>P_1(x)=x.</m> Derive <m>P_2(x)</m> and <m>P_3(x).</m>     </p>  </li>
+            <li>  <p> Show that the Legendre Polynomials are orthogonal, i.e.,
+              <md> \int_{-1}^1 P_n(x)P_m(x)dx=\left\{\begin{array}{ll}0,\amp \mbox{if }n \neq m\cr
+                \mbox{nonzero},\amp \mbox{if } n=m\end{array}\right\}\</md> </p>  </li>
+          </ol>
+          
+        </p>
+      </statement>
+    </example>
+    <definition xml:id="def-norm">
+      <statement>
+        <p>The <term>norm</term> of a function <m>\phi(x)</m> is 
+          <md>\|\phi(x)\|=\sqrt{(\phi,\phi)}=\sqrt{\int_a^b\phi^2(x)dx}.</md>
+          If <m>\left\{\phi_n(x)\right\}</m> is an orthogonal set of functions 
+          on the interval <m>[a,b]</m> with <m>\|\phi_n(x)\|=1,</m> for all <m>n,</m> then 
+          <m>\left\{\phi_n(x)\right\}</m> is said to be an <term>orthonormal set</term>
+           on the interval of <m>[a,b].</m>         
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>Find the norm of each function in <m>S=\left\{\sin x,\sin 2x, \sin 3x, \ldots\right\}</m> on 
+          <m>[-\pi, \pi].</m>         
+        </p>
+      </statement>
+    </example>
+  <remark>
+    <statement>
+      <p>Suppose <m>\{\phi_n(x)\}</m> is an infinite orthogonal set of functions on 
+        <m>[a,b].</m>  If <m>f(x)</m> is a function on <m>[a,b]</m>, is it possible to 
+        write <m>f(x)</m> as a linear combination of <m>\phi_n(x)</m>, i.e,
+        <md>f(x)=c_0\phi_0(x)+c_1\phi_1(x)+c_2\phi_2(x)+\ldots</md>
+        is it possible to determine <m>c_n, n=0,1,2,\ldots</m>?       
+      </p>
+    </statement>
+  </remark>
+  <example>
+    <statement>
+      <p>Consider <m>f(x)=x-3x^3+5x^5</m> and <m>S=\left\{\sin x,\sin 2x, \sin 3x, \ldots\right\}</m>
+         on <m>[-\pi, \pi]</m>. 
+         <ol>
+          <li> <p>Find <m>c_n</m> such that <m>f(x)=\sum_{n=1}^\infty c_n\sin(nx)</m> on <m>[-\pi, \pi].</m> </p> </li>
+          <li><p> Create graphs of partial sum: <m>S_k=\sum_{n=1}^k c_n \sin(nx)</m> and 
+            the graph of <m>f(x)</m>.  Observe the behavior of <m>S_k</m> as <m>k\rightarrow \infty</m> with <m>f(x).</m> </p></li>
+         </ol>       
+      </p>
+    </statement>
+  </example>
+  <definition xml:id="def-Fourier-Series">
+    <statement>
+      <p>The <term> Fourier Series</term> of a function <m>f</m> defined on <m>(-p, p)</m> 
+        is given by 
+        <md>
+          <mrow> f(x) \amp = \frac{a_0}{2}+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi}{p}x+b_n\sin\frac{n\pi}{p}x\right),</mrow>
+          <mrow> a_0 \amp =  \frac{1}{p}\int_{-p}^p f(x)dx</mrow>
+          <mrow> a_n \amp =  \frac{1}{p}\int_{-p}^p f(x)\cos\frac{n\pi}{p}x dx </mrow>
+          <mrow> b_n \amp =  \frac{1}{p}\int_{-p}^p f(x)\sin\frac{n\pi}{p}x dx </mrow>
+        </md>       
+      </p>
+    </statement>
+  </definition>
+  <example>
+    <statement>
+      <p> Show how to obtain <m>a_0, a_n, </m> and <m>b_n</m> shown in the <xref ref="def-Fourier-Series"/>.</p>
+    </statement>
+  </example>
+  <example>
+    <statement>
+      <p> Given 
+        <md> f(x)=\left\{\begin{array}{ll} 1+x,\amp -2\lt x\lt 0,\cr 1,\amp 0\lt x\lt 2\end{array}\right\}.</md>
+        <ol>
+          <li> <p> Find the Fourier series of the function <m>f</m> on the given interval 
+            and give the number to which the Fourier series converges at a point of discontinuity of <m>f.</m> </p></li>
+          <li> <p>Create graphs of partial sum <m>S_k(x)</m> and the graph of <m>f(x).</m> 
+             Observe the behavior of <m>S_k(x)</m> as <m>k\rightarrow \infty</m> with <m>f(x).</m>
+              Sketch the periodic extension.              
+            </p>
+          </li>
+        </ol>      
+      </p>
+    </statement>
+  </example>
+  <theorem xml:id="thm-Fourier-convergence">
+    <title>Conditions for Convergences</title>   
+    <statement>
+      <p>Let <m>f</m> and <m>f'</m> be piecewise continuous on the interval of <m>[-p,p];</m>
+         that is, let <m>f</m> and <m>f'</m> be continuous except at a finite number of 
+         points in the interval and have only finite discontinuities at these points. 
+         Then for all <m>x</m> in the interval <m>(-p,p)</m> the Fourier series of <m>f</m>
+          converges to <m>f(x)</m> at a point of continuity. At the point of discontinuity, 
+          the Fourier series converges to the average 
+          <md>\frac{f(x+)+f(x-)}{2},</md> where <m>f(x+)</m> and <m>f(x-)</m>
+           denote the limit of <m>f</m> and <m>x</m> from the right and from the left, 
+           respectively.       
+      </p>
+    </statement>
+  </theorem>
+  <example>
+    <statement>
+      <p>Given <md>f(x)=\left\{\begin{array}{ll}-1,\amp \pi\lt x\lt 0\cr 1,\amp 0\lt x\lt \pi\end{array}\right\}</md>
+      <ol>
+        <li>  <p>Find the Fourier Series of <m>f(x).</m>      </p>    </li>
+        <li>  <p> What happened to the <m>\cos\frac{n\pi}{p}x</m> part of series? Why?       </p></li>
+        <li> <p>Create the graph of partial sum <m>S_k</m> and observe what happens as <m>k\rightarrow\infty.</m></p></li>
+      </ol>      
+      </p>
+    </statement>
+  </example>
+</worksheet>
+

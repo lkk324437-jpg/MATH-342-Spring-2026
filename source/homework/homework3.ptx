@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Written by Sarah Sparks, Fall 2025 -->
+
+<worksheet xml:id="hw3">
+  <title>Homework 3</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> Submit your work by uploading a <alert>single PDF</alert> and 
+      a <alert> single Mathematica notebook </alert> to D2L.  
+      For the algebraic work, it can either be a scan of handwritten solutions or a PDF you created by 
+      typing your solutions. Clearly label each problem and include your reference to which definition, remark, theorem and/or 
+      which part of theorem in <alert>which week's handout</alert> is used for each step.   You can use Mathematica to 
+      help you with algebraic work, however, you must show the steps and include explanation and reasoning. In Mathematica, 
+      you must include text to clearly label your code and graphs. 
+    </p>
+
+  </introduction>
+
+ <exercise>
+  <p>Find the radius of convergence and the interval of convergence for the given power series. 
+    Plot the graphs of the truncated series of the first 2 terms, first 4 terms, first 6 terms, 
+    first 10 terms, and first 20 terms on the same graph over the interval of convergence 
+    with the legend. Describe your observations of the graphs as the number of terms in the 
+    truncated Taylor series increases.
+    <ol>
+      <li><p> <m>\sum_{n=1}^\infty \frac{4^n}{n}x^n</m>     </p>   </li>
+      <li><p> <m> \sum_{n=0}^\infty\frac{(80)^n}{n!}(x-3)^n</m> </p>    </li>
+    </ol>   
+  </p>
+ </exercise>
+ <exercise>
+  <p>
+    <m>x=0</m> is a regular singular point of the given differential equation. Use the method 
+    Frobenius to obtain two linearly independent series solution about <m>x=0.</m> Form the general solution
+    on the inverval <m>(0,\infty).</m>
+    <ol>
+      <li> <p> <m>2x^2y''-xy'+(x^2+1)y=0</m> </p>  </li>
+      <li> <p> <m>4xy''+\frac{1}{2}y'+y=0</m>     </p> </li>
+    </ol>
+  </p>
+ </exercise> 
+ <exercise>
+  <p> Show that the given set of functions are orthogonal on the indicated interval.
+    <ol>
+      <li> <p> <m>\left\{sin\left(\frac{n\pi}{p}x\right)\right\}, n=1,2,3,\ldots; [0,p]</m>    </p> </li>
+      <li><p> <m>\left\{63x^5-70x^3+15x,5x^3-3x, 3x^2-1,35x^4-30x^2+3\right\}; [-1,1]</m>   </p> </li>
+    </ol>    
+  </p>
+ </exercise>
+ <exercise>
+  <p> Find the Fourier series of the function <m>f</m> on the given interval. Give the number to which the Fourier series
+    converges at a point of discontinuity of <m>f.</m> Create the graph of the periodic extension of the indicated function.
+    <ol>
+      <li><p> <m>f(x)=\left\{\begin{array}{ll}1,\amp -1\lt x\lt 0\cr x,\amp 0\leq x\lt 1\end{array}\right\}</m>   </p> </li>
+      <li><p>  <m>f(x)=\left\{\begin{array}{ll}\sin x,\amp -\pi\lt x\leq 0\cr 0,\amp 0\lt x\lt\pi\end{array}\right\}</m>    </p>  </li>
+    </ol>
+  </p>
+ </exercise>
+ <exercise>
+  <p>Expand the given function in an appropriate cosine or sine series.
+    <ol>
+      <li> <p> <m>f(x)=\left\{\begin{array}{ll}x+1,\amp -1\lt x\lt 0\cr x-1,\amp 0\leq x\lt 1\end{array}\right\}</m>  </p>  </li>
+      <li><p>      </p><m>f(x)=x|x|,-1\lt x\lt 1</m>    </li>
+    </ol>
+    
+  </p>
+ </exercise>
+</worksheet>
