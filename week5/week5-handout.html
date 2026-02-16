@@ -238,6 +238,19 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
+<div class="para">Why is constructing a series solution important?</div>
+<ul class="disc" id="week5-handout-4-1-1-2">
+<li id="week5-handout-4-1-1-2-1">
+<div class="para" id="week5-handout-4-1-1-2-1-1">Iterative<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-2-2">
+<div class="para" id="week5-handout-4-1-1-2-2-1">Truncated Series vs Error<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Remark 2"><a href="#week5-handout-4" title="Copy heading and permalink for Remark 2" aria-label="Copy heading and permalink for Remark 2">🔗</a></div></article><article class="definition definition-like" id="def-analytic"><h3 class="heading">
@@ -419,7 +432,23 @@ y''=\amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2}
 \amp y''+x^2y'+xy=0 \\
 \Rightarrow \amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2}+x^2\sum_{n=1}^\infty c_nnx^{n-1}+x\sum_{n=0}^\infty c_n x^n=0 \\
 \Rightarrow \amp\sum_{n=2}^\infty c_nn(n-1)x^{n-2}+\sum_{n=1}^\infty c_nnx^{n+1}+\sum_{n=0}^\infty c_n x^{n+1}=0  \\
-\Rightarrow \amp \sum_{k=0}^\infty c_{k+2}(k+2)(k+1)x^k+\sum_{k=2}^\infty (k-1)c_{k-1}x^k+\sum_{k=1}^\infty c_{k-1}x^k=0 
+\Rightarrow \amp \sum_{k=0}^\infty c_{k+2}(k+2)(k+1)x^k+\sum_{k=2}^\infty (k-1)c_{k-1}x^k+\sum_{k=1}^\infty c_{k-1}x^k=0 \\
+\Rightarrow \amp 2c_2+(c_0+6c_3)x+\sum_{k=2}^\infty \left(c_{k-1}\cdot k+(k+2)(k+1)c_{k+2}\right)x^k =0
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-8">
+\begin{align*}
+2c_2=0 \amp \Rightarrow c_2=0 \\
+c_0+6c_3=0 \amp \Rightarrow c_3=-\frac{1}{6}c_0 \\
+kc_{k-1}+(k+2)(k+1)c_{k+2}=0 \amp \Rightarrow c_{k+2}=-\frac{kc_{k-1}}{(k+2)(k+1)}, k\geq 2 
+\end{align*}
+</div>
+<div class="para">From the above relations, there are two free variables <span class="process-math">\(c_0\)</span> and <span class="process-math">\(c_1,\)</span> which generate two sequences of coefficients, <span class="process-math">\(\{c_0, c_3,c_6,\ldots\}\)</span> and <span class="process-math">\(\{c_1, c_4, c_7,\ldots\}.\)</span>  Thus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-13">
+\begin{align*}
+y_1(x)= \amp \sum_{n=0}^\infty c_{3n}x^{3n},\amp \mbox{ where } c_{3(n+1)}=\frac{-(3n+1)c_3n}{(3n+3)(3n+2)},\\
+y_2(x)= \amp \sum_{n=0}^\infty c_{3n+1}x^{3n+1},\amp \mbox{ where } c_{3n+4}=\frac{-(3n+2)c_{3n+1}}{(3n+4)(3n+5)}, \\
+\Rightarrow \amp \mbox{ general solution } \amp y(x)= a_1y_1(x)+a_2y_2(x).\amp
 \end{align*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
