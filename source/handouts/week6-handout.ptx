@@ -64,7 +64,7 @@
           <li> <p>Show that <m>S=\left\{\sin x,\sin 2x, \sin 3x, \ldots\right\}</m>
            is orthogonal on <m>[-\pi, \pi].</m>        </p>  </li>
           <li> <p> Show that <m>f_1(x)=\cos (mx)</m> and <m>f_2(x)=\sin (nx)</m>
-             are orthogonal for any integer $m,n$ on the interval of <m>[-\pi,\pi].</m> </p> </li>
+             are orthogonal for any integer <m>m,n</m> on the interval of <m>[-\pi,\pi].</m> </p> </li>
         </ol>        
         </p>
       </statement>
@@ -218,5 +218,12 @@
       </p>
     </statement>
   </example>
+    <remark>
+    <statement>
+      <p>
+        When to use Power Series? When to use Fourier Series?
+      </p>
+    </statement>
+  </remark>
 </worksheet>
 

@@ -156,7 +156,8 @@
       <p><ol>
         <li><p> Expanding the product, it becomes
           <md>
-            <mrow>\sin x\cos x =\amp\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\right)
+            <mrow> \amp \sin x\cos x  </mrow>
+            <mrow>=\amp\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots\right)
               \left(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots\right) </mrow>
             <mrow>=\amp x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots-\frac{x^3}{2!}+\frac{x^5}{2!3!}-\frac{x^7}{2!5!}+\cdots </mrow>
             <mrow>=\amp x+\left(-\frac{1}{6}-\frac{1}{2}\right)x^3+\left(\frac{1}{5!}+\frac{1}{2!3!}+\frac{1}{4!}\right)x^5</mrow>
@@ -188,7 +189,8 @@
           <mrow> y''=\amp \sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)\amp= -1+2x-3x^2+4x^3+\cdots</mrow>
       </md>
       <md>
-        <mrow>(x+1)y''+y'= \amp  (x+1)\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
+        <mrow> \amp (x+1)y''+y' </mrow>
+        <mrow> = \amp  (x+1)\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
         <mrow> = \amp \sum_{n=0}^{\infty} (-1)^{n+1}x^{n+1} (n+1)+\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
         <mrow> = \amp \sum_{k=1}^\infty (-1)^kkx^k+\sum_{n=0}^{\infty} (-1)^{n+1}x^n (n+1)+\sum_{n=0}^{\infty}(-1)^{n}x^n </mrow>
         <mrow> = \amp \sum_{k=1}^\infty\left[k(-1)^k+(-1)^{k+1}(k+1)+(-1)^k\right]x^k+(-1)^1\cdot 1\cdot x^0+ (-1)^0\cdot x^0</mrow>
@@ -285,9 +287,9 @@
               generate two sequences of coefficients, <m>\{c_0, c_3,c_6,\ldots\}</m> and 
               <m>\{c_1, c_4, c_7,\ldots\}.</m>  Thus, we have
               <md>
-                <mrow>y_1(x)= \amp \sum_{n=0}^\infty c_{3n}x^{3n},\amp \mbox{ where } c_{3(n+1)}=\frac{-(3n+1)c_3n}{(3n+3)(3n+2)},</mrow>
-                <mrow>y_2(x)= \amp \sum_{n=0}^\infty c_{3n+1}x^{3n+1},\amp \mbox{ where } c_{3n+4}=\frac{-(3n+2)c_{3n+1}}{(3n+4)(3n+5)}, </mrow>
-                <mrow>\Rightarrow \amp \mbox{ general solution } \amp y(x)= a_1y_1(x)+a_2y_2(x).\amp</mrow>
+                <mrow>y_1(x)= \amp \sum_{n=0}^\infty c_{3n}x^{3n}, \mbox{ where } c_{3(n+1)}=\frac{-(3n+1)c_3n}{(3n+3)(3n+2)},</mrow>
+                <mrow>y_2(x)= \amp \sum_{n=0}^\infty c_{3n+1}x^{3n+1}, \mbox{ where } c_{3n+4}=\frac{-(3n+2)c_{3n+1}}{(3n+4)(3n+5)}, </mrow>
+                <mrow>\Rightarrow \amp  y(x)= a_1y_1(x)+a_2y_2(x).</mrow>
               </md>
               
               </p>   </li>
@@ -319,7 +321,9 @@
       <li> <p><md> y''+\frac{3x^2}{x^3}y'+\frac{6}{x^3}y=0 \Rightarrow P(x)=\frac{3x^2}{x^3}, Q(x)=\frac{6}{x^3} </md>
         <m>\Rightarrow x=0</m> is a singular point.  Since <m>x=0</m> is not analytic for <m>x^2Q(x),</m>
         <m>x=0</m> is an <term>irregular singular point.</term>  </p> </li>
-      <li><p><md>y''+\frac{(x-4)}{(x^2-16)^2}y'+\frac{5}{(x^2-16)^2}y=0 \Rightarrow P(x)=\frac{(x-4)}{(x^2-16)^2}, Q(x)=\frac{5}{(x^2-16)^2}   </md>
+      <li><p>
+        <md><mrow> y''+\frac{(x-4)}{(x^2-16)^2}y'+\frac{5}{(x^2-16)^2}y=0</mrow>
+          <mrow> \Rightarrow P(x)=\frac{(x-4)}{(x^2-16)^2}, Q(x)=\frac{5}{(x^2-16)^2} </mrow>  </md>
         <m>x=4</m> is a regular singular point and <m>x=-4</m> an irregular singular point.
             </p>
       </li>
@@ -329,6 +333,7 @@
   </solution> 
   </example>
   <theorem xml:id="thm-Frobenius">
+    <title>Method of Frobenius</title> 
     <statement>
       <p>If <m>x=x_0</m> is a regular singular point of the 2nd order linear differential equation, 
         then there exists at least one nonzero solution of the form 
@@ -337,7 +342,6 @@
       </equation>
         where the number <m>r</m> is a constant to be determined. 
         The series will converge at least on some interval defined by <m>0\lt x-x_0\lt R.</m>
-        
       </p>
     </statement>
   </theorem>
@@ -347,6 +351,49 @@
         <md> 4xy''+2y'-y=0</md>      
       </p>
     </statement>
+    <solution component="inst">
+      <p> <m>y''-\frac{2}{4x}y'-\frac{1}{4x}y=0 \Rightarrow P(x)=\frac{-1}{2x}, Q(x)=-\frac{1}{4x}.</m>
+        <m>\Rightarrow p(x)=(x-0)P(x), q(x)=(x-0)^2Q(x)</m> are both analytic at <m>x=0.</m> Thus <m>x=0</m> 
+        is a regular singular point.
+
+        <md>
+          <mrow> y=\amp \sum_{n=0}^\infty c_nx^{n+r}</mrow>
+          <mrow> y'=\amp \sum_{n=0}^\infty c_n(n+r)x^{n+r-1} </mrow>
+          <mrow> y''=\amp \sum_{n=0}^\infty c_n(n+r)(n+r-1)x^{n+r-2} \amp </mrow>
+        </md>
+        <md>
+          <mrow>\amp 4xy''+2y'-y </mrow>
+          <mrow>= \amp 4\sum_{n=0}^\infty c_n(n+r)(n+r-1)x^{n+r-1} </mrow>
+          <mrow> \amp +2\sum_{n=0}^\infty c_n(n+r)x^{n+r-1} - \sum_{n=0}^\infty c_nx^{n+r}</mrow>
+          <mrow> =\amp \sum_{n=0}^\infty\left[c_n(n+r)(4(n+r-1)+2)\right]x^{n+r-1}- \sum_{n=0}^\infty c_nx^{n+r}</mrow>
+          <mrow> =\amp x^r\left[c_0r(4r-2)x^{-1}+\sum_{n=1}^\infty c_n(n+r)(4n+4r-2)x^{n-1}-\sum_{n=0}^\infty c_nx^n\right]</mrow>
+          <mrow> = \amp x^r\left[c_0r(4r-2)x^{-1}+\sum_{n=0}^\infty \left[c_{n+1}(n+r+1)(4n+4r+c)-c_n\right]x^n\right]</mrow>
+        </md>
+        <md>
+          <mrow> \mbox{lowest degree in } x = x^{-1} :\mbox{ } \amp   c_nr(4r-2)=0 </mrow>
+          <mrow> x^{n}:\mbox{ } \amp  c_{n+1}(n+r+1)(4n+4r+2)-c_n=0 </mrow>
+        </md>
+        If <m>c_0=0</m>, it produces the trivial solution <m>y(x)\equiv 0.</m>  For nontrivial solution (<m>c_0\neq 0</m>),
+        <md>
+          r(4r-2)=0 \Rightarrow r_1=0, r_2=\frac{1}{2}.
+        </md>
+        <m>r(4r-2)=0</m> is called an <term>Indicial Equation</term> and <m>r_1=0</m> and <m> r_2=\frac{1}{2}</m> 
+        are called <term>indicial roots.</term>  Next,
+        <md>
+           <mrow> \amp c_{n+1}(n+r+1)(4n+4r+2)-c_n=0, n=0,1,2,\ldots </mrow>
+           <mrow> \Rightarrow \amp c_{n+1}=\frac{c_n}{(n+r+1)(4n+4r+2)}</mrow>
+        </md>
+        <md>
+          <mrow>r_1=0 \amp\Rightarrow c_{n+1}=\frac{c_n}{(n+1)(4n+2)}, n=0,1,2,\ldots \rightarrow y_1(x) </mrow>
+          <mrow>r_2=\frac{1}{2} \amp \Rightarrow c_{n+1}\frac{c_n}{\left(n+\frac{3}{2}\right)\left(4n+4\right)}, n=0,1,2,\ldots, \rightarrow y_2(x) </mrow>
+        </md>
+        <md>
+          <mrow> y_1(x)= \amp \sum_{n=0}^\infty c_nx^n, \mbox{ where }c_{n+1}=\frac{c_n}{(n+1)(4n+2)} </mrow>
+          <mrow> y_2(x)= \amp \sum_{n=0}^\infty b_nx^{n+\frac{1}{2}}, \mbox{ where }b_{n+1}=\frac{b_n}{\left(n+\frac{3}{2}\right)\left(4n+2\right)} </mrow>
+          <mrow> y(x)= \amp a_1y_1(x)+a_2y_2(x) </mrow>
+        </md>       
+      </p>
+    </solution>
   </example>
   <definition xml:id="def-indicial">
     <statement>
@@ -394,6 +441,42 @@
           </ol>
       </p>
     </statement>
+    <solution component="inst">
+      <p><ol>
+        <li><p> <m>3xy''+(2-x)y'-y=0 \Rightarrow y''+\frac{2-x}{3x}y'-\frac{1}{3x}y=0</m> 
+        <m>\Rightarrow P(x)=\frac{2-x}{3x}, Q(x)=\frac{-1}{3x}.</m> Thus, <m>x=0</m> is a singular point.
+        Since <m>p(x)=xP(x)</m> and <m>q(x)=x^2Q(x)</m>  are both analytic at <m>x=0,</m>  <m>x=0</m>
+      is a regular singular point.  Let <m>y(x)=\sum_{n=0}^\infty c_nx^{n+r}</m>.
+       <md>
+        <mrow> \amp 3xy''+(2-x)y'-y </mrow>
+        <mrow>= \amp 3\sum_{n=0}^\infty c_n(n+r)(n+r-1)x^{n+r-1}</mrow>
+        <mrow>\amp + (2-x)\sum_{n=0}c_n(n+r)x^{n+r-1}-\sum_{n=0}^\infty c_nx^{n+r} </mrow>
+        <mrow>= \amp \sum_{n=0}^\infty \left[3(n+r)(n+r-1)c_n+2(n+r)c_n\right]x^{n+r-1}</mrow>
+          <mrow> \amp -\sum_{n=0}^\infty \left[(2n+r)c_n+c_n\right]x^{n+r}  </mrow>
+          <mrow> =\amp 0</mrow>
+       </md>
+       <md>
+        <mrow>3r(r-1)c_0+2rc_0=0 \amp \Rightarrow 3r(r-1)+2r=0\Rightarrow 3r^2-r=0</mrow>
+        <mrow> \amp \Rightarrow r=0 \mbox{ or } r=\frac{1}{3} </mrow>
+       </md>
+       <md>
+        <mrow> \left[3(n+r+1)(n+r)+2(n+r+1)\right]c_{n+1}-(2n+r+1)c_n =0</mrow>
+        <mrow> \Rightarrow  c_{n+1}=\frac{(2n+r+1)c_n}{(n+r+1)(3n+3r+2)} </mrow>
+       </md>
+       <md>
+        <mrow>y_1(x)= \amp \sum_{n=0}^\infty c_nx^n, \mbox{ where }c_{n+1}=\frac{(2n+1)c_n}{(n+1)(3n+2)}  </mrow>
+        <mrow>y_2(x)= \amp \sum_{n=0}^\infty b_nx^{n+\frac{1}{3}}, \mbox{ where }b_{n+1}=\frac{\left(2n+\frac{4}{3}\right)b_n}{\left(n+\frac{4}{3}\right)\left(3n+3\right)}  </mrow>
+        <mrow>\Rightarrow y(x)=\amp a_1y_1(x)+a_2y_2(x)</mrow>
+       </md> 
+       </p> </li>
+       <li>
+        <p>
+          
+        </p>
+       </li>
+      </ol>       
+      </p>
+    </solution>
   </example>
   <example>
     <statement>
@@ -409,6 +492,29 @@
           </ol>
       </p>
     </statement>
+    <solution component="inst">
+      <p><ol>
+        <li> <p> <m>t=\frac{1}{x}\Rightarrow x=\frac{1}{t}\Rightarrow \frac{dx}{dt}=-t^{-2} \mbox{ and }\frac{d^2x}{dt^2}=2t^{-3}</m>
+        <md>
+          <mrow>\frac{dy}{dt} =\amp \frac{dy}{dx}\frac{dx}{dt} =\frac{dy}{dx}\left(-t^{-2}\right)</mrow>
+          <mrow> \frac{dy}{dx}=\amp -t^2\frac{dy}{dt}  </mrow>
+          <mrow> \frac{d^2y}{dt^2}=\amp \frac{d^2y}{dx^2}\left(\frac{dx}{dt}\right)^2+\frac{dy}{dx}\frac{d^2x}{dt^2} </mrow>
+          <mrow> = \amp \frac{d^2y}{dx^2}\left(-t^{-2}\right)^2+\frac{dy}{dx}\left(2t^{-3}\right) </mrow>
+          <mrow> = \amp  \frac{d^2y}{dx^2}\left(-t^{-2}\right)^2+\left(-t^2\frac{dy}{dt}\right)\left(2t^{-3}\right) </mrow>
+          <mrow>\frac{d^2y}{dx^2}= \amp t^4\frac{d^2y}{dt^2}+2t^3\frac{dy}{dt}</mrow>
+        </md>
+        <md>
+          <mrow>\amp x^4y''+\lambda y=0 </mrow>
+          <mrow>\Rightarrow \amp \left(\frac{1}{t}\right)^4\left[t^4\frac{d^2y}{dt^2}+2t^3\frac{dy}{dt}\right]+\lambda y=0 </mrow>
+          <mrow> \Rightarrow \amp \frac{d^2y}{dt^2}+\frac{2}{t}\frac{dy}{dt}+\lambda y=0 </mrow>
+        </md>
+        
+             </p>  </li>
+      </ol>
+        
+      </p>
+    </solution>
   </example>
+
 </worksheet>
 
