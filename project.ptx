@@ -38,6 +38,10 @@
             publication="publication.ptx" deploy-dir="week6" />
      <target name="week6-inst" source="week6.ptx" format="html"
             publication="publication-inst.ptx" /> 
+    <target name="week7" source="week7.ptx" format="html"
+            publication="publication.ptx" deploy-dir="week7" />
+     <target name="week7-inst" source="week7.ptx" format="html"
+            publication="publication-inst.ptx" /> 
     <target name="hw2" source="hw2.ptx" format="html"
             publication="publication.ptx" deploy-dir="hw2" />
         <target name="hw3" source="hw3.ptx" format="html"

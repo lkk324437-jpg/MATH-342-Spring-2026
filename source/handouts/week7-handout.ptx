@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+
+<worksheet xml:id="week5-handout">
+  <title>Week 7 Handout- Series Solution-Part 3</title>
+
+    <introduction>
+        <statement> <p>
+        We will discuss the following topics related to <term> Series Solution</term>:
+      <ul>
+        <li> <p>Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
+        <li> <p>Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4), 
+          Sturm-Liouville Problem (Section 12.5)  </p> </li>
+
+      </ul>  </p>
+        </statement>
+    </introduction>
+    <definition xml:id="def-complex">
+      <statement>
+        <p><ol>
+          <li> <p>  <m>i</m> is the imaginary unit defined by <m>i^2=-1.</m>      </p></li>
+          <li> <p> For <m>x</m> a real number, Euler's formula 
+            <md xml:id="eq-euler" number="yes">
+              e^{ix}=\cos x+i\sin x \mbox{ gives } e^{-ix}=\cos x-i\sin x. </md>   </p></li>
+          <li> <p>  A <term>complex number</term> is a number <m>z=a+ib,</m> where <m>a</m> 
+            and <m>b</m> are real numbers. The number <m>\bar{z}=a-ib</m> is called 
+            the <term> conjugate</term> of <m>z.</m>     </p>  </li>
+        </ol>          
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <statement>
+        <p>From <xref ref="eq-euler"/>, we can derive
+          <md xml:id="eq-cossin" number="yes"> 
+            \cos x=\frac{e^{ix}+e^{-ix}}{2}\mbox{ and }\sin x=\frac{e^{ix}-e^{-ix}}{2i} </md>
+            Then using <xref ref="eq-cossin"/> to replace <m>\cos\frac{n\pi x}{p}</m> and 
+            <m>\sin \frac{n\pi x}{p}</m> in the defintion of Fourier Series.           
+        </p>
+      </statement>
+    </remark> 
+    <definition xml:id="def-complex-fourier">
+      <title>Complex Fourier Series</title>
+        <statement>
+        <p>The <term>complex Fourier series</term> of function <m>f</m> defined on an interval <m>(-p,p)</m> 
+          is given by 
+          <md>
+            <mrow xml:id="eq-complex-fourier" number="yes">
+              f(x)\amp =\sum_{n=-\infty}^{\infty}c_n e^{in\pi x/p} </mrow>
+            <mrow>\mbox{where }c_n \amp = \frac{1}{2p}\int_{-p}^p f(x)e^{-in\pi x/p}dx, n=0,\pm 1,\pm 2,\ldots</mrow>
+          </md>
+          If <m>f(x)</m> is a periodic function and the <term>fundamental period</term> of <m>f</m> is <m>T=2p,</m>
+           then <xref ref="eq-complex-fourier"/> becomes <m>\sum_{n=-\infty}^{\infty}c_ne^{in\omega x},</m>
+           where <m>\omega=\frac{2\pi}{T}</m> is called <term>fundamental angular frequency</term> and 
+           <m>c_n</m> is called <term>frequency spectrum</term> of <m>f.</m>         
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>Find the complex Fourier series of <m>f</m> on the given interval 
+          <md>
+            f(x)=\left\{\begin{array}{ll}-1\amp -2\lt x\lt 0\cr 1\amp 1, 0\lt x\lt 2.\end{array}\right\}
+          </md>
+          <ol>
+            <li> <p> Graph the periodic expansion of <m>f.</m> </p>      </li>
+            <li>  <p>   Graph Frequency spectrum of <m>f.</m>        </p></li>
+            <li> <p> Sketch the graph of partial sum for <m>n=3, 6, 8, 10.</m>      </p>    </li>
+          </ol>         
+        </p>
+      </statement>
+    </example>
+</worksheet>
+
