@@ -246,7 +246,7 @@ Graph <m>\textbf{r}(t)=\langle \cos(t), -\sin(t), t/2\rangle</m> for <m>0\leq t\
     <definition xml:id="def-length-curve">
       <statement> <p> If <m>\textbf{r}(t)=f(t)\textbf{i}+g(t)\textbf{j}+h(t)\textbf{k}</m> is a smooth function, the <term>length</term>
       of the smooth curve traced by <m>\textbf{r}</m> is given by
-    <md> s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|^2dt. </md>
+    <md> s=\int_a^b \sqrt{[f'(t)]^2+[g'(t)]^2+[h'(t)]^2}dt=\int_a^b \|\textbf{r}'(t)\|dt. </md>
   
     A curve in the plane or in space can be parameterized in terms of the arc length <m>s</m>.</p>
       </statement>
