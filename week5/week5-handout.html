@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Week 5 Handout- Series Solution-Part 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.15';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.529fd9398bfbd03e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="root-1-2.html"><span class="title"></span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="handouts.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="handouts.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="week5-handout.html" class="internal"><span class="title">Week 5 Handout- Series Solution-Part 1</span></a></div></li></ul>
+</li></ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="worksheet" id="week5-handout" data-margins="0.75in 0.75in 0.75in 0.75in"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Week 5 Handout- Series Solution-Part 1</span><div class="print-links"><a href="week5-handout-printable.html" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h2>
+<section class="introduction" id="week5-handout-2"><div class="para logical" id="week5-handout-2-1-1">
+<div class="para">We will discuss the following topics related to <dfn class="terminology">Series Solution</dfn>:</div>
+<ul class="disc" id="week5-handout-2-1-1-2">
+<li id="week5-handout-2-1-1-2-1">
+<div class="para" id="week5-handout-2-1-1-2-1-1">Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-2-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-2-1-1-2-2">
+<div class="para" id="week5-handout-2-1-1-2-2-1">Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-2-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><article class="definition definition-like" id="def-power-series"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-power-series-1-1">
+<div class="para">A <dfn class="terminology">power series</dfn> in <span class="process-math">\(x-a\)</span> is an <em class="alert">infinite series</em> of the form</div>
+<div class="displaymath process-math" id="eq-series">
+\begin{equation}
+\sum_{n=0}^\infty c_n(x-a)^n=c_0+c_1(x-a)+c_2(x-a)^2+\cdots.\tag{0}
+\end{equation}
+</div>
+<div class="para">It is also called a <dfn class="terminology">power series centered at <span class="process-math">\(a\text{.}\)</span></dfn>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-power-series-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1"><a href="#def-power-series" title="Copy heading and permalink for Definition 1" aria-label="Copy heading and permalink for Definition 1">🔗</a></div></article><article class="remark remark-like" id="week5-handout-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="week5-handout-4-1-1">
+<div class="para">A few issues are important to consider when using a series:</div>
+<ul class="disc" id="week5-handout-4-1-1-1">
+<li id="week5-handout-4-1-1-1-1">
+<div class="para" id="week5-handout-4-1-1-1-1-1">Is the series <em class="alert">convergent</em>?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2">
+<div class="para logical" id="week5-handout-4-1-1-1-2-1">
+<div class="para">If the series is convergent,</div>
+<ul class="circle" id="week5-handout-4-1-1-1-2-1-1">
+<li id="week5-handout-4-1-1-1-2-1-1-1">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-1-1">What is the radius of convergence? That is the same question as "What is the interval of convergence?".<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2-1-1-2">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-2-1">Is it convergent absolutely? Is it convergent pointwisely?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-1-2-1-1-3">
+<div class="para" id="week5-handout-4-1-1-1-2-1-1-3-1">Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Why is constructing a series solution important?</div>
+<ul class="disc" id="week5-handout-4-1-1-2">
+<li id="week5-handout-4-1-1-2-1">
+<div class="para" id="week5-handout-4-1-1-2-1-1">Iterative<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-4-1-1-2-2">
+<div class="para" id="week5-handout-4-1-1-2-2-1">Truncated Series vs Error<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-4-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2"><a href="#week5-handout-4" title="Copy heading and permalink for Remark 2" aria-label="Copy heading and permalink for Remark 2">🔗</a></div></article><article class="definition definition-like" id="def-analytic"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-analytic-1-1">A function <span class="process-math">\(f\)</span> is said to be <em class="alert">analytic at a point <span class="process-math">\(a\)</span></em> if it can be represented by a power series in <span class="process-math">\(x-a\)</span> with either a positive or an infinite radius of convergence.<div class="autopermalink" data-description="Paragraph"><a href="#def-analytic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3"><a href="#def-analytic" title="Copy heading and permalink for Definition 3" aria-label="Copy heading and permalink for Definition 3">🔗</a></div></article><details id="week5-handout-6" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-6-1-1">
+<div class="para">Find the radius of convergence and interval of convergence for the given power series.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-6-1-1-1">
+<li id="week5-handout-6-1-1-1-1">
+<div class="para" id="week5-handout-6-1-1-1-1-1">
+<span class="process-math">\(\displaystyle \sum_{n=1}^\infty \frac{3^n}{n}x^{n-1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-6-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-6-1-1-1-2">
+<div class="para" id="week5-handout-6-1-1-1-2-1">
+<span class="process-math">\(\displaystyle \sum_{m=1}^\infty \frac{2^m}{(m-1)!}(x+1)^{m+2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-6-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4"><a href="#week5-handout-6" title="Copy heading and permalink for Example 4" aria-label="Copy heading and permalink for Example 4">🔗</a></div></article></details><article class="remark remark-like" id="rem-power-series"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="rem-power-series-1-1">
+<em class="alert">Taylor series</em> centered at <span class="process-math">\(a=0\)</span> is also called <em class="alert">Maclaurin series</em>. The five functions below are <dfn class="terminology">analytic</dfn> at <span class="process-math">\(a=0.\)</span>  <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><em class="alert">Power Series</em></td>
+<td class="l m b0 r0 l0 t0 lines"><em class="alert">Interval of Convergence</em></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\cdots=\sum_{n=0}^\infty \frac{x^n}{n!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty, \infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n}}{(2n)!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots=\sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1)!}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-\infty,\infty)\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\ln(x+1)=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots=\sum_{n=1}^\infty\frac{(-1)^{n+1}x^n}{n}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1]\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{1-x}=1+x+x^2+x^3+\cdots=\sum_{n=1}^\infty x^n\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\((-1,1)\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Paragraph: Power Series of Basic Functions"><a href="#rem-power-series-1-1" title="Copy heading and permalink for Paragraph: Power Series of Basic Functions" aria-label="Copy heading and permalink for Paragraph: Power Series of Basic Functions">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 5"><a href="#rem-power-series" title="Copy heading and permalink for Remark 5" aria-label="Copy heading and permalink for Remark 5">🔗</a></div></article><details id="week5-handout-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-8-1-1">
+<div class="para">Using the power series in the Remark, find the first 4 terms of a power series in <span class="process-math">\(x\)</span> for each function below.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-8-1-1-2">
+<li id="week5-handout-8-1-1-2-1">
+<div class="para" id="week5-handout-8-1-1-2-1-1">
+<span class="process-math">\(\displaystyle \sin x \cos x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-8-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-8-1-1-2-2">
+<div class="para" id="week5-handout-8-1-1-2-2-1">
+<span class="process-math">\(\displaystyle \frac{1}{\sin x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-8-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6"><a href="#week5-handout-8" title="Copy heading and permalink for Example 6" aria-label="Copy heading and permalink for Example 6">🔗</a></div></article></details><details id="week5-handout-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-9-1-1">
+<div class="para">Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.</div>
+<div class="displaymath process-math" id="eq2-sub-series">
+\begin{equation}
+y=\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}x^{n}, (x+1)y''+y'=0\tag{0}
+\end{equation}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7"><a href="#week5-handout-9" title="Copy heading and permalink for Example 7" aria-label="Copy heading and permalink for Example 7">🔗</a></div></article></details><article class="definition definition-like" id="def-ordinary-point"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-ordinary-point-1-1">The standard form of a linear second order differential equation is defined as <div class="displaymath process-math" id="eq-DE-standard-1">
+\begin{equation*}
+y''+P(x)y'+Q(x)y=0.
+\end{equation*}
+</div> A point <span class="process-math">\(x_0\)</span> is said to be an <dfn class="terminology">ordinary point</dfn> of the differential equation if both <span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(x)\)</span> in the standard form are <dfn class="terminology">analytic</dfn> at <span class="process-math">\(x_0.\)</span> A point that is not an ordinary point is said to be a <dfn class="terminology">singular point</dfn> of the equation.<div class="autopermalink" data-description="Paragraph"><a href="#def-ordinary-point-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 8"><a href="#def-ordinary-point" title="Copy heading and permalink for Definition 8" aria-label="Copy heading and permalink for Definition 8">🔗</a></div></article><details id="week5-handout-11" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-11-1-1">
+<div class="para">Identify all ordinary points and singular points of</div>
+<div class="displaymath process-math" id="week5-handout-11-1-1-1">
+\begin{equation*}
+(x^2-4x-5)y''+2xy'+3y=0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="week5-handout-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="week5-handout-11-2-1">
+<div class="para">Convert to the standard form:</div>
+<div class="displaymath process-math" id="week5-handout-11-2-1-1">
+\begin{equation*}
+y''+\frac{2x}{x^2-4x-5}y'+\frac{3}{x^2-4x-5}y=0
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="week5-handout-11-2-1-2">
+\begin{equation*}
+\Rightarrow P(x)=\frac{2x}{x^2-4x-5} \mbox{ and } Q(x)=\frac{3}{x^2-4x-5}    
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="week5-handout-11-2-1-3">
+\begin{equation*}
+x^2-4x-5=0\Rightarrow (x-5)(x+1)=0\Rightarrow x=5 \mbox{ or } x=-1
+\end{equation*}
+</div>
+<div class="para">
+<span class="process-math">\(P(x)\)</span> and <span class="process-math">\(Q(x)\)</span> are analytic at all real numbers, except <span class="process-math">\(5\)</span> or <span class="process-math">\(-1.\)</span> Thus singular points for the given DE are <span class="process-math">\(\{-1,5\}\)</span> and the ordinary points are <span class="process-math">\(x\neq -1\)</span> and <span class="process-math">\(x\neq 5,\)</span> i.e., <span class="process-math">\((-\infty, -1)\bigcup(-1,5)\bigcup(5,\infty).\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 9.1"><a href="#week5-handout-11-2" title="Copy heading and permalink for Solution 9.1" aria-label="Copy heading and permalink for Solution 9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 9"><a href="#week5-handout-11" title="Copy heading and permalink for Example 9" aria-label="Copy heading and permalink for Example 9">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-existence-power-solution"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-existence-power-solution-1-1">If <span class="process-math">\(x=x_0\)</span> is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at <span class="process-math">\(x_0\text{;}\)</span> that is <span class="process-math">\(y=\sum_{n=0}^\infty c_n(x-x_0)^n,\)</span> called <em class="alert">a solution about the ordinary point <span class="process-math">\(x_0.\)</span></em> A series solution converges at least on some interval defined by <span class="process-math">\(|x-x_0|\lt R,\)</span> where <span class="process-math">\(R\)</span> is the distance from <span class="process-math">\(x_0\)</span> to be the closest singular point.<div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-power-solution-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10"><a href="#thm-existence-power-solution" title="Copy heading and permalink for Theorem 10" aria-label="Copy heading and permalink for Theorem 10">🔗</a></div></article><details id="week5-handout-13" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-13-1-1">
+<div class="para">Find a power series solution of each given differential equation about the ordinary point <span class="process-math">\(x=0\)</span> and a lower bound for the radius of convergence.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-13-1-1-2">
+<li id="week5-handout-13-1-1-2-1">
+<div class="para" id="week5-handout-13-1-1-2-1-1">
+<span class="process-math">\(\displaystyle y''+x^2y'+xy=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-13-1-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-13-1-1-2-2">
+<div class="para" id="week5-handout-13-1-1-2-2-1">
+<span class="process-math">\(\displaystyle (x^2+2)y''+3xy'-y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-13-1-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="week5-handout-13-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="week5-handout-13-2-1">
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-13-2-1-1"><li id="week5-handout-13-2-1-1-1">
+<div class="para logical" id="week5-handout-13-2-1-1-1-1">
+<div class="para">Considering <span class="process-math">\(y''+x^2y'+xy=0,\)</span> <span class="process-math">\(x=0\)</span> is an ordinary point. By <a href="week5-handout.html#thm-existence-power-solution" class="xref" data-knowl="./knowl/xref/thm-existence-power-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 10">Theorem 10</a>, there exists a solution <span class="process-math">\(y(t)\)</span> in the form of</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-5">
+\begin{equation*}
+y(t)=\sum_{n=0}^\infty c_n(x-0)^n=\sum_{n=0}^\infty c_n x^n.
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-6">
+\begin{align*}
+y'= \amp \sum_{n=1}^\infty c_nnx^{n-1} \\
+y''=\amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2} 
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-7">
+\begin{align*}
+\amp y''+x^2y'+xy=0 \\
+\Rightarrow \amp \sum_{n=2}^\infty c_nn(n-1)x^{n-2}+x^2\sum_{n=1}^\infty c_nnx^{n-1}+x\sum_{n=0}^\infty c_n x^n=0 \\
+\Rightarrow \amp\sum_{n=2}^\infty c_nn(n-1)x^{n-2}+\sum_{n=1}^\infty c_nnx^{n+1}+\sum_{n=0}^\infty c_n x^{n+1}=0  \\
+\Rightarrow \amp \sum_{k=0}^\infty c_{k+2}(k+2)(k+1)x^k+\sum_{k=2}^\infty (k-1)c_{k-1}x^k+\sum_{k=1}^\infty c_{k-1}x^k=0 \\
+\Rightarrow \amp 2c_2+(c_0+6c_3)x+\sum_{k=2}^\infty \left(c_{k-1}\cdot k+(k+2)(k+1)c_{k+2}\right)x^k =0
+\end{align*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-8">
+\begin{align*}
+2c_2=0 \amp \Rightarrow c_2=0 \\
+c_0+6c_3=0 \amp \Rightarrow c_3=-\frac{1}{6}c_0 \\
+kc_{k-1}+(k+2)(k+1)c_{k+2}=0 \amp \Rightarrow c_{k+2}=-\frac{kc_{k-1}}{(k+2)(k+1)}, k\geq 2 
+\end{align*}
+</div>
+<div class="para">From the above relations, there are two free variables <span class="process-math">\(c_0\)</span> and <span class="process-math">\(c_1,\)</span> which generate two sequences of coefficients, <span class="process-math">\(\{c_0, c_3,c_6,\ldots\}\)</span> and <span class="process-math">\(\{c_1, c_4, c_7,\ldots\}.\)</span>  Thus, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-power-solution.html" id="week5-handout-13-2-1-1-1-1-13">
+\begin{align*}
+y_1(x)= \amp \sum_{n=0}^\infty c_{3n}x^{3n}, \mbox{ where } c_{3(n+1)}=\frac{-(3n+1)c_3n}{(3n+3)(3n+2)},\\
+y_2(x)= \amp \sum_{n=0}^\infty c_{3n+1}x^{3n+1}, \mbox{ where } c_{3n+4}=\frac{-(3n+2)c_{3n+1}}{(3n+4)(3n+5)}, \\
+\Rightarrow \amp  y(x)= a_1y_1(x)+a_2y_2(x).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-13-2-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li></ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-13-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 11.1"><a href="#week5-handout-13-2" title="Copy heading and permalink for Solution 11.1" aria-label="Copy heading and permalink for Solution 11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 11"><a href="#week5-handout-13" title="Copy heading and permalink for Example 11" aria-label="Copy heading and permalink for Example 11">🔗</a></div></article></details><article class="definition definition-like" id="def-regular-singular"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-regular-singular-1-1">A singular point <span class="process-math">\(x_0\)</span> is said to be a <em class="alert">regular singular point</em> of the 2nd order linear differential equation if <dfn class="terminology">the functions <span class="process-math">\(p(x)=(x-x_0)P(x)\)</span> and <span class="process-math">\(q(x)=(x-x_0)^2Q(x)\)</span> are both analytic at <span class="process-math">\(x_0.\)</span></dfn> A singular point is <dfn class="terminology">not regular</dfn> is said to be an  <dfn class="terminology">irregular singular point</dfn> of the equation.<div class="autopermalink" data-description="Paragraph"><a href="#def-regular-singular-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12"><a href="#def-regular-singular" title="Copy heading and permalink for Definition 12" aria-label="Copy heading and permalink for Definition 12">🔗</a></div></article><details id="week5-handout-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-15-1-1">
+<div class="para">Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-15-1-1-1">
+<li id="week5-handout-15-1-1-1-1">
+<div class="para" id="week5-handout-15-1-1-1-1-1">
+<span class="process-math">\(\displaystyle x^3y''+3x^2y'+6y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-15-1-1-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-15-1-1-1-2">
+<div class="para" id="week5-handout-15-1-1-1-2-1">
+<span class="process-math">\(\displaystyle (x^2-16)^2y''+(x-4)y'+5y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-15-1-1-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 13"><a href="#week5-handout-15" title="Copy heading and permalink for Example 13" aria-label="Copy heading and permalink for Example 13">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-Frobenius"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Method of Frobenius.</span>
+</h3>
+<div class="para" id="thm-Frobenius-2-1">If <span class="process-math">\(x=x_0\)</span> is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form <div class="displaymath process-math" id="froben-1">
+\begin{equation*}
+y=(x-x_0)^r\sum_{n=0}^\infty c_n(x-x_0)^n=\sum_{n=0}^\infty c_n(x-x_0)^{n+r},
+\end{equation*}
+</div> where the number <span class="process-math">\(r\)</span> is a constant to be determined. The series will converge at least on some interval defined by <span class="process-math">\(0\lt x-x_0\lt R.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-Frobenius-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 14: Method of Frobenius"><a href="#thm-Frobenius" title="Copy heading and permalink for Theorem 14: Method of Frobenius" aria-label="Copy heading and permalink for Theorem 14: Method of Frobenius">🔗</a></div></article><details id="week5-handout-17" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-17-1-1">
+<div class="para">Find a solution of the form <span class="process-math">\(y=\sum_{n=0}^\infty c_nx^{n+r}\)</span> for</div>
+<div class="displaymath process-math" id="week5-handout-17-1-1-2">
+\begin{equation*}
+4xy''+2y'-y=0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 15"><a href="#week5-handout-17" title="Copy heading and permalink for Example 15" aria-label="Copy heading and permalink for Example 15">🔗</a></div></article></details><article class="definition definition-like" id="def-indicial"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-indicial-1-1">After substituting <span class="process-math">\(y=\sum_{n=0}^\infty c_nx^{n+r}\)</span> into the given differential equation and simplifying, the <dfn class="terminology">indicial equation</dfn> is a equation in <span class="process-math">\(r\)</span> that results from equating the total coefficient of the lowest power of <span class="process-math">\(x\)</span> to zero. The solutions to the indicial equation are called <dfn class="terminology">indicial roots</dfn>, or <dfn class="terminology">exponents</dfn> of the singularity <span class="process-math">\(x=0.\)</span> When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.<div class="autopermalink" data-description="Paragraph"><a href="#def-indicial-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 16"><a href="#def-indicial" title="Copy heading and permalink for Definition 16" aria-label="Copy heading and permalink for Definition 16">🔗</a></div></article><article class="remark remark-like" id="week5-handout-19"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="week5-handout-19-1-1">
+<div class="para">3 Cases of <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\text{:}\)</span>
+</div>
+<ul class="disc" id="week5-handout-19-1-1-3">
+<li id="week5-handout-19-1-1-3-1">
+<div class="para logical" id="week5-handout-19-1-1-3-1-1">
+<div class="para">
+<dfn class="terminology">Case I:</dfn> <span class="process-math">\(r_1\)</span> and <span class="process-math">\(r_2\)</span> are distinct and do not differ by an integer</div>
+<div class="displaymath process-math" id="week5-handout-19-1-1-3-1-1-4">
+\begin{align*}
+y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1},\\
+y_2(x)=\amp \sum_{n=0}^\infty b_nx^{n+r_2}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-19-1-1-3-2">
+<div class="para logical" id="week5-handout-19-1-1-3-2-1">
+<div class="para">
+<dfn class="terminology">Case II:</dfn> <span class="process-math">\(r_1-r_2=N\text{,}\)</span> where <span class="process-math">\(N\)</span> is a positive integer</div>
+<div class="displaymath process-math" id="week5-handout-19-1-1-3-2-1-4">
+\begin{align*}
+y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1}, c_0\neq 0 \\
+y_2(x)=\amp c y_1(x)\ln(x)+\sum_{n=0}^\infty b_nx^{n+r_2}, b_0\neq 0, c \mbox{ is a constant.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="week5-handout-19-1-1-3-3">
+<div class="para logical" id="week5-handout-19-1-1-3-3-1">
+<div class="para">
+<dfn class="terminology">Case III:</dfn>  <span class="process-math">\(r_1=r_2\)</span>
+</div>
+<div class="displaymath process-math" id="week5-handout-19-1-1-3-3-1-3">
+\begin{align*}
+y_1(x)=\amp \sum_{n=0}^\infty c_nx^{n+r_1}, c_0\neq 0\\
+y_1(x)=\amp y_1(x)\ln(x)+\sum_{n=0}^\infty b_nx^{n+r_1}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#week5-handout-19-1-1-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 17"><a href="#week5-handout-19" title="Copy heading and permalink for Remark 17" aria-label="Copy heading and permalink for Remark 17">🔗</a></div></article><details id="week5-handout-20" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-20-1-1">
+<div class="para">For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about <span class="process-math">\(x=0,\)</span> and form the general solution on the interval <span class="process-math">\((0,\infty).\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-20-1-1-3">
+<li id="week5-handout-20-1-1-3-1">
+<div class="para" id="week5-handout-20-1-1-3-1-1">
+<span class="process-math">\(\displaystyle 3xy''+(2-x)y'-y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-20-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-20-1-1-3-2">
+<div class="para" id="week5-handout-20-1-1-3-2-1">
+<span class="process-math">\(\displaystyle 9x^2y''+9x^2y'+2y=0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-20-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-20-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 18"><a href="#week5-handout-20" title="Copy heading and permalink for Example 18" aria-label="Copy heading and permalink for Example 18">🔗</a></div></article></details><details id="week5-handout-21" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="week5-handout-21-1-1">
+<div class="para">The differential equation (DE) <span class="process-math">\(x^4y''+\lambda y=0\)</span> has an irregular singular point at <span class="process-math">\(x=0.\)</span>
+</div>
+<ol class="lower-alpha lower-alpha-level-1" id="week5-handout-21-1-1-3">
+<li id="week5-handout-21-1-1-3-1">
+<div class="para logical" id="week5-handout-21-1-1-3-1-1">
+<div class="para">Show that the substitution <span class="process-math">\(t=\frac{1}{x}\)</span> yields the DE</div>
+<div class="displaymath process-math" id="week5-handout-21-1-1-3-1-1-2">
+\begin{equation*}
+\frac{d^2 y}{dt^2}+\frac{2}{t}\frac{dy}{dt}+\lambda y=0
+\end{equation*}
+</div>
+<div class="para">which now has a regular singular point at <span class="process-math">\(t=0.\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#week5-handout-21-1-1-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="week5-handout-21-1-1-3-2">
+<div class="para" id="week5-handout-21-1-1-3-2-1">Find two series solutions of the above equation about the singular point <span class="process-math">\(t=0.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#week5-handout-21-1-1-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="week5-handout-21-1-1-3-3">
+<div class="para" id="week5-handout-21-1-1-3-3-1">Express each solution of the original equation in terms of elementary functions.<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#week5-handout-21-1-1-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#week5-handout-21-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 19"><a href="#week5-handout-21" title="Copy heading and permalink for Example 19" aria-label="Copy heading and permalink for Example 19">🔗</a></div></article></details><div class="autopermalink" data-description="Worksheet: Week 5 Handout- Series Solution-Part 1"><a href="#week5-handout" title="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1" aria-label="Copy heading and permalink for Worksheet: Week 5 Handout- Series Solution-Part 1">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="handouts.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
