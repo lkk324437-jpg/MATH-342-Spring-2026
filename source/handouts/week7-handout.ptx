@@ -73,5 +73,24 @@
         </p>
       </statement>
     </example>
+    <definition xml:id="def-sturm-liouville">
+      <statement>
+        <p> Let <m>p,q,r</m> and <m>r'</m> be real-valued functions continuous on an interval 
+          <m>[a,b]</m>, and let <m>r(x)\gt 0</m> and <m>p(x)\gt 0</m> for every <m>x</m> in the interval.
+          <md xml:id="eq-strum-liouville">
+            <mrow>\frac{d}{dx}\left[r(x)y'\right]+\left(q(x)+\lambda p(x0)\right)y=0 </mrow>
+            <mrow> A_1 y(a)+B_1y'(a)=0 </mrow>
+            <mrow> A_2 y(b)+B_2y'(b)=0 </mrow>
+          </md>
+          is said to be a <term>regular Sturm-Liouville Problem.</term>         
+        </p>
+      </statement>
+    </definition>
+    <example>
+      Solve the boundary value problem
+      <md>
+        y''+\lambda y=0, y(0)=0, y(1)+y'(1)=0
+      </md>
+    </example>
 </worksheet>
 
