@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Week 7 Handout- Series Solution-Part 3",
-  "body": " Week 7 Handout- Series Solution-Part 3    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)            is the imaginary unit defined by    For a real number, Euler's formula    A complex number is a number where and are real numbers. The number is called the conjugate of          From , we can derive Then using to replace and in the defintion of Fourier Series.     Complex Fourier Series   The complex Fourier series of function defined on an interval is given by If is a periodic function and the fundamental period of is then becomes where is called fundamental angular frequency and is called frequency spectrum of       Find the complex Fourier series of on the given interval    Graph the periodic expansion of     Graph Frequency spectrum of    Sketch the graph of partial sum for        "
+  "body": " Week 7 Handout- Series Solution-Part 3    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4), Sturm-Liouville Problem (Section 12.5)            is the imaginary unit defined by    For a real number, Euler's formula    A complex number is a number where and are real numbers. The number is called the conjugate of          From , we can derive Then using to replace and in the defintion of Fourier Series.     Complex Fourier Series   The complex Fourier series of function defined on an interval is given by If is a periodic function and the fundamental period of is then becomes where is called fundamental angular frequency and is called frequency spectrum of       Find the complex Fourier series of on the given interval    Graph the periodic expansion of     Graph Frequency spectrum of    Sketch the graph of partial sum for          Let and be real-valued functions continuous on an interval , and let and for every in the interval. is said to be a regular Sturm-Liouville Problem.     Solve the boundary value problem   "
 },
 {
   "id": "week5-handout-2-1-1",
@@ -53,6 +53,24 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "",
   "body": "  Find the complex Fourier series of on the given interval    Graph the periodic expansion of     Graph Frequency spectrum of    Sketch the graph of partial sum for       "
+},
+{
+  "id": "def-sturm-liouville",
+  "level": "2",
+  "url": "week5-handout.html#def-sturm-liouville",
+  "type": "Definition",
+  "number": "5",
+  "title": "",
+  "body": "  Let and be real-valued functions continuous on an interval , and let and for every in the interval. is said to be a regular Sturm-Liouville Problem.    "
+},
+{
+  "id": "week5-handout-8",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-8",
+  "type": "Example",
+  "number": "6",
+  "title": "",
+  "body": "Solve the boundary value problem  "
 }
 ]
 
