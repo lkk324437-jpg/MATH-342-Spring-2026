@@ -5,16 +5,16 @@
   <!-- Include common macros etc: -->
   <xi:include href="./docinfo.ptx" />
   <!-- By creating a PreTeXt "book" for the course, we can split components into "chapters" -->
-  <book>
-    <chapter xml:id="handouts">
-      <title>Handouts</title>
+  <article>
+    <!-- <section xml:id="handouts">-->
+      <!-- c<title>Handouts</title> -->
 
       <!-- Remove or comment out the sample and replace with your own handouts -->
       <!-- You can also comment out the entire chapter on Handouts until you are ready to include them -->
       <xi:include href="./handouts/week7-handout.ptx"/>
 
-    </chapter>
+    <!-- </section>-->
 
    
-    </book>
+  </article>
   </pretext>
