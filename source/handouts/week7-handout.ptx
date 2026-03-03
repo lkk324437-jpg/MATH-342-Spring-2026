@@ -5,15 +5,15 @@
   <!-- Include common macros etc: -->
 
 <worksheet xml:id="week7-handout">
-  <title>Week 7 Handout- Series Solution-Part 3</title>
+  <title>Week 7-8 Handout- Series Solution-Part 3</title>
 
     <introduction>
         <statement> <p>
         We will discuss the following topics related to <term> Series Solution</term>:
       <ul>
         <li> <p>Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2) </p>   </li>
-        <li> <p>Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4), 
-          Sturm-Liouville Problem (Section 12.5)  </p> </li>
+        <li> <p>Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4) </p> </li>
+        <li>  <p> Week 7-Week 8: Boundary Value Problems in Rectangular Coordinates (13.1-13.5)</p></li>
 
       </ul>  </p>
         </statement>
@@ -73,24 +73,162 @@
         </p>
       </statement>
     </example>
-    <definition xml:id="def-sturm-liouville">
+    <definition xml:id="def-2nd-PDE">
+      <title>Linear Partial Differential Equation</title>
+      
+      
       <statement>
-        <p> Let <m>p,q,r</m> and <m>r'</m> be real-valued functions continuous on an interval 
-          <m>[a,b]</m>, and let <m>r(x)\gt 0</m> and <m>p(x)\gt 0</m> for every <m>x</m> in the interval.
-          <md xml:id="eq-strum-liouville">
-            <mrow>\frac{d}{dx}\left[r(x)y'\right]+\left(q(x)+\lambda p(x0)\right)y=0 </mrow>
-            <mrow> A_1 y(a)+B_1y'(a)=0 </mrow>
-            <mrow> A_2 y(b)+B_2y'(b)=0 </mrow>
-          </md>
-          is said to be a <term>regular Sturm-Liouville Problem.</term>         
+        <p>Let <m>u</m> denote the dependent variable and <m>x</m> and <m>y</m> 
+          independent variables, the general form of a <term>linear second-order partial differential equations</term>
+           is given by 
+           <md xml:id="linear-2pde" number="yes">
+            A\frac{\partial^2 u}{\partial x^2}+B\frac{\partial^2 u}{\partial x\partial y}+C\frac{\partial^2 u}{\partial y^2}+D\frac{\partial u}{\partial x}+E\frac{\partial u}{\partial y}+Fu=G,
+           </md>
+           where the coefficients <m>A, B, \ldots, G</m> are constants or functions of <m>x</m> and <m>y.</m>
+            When <m>G(x,y)=0</m>, <xref ref="linear-2pde"/> is said to be <term>homogeneous</term>; 
+              otherwise, it is <term>nonhomogeneous.</term>    
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-sep-var">
+      <title>Separation of Variables</title>
+       <statement><p>
+          While seeking a particular solution of a differential equation in which 
+          the independent variable are <m>x</m> and <m>y</m>, we assume that this 
+          particular solution is in the form of <term>product</term> of a function of <m>x</m>
+           and a function of <m>y</m>:
+           <md>
+            u(x,y)=X(x)Y(y).
+           </md>
         </p>
       </statement>
     </definition>
     <example>
-      Solve the boundary value problem
-      <md>
-        y''+\lambda y=0, y(0)=0, y(1)+y'(1)=0
-      </md>
+      <statement>
+        <p> Use Separation of Variables to solve 
+          <md>\frac{\partial^2 u}{\partial x^2}+4\frac{\partial^2 u}{\partial x\partial y}
+            +\frac{\partial^2 u}{\partial y^2}=0.</md>
+        </p>
+      </statement>
     </example>
+    <theorem xml:id="thm-superposition">
+      <title>Superposition Principle</title>   
+      <statement>
+        <p>If <m>u_1, u_2, \ldots, u_k</m> are solutions of a homogeneous linear PDE, 
+          then the linear combination 
+          <md> u=c_1u_1+c_2u_2+\cdots+c_ku_k,</md> 
+          is also a solution, where <m>c_i, i=1,2,\ldots, k, </m> are constants.         
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      Many other approaches are also based on the above theorem, 
+      for example, power series, Fourier series, etc. 
+      <md>u=\sum_{k=1}^\infty c_ku_k.</md>
+      <ul>
+        <li> <p> In power series, what is <m>u_k</m>? </p>   </li>
+        <li> <p> In Fourier series, what is <m>u_k</m>?   </p> </li>
+      </ul>
+    </remark>
+    <definition xml:id="def-classification-2nd-pdes">
+      <title>Classification of linear 2nd-order PDEs</title>     
+      <statement>
+        <p> The linear 2nd order PDE:
+          <md> A\frac{\partial^2 u}{\partial x^2}+B\frac{\partial^2 u}{\partial x\partial y}+C\frac{\partial^2 u}{\partial y^2}
+            +D\frac{\partial u}{\partial x}+E\frac{\partial u}{\partial y}+Fu=G,</md>
+          is said to be 
+          <ul>
+            <li><p> <term>hyperbolic</term> if <m>B^2-4AC\gt 0,</m>      </p></li>
+            <li><p> <term>parabolic</term> if <m>B^2-4AC=0,</m>  </p>  </li>
+            <li><p><term>elliptic</term> if <m>B^2-4AC\lt 0.</m>    </p> </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+    <example>
+      <statement>
+        <p>Classify each of given PDEs as hyperbolic, parabolic, or elliptic.
+          <ol>
+            <li><p>  <m>3\frac{\partial^2 u}{\partial x^2}-4\frac{\partial^2 u}{\partial x\partial y}-\frac{\partial^2 u}{\partial y^2}=0</m>   </p>     </li>
+            <li><p> <m>\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial x\partial y}=u</m>  </p>  </li>
+            <li><p> <m>k\frac{\partial^2 u}{\partial x^2}=\frac{\partial u}{\partial y}, k>0</m>     </p></li>
+          </ol>        
+        </p>
+      </statement>
+    </example>
+    <remark>
+      <statement>
+        <p> Here, we focus on finding product solutions of the 2nd-order PDEs 
+    and observe the relationship with Fourier series:
+    <ol>
+      <li><p> 1-D Heat Equation:
+        <md xml:id="heat1d" number="yes">
+          k\frac{\partial^2 u}{\partial x^2}=\frac{\partial u}{\partial t}, k\gt 0
+        </md> </p> </li>
+      <li> <p>1D Wave Equation:
+        <md xml:id="wave1d" number="yes">
+          a^2\frac{\partial^2 u}{\partial x^2}=\frac{\partial^2 u}{\partial t^2}          
+        </md> </p></li>
+      <li><p> Laplace's Equation:
+        <md xml:id="laplace-eq" number="yes">
+          \nabla^2 u=0,          
+        </md> 
+        where
+      <md>
+        \nabla^2 u=\frac{\partial^2 u}{\partial x^2}+
+        \frac{\partial^2 u}{\partial y^2} \textbf{(2D Laplacian)},
+      </md>      or
+      <md>
+        \nabla^2 u=\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}+
+        \frac{\partial^2 u}{\partial z^2}  \textbf{(3D Laplacian)}
+      </md>     
+       </p> </li>
+    </ol>
+          
+        </p>
+      </statement>
+    </remark>
+  <definition xml:id="def-heat">
+    <title>1-D Heat Equation</title>
+    
+    
+    <statement>
+      <p> Consider a thin rod of length <m>L</m> with an initial temperature <m>f(x)</m> 
+        throughout and whose ends are held at temperature zero for all time <m>t\gt 0.</m>
+        <figure xml:id="fig-3d-rod-vertical-ellipse-left-half-ellipse-right">
+      <caption>      A thin rod . </caption>
+      <image>
+      <latex-image>
+      \begin{tikzpicture}[scale=.7]
+        \def\L{8}
+        \def\yr{0.9}
+        \def\xl{0.4}
+        \def\xr{0.5}
+
+        \draw[densely dashed, samples=160, domain=90:270, variable=\t]
+          plot ({\xl*cos(\t)}, {\yr*sin(\t)});
+        \draw[line width=0.9pt, samples=160, domain=-90:90, variable=\t]
+          plot ({\xl*cos(\t)}, {\yr*sin(\t)});
+        \draw[line width=0.9pt] (0,\yr) -- (\L,\yr);
+        \draw[line width=0.9pt] (0,-\yr) -- (\L,-\yr);
+        \draw[line width=1.1pt, samples=200, domain=-90:90, variable=\t]
+          plot ({\L + \xr*cos(\t)}, {\yr*sin(\t)});
+        \node[anchor=east] at (-0.25,0) {$u(0,t)$};
+        \node[anchor=west] at (\L+\xr+0.35,0) {$u(L,t)$};
+      \end{tikzpicture}
+    </latex-image>
+    </image>
+  </figure>
+      The temperature <m>u(x,t)</m> in the rod is determined from the BVP:
+      <md>
+        <mrow> k\frac{\partial^2 u}{\partial x^2}\amp= \frac{\partial u}{\partial t},0\lt x\lt L, t\gt 0 </mrow>
+        <mrow> u(0,t)\amp= 0, t\gt 0  </mrow>
+        <mrow> u(L,t)\amp= 0, t\gt 0 </mrow>
+        <mrow> u(x,0)\amp= f(x),0\lt x\lt L  </mrow>
+      </md>
+      </p>
+    </statement>
+  </definition>
+
 </worksheet>
 
