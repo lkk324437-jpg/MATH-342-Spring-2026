@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Week 7-8 Handout- Series Solution-Part 3",
-  "body": " Week 7-8 Handout- Series Solution-Part 3    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4)    Week 7-Week 8: Boundary Value Problems in Rectangular Coordinates (13.1-13.5)           is the imaginary unit defined by    For a real number, Euler's formula    A complex number is a number where and are real numbers. The number is called the conjugate of          From , we can derive Then using to replace and in the defintion of Fourier Series.     Complex Fourier Series   The complex Fourier series of function defined on an interval is given by If is a periodic function and the fundamental period of is then becomes where is called fundamental angular frequency and is called frequency spectrum of       Find the complex Fourier series of on the given interval    Graph the periodic expansion of     Graph Frequency spectrum of    Sketch the graph of partial sum for         Linear Partial Differential Equation   Let denote the dependent variable and and independent variables, the general form of a linear second-order partial differential equations is given by where the coefficients are constants or functions of and When , is said to be homogeneous ; otherwise, it is nonhomogeneous.      Separation of Variables  While seeking a particular solution of a differential equation in which the independent variable are and , we assume that this particular solution is in the form of product of a function of and a function of :       Use Separation of Variables to solve      Superposition Principle   If are solutions of a homogeneous linear PDE, then the linear combination is also a solution, where are constants.    Many other approaches are also based on the above theorem, for example, power series, Fourier series, etc.    In power series, what is ?    In Fourier series, what is ?      Classification of linear 2nd-order PDEs   The linear 2nd order PDE: is said to be   hyperbolic if    parabolic if    elliptic if          Classify each of given PDEs as hyperbolic, parabolic, or elliptic.                   Here, we focus on finding product solutions of the 2nd-order PDEs and observe the relationship with Fourier series:  1-D Heat Equation:     1D Wave Equation:   Laplace's Equation: where or         1-D Heat Equation   Consider a thin rod of length with an initial temperature throughout and whose ends are held at temperature zero for all time   A thin rod .     The temperature in the rod is determined from the BVP:     "
+  "body": " Week 7-8 Handout- Series Solution-Part 3    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.4)    Week 7-Week 8: Boundary Value Problems in Rectangular Coordinates (13.1-13.5)           is the imaginary unit defined by    For a real number, Euler's formula    A complex number is a number where and are real numbers. The number is called the conjugate of          From , we can derive Then using to replace and in the defintion of Fourier Series.     Complex Fourier Series   The complex Fourier series of function defined on an interval is given by If is a periodic function and the fundamental period of is then becomes where is called fundamental angular frequency and is called frequency spectrum of       Find the complex Fourier series of on the given interval    Graph the periodic expansion of     Graph Frequency spectrum of    Sketch the graph of partial sum for         Linear Partial Differential Equation   Let denote the dependent variable and and independent variables, the general form of a linear second-order partial differential equations is given by where the coefficients are constants or functions of and When , is said to be homogeneous ; otherwise, it is nonhomogeneous.      Separation of Variables  While seeking a particular solution of a differential equation in which the independent variable are and , we assume that this particular solution is in the form of product of a function of and a function of :       Use Separation of Variables to solve each of the followings:              Superposition Principle   If are solutions of a homogeneous linear PDE, then the linear combination is also a solution, where are constants.    Many other approaches are also based on the above theorem, for example, power series, Fourier series, etc.    In power series, what is ?    In Fourier series, what is ?      Classification of linear 2nd-order PDEs   The linear 2nd order PDE: is said to be   hyperbolic if    parabolic if    elliptic if          Classify each of given PDEs as hyperbolic, parabolic, or elliptic.                   Here, we focus on finding product solutions of the 2nd-order PDEs and observe the relationship with Fourier series:  1-D Heat Equation:     1D Wave Equation:   Laplace's Equation: where or         1-D Heat Equation   Consider a thin rod of length with an initial temperature throughout and whose ends are held at temperature zero for all time   A thin rod .     The temperature in the rod is determined from the BVP:      Wave Equation   Consider a string of length stretched taut between two end points on the x-axis. When the string starts to vibrate, assume that the motion takes place in the xy-plane in such a manner that each point on the string moves in a direction perpendicular to the x-axis (transverse vibrations). Let denote the vertical displacement of any point on the string measured from the x-axis for (Referred back to Section 13.2 for further assumptions.)      Laplace's Equation    is the steady-state temperature in a rectangular plate. When no heat escapes from the lateral faces of the plate, we solve the following BVP:   A Rectangle plate.     A Rectangle plate.       Laplace's Equation-Superposition Principle        "
 },
 {
   "id": "week7-handout-2-1-1",
@@ -79,7 +79,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "7",
   "title": "",
-  "body": "  Use Separation of Variables to solve    "
+  "body": "  Use Separation of Variables to solve each of the followings:            "
 },
 {
   "id": "thm-superposition",
@@ -134,6 +134,33 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "1-D Heat Equation.",
   "body": " 1-D Heat Equation   Consider a thin rod of length with an initial temperature throughout and whose ends are held at temperature zero for all time   A thin rod .     The temperature in the rod is determined from the BVP:    "
+},
+{
+  "id": "def-wave",
+  "level": "2",
+  "url": "week7-handout.html#def-wave",
+  "type": "Definition",
+  "number": "15",
+  "title": "Wave Equation.",
+  "body": " Wave Equation   Consider a string of length stretched taut between two end points on the x-axis. When the string starts to vibrate, assume that the motion takes place in the xy-plane in such a manner that each point on the string moves in a direction perpendicular to the x-axis (transverse vibrations). Let denote the vertical displacement of any point on the string measured from the x-axis for (Referred back to Section 13.2 for further assumptions.)    "
+},
+{
+  "id": "def-laplace-eq",
+  "level": "2",
+  "url": "week7-handout.html#def-laplace-eq",
+  "type": "Definition",
+  "number": "16",
+  "title": "Laplace’s Equation.",
+  "body": " Laplace's Equation    is the steady-state temperature in a rectangular plate. When no heat escapes from the lateral faces of the plate, we solve the following BVP:   A Rectangle plate.     A Rectangle plate.     "
+},
+{
+  "id": "week7-handout-18",
+  "level": "2",
+  "url": "week7-handout.html#week7-handout-18",
+  "type": "Remark",
+  "number": "18",
+  "title": "Laplace’s Equation-Superposition Principle.",
+  "body": " Laplace's Equation-Superposition Principle       "
 }
 ]
 
