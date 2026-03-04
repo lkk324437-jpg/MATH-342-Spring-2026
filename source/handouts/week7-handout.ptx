@@ -105,11 +105,36 @@
     </definition>
     <example>
       <statement>
-        <p> Use Separation of Variables to solve 
-          <md>\frac{\partial^2 u}{\partial x^2}+4\frac{\partial^2 u}{\partial x\partial y}
-            +\frac{\partial^2 u}{\partial y^2}=0.</md>
+        <p> Use Separation of Variables to solve each of the followings:
+          <ol>
+            <li>  <p><m>\frac{\partial u}{\partial x}+3\frac{\partial u}{\partial y}=0</m>     </p></li>
+            <li> <p>   <m>      \frac{\partial ^2 u}{\partial x^2}=9\frac{\partial u}{\partial y}  </m>   </p></li>
+          </ol>      
         </p>
       </statement>
+      <solution component="inst">
+        <ol>
+          <li><p> The equation is equivalent to <m>\frac{\partial u}{\partial x}=-3\frac{\partial u}{\partial y}.</m> 
+             Let <m>u(x,y)=X(x)Y(y).</m> Then <m>\frac{\partial u}{\partial x}=X'Y, \frac{\partial u}{\partial y}=XY'.</m> 
+          The equation becomes <m>X'Y=-3XY'.</m> Divded both sides by <m>-3XY</m>
+        <md>
+          \Rightarrow  \frac{X'Y}{-3XY}=\frac{-3XY'}{-3XY}\Rightarrow \frac{X'}{-3X}=\frac{Y'}{Y}.
+        </md>
+        Let the ratios be the constant <m>\lambda.</m> Then we have 2 differential equations:
+        <md>
+          <mrow> X' \amp =-3\lambda X \amp \Rightarrow X(x)=e^{-3\lambda x}</mrow>
+          <mrow> Y' \amp =\lambda Y  \amp \Rightarrow Y(y)=e^{\lambda x}</mrow>
+        </md>
+        Thus <md>
+          u(x,y)=Ae^{-3\lambda x}e^{\lambda y},
+        </md>
+        where <m>A</m> is a constant.
+        
+          </p>  </li>
+          <li> <p>    </p> </li>
+        </ol>
+
+      </solution>
     </example>
     <theorem xml:id="thm-superposition">
       <title>Superposition Principle</title>   
@@ -196,7 +221,7 @@
       <p> Consider a thin rod of length <m>L</m> with an initial temperature <m>f(x)</m> 
         throughout and whose ends are held at temperature zero for all time <m>t\gt 0.</m>
         <figure xml:id="fig-3d-rod-vertical-ellipse-left-half-ellipse-right">
-      <caption>      A thin rod . </caption>
+      <caption align="center">      A thin rod . </caption>
       <image>
       <latex-image>
       \begin{tikzpicture}[scale=.7]
@@ -221,7 +246,7 @@
   </figure>
       The temperature <m>u(x,t)</m> in the rod is determined from the BVP:
       <md>
-        <mrow> k\frac{\partial^2 u}{\partial x^2}\amp= \frac{\partial u}{\partial t},0\lt x\lt L, t\gt 0 </mrow>
+        <mrow xml:id="eq-heat" number="yes"> k\frac{\partial^2 u}{\partial x^2}\amp= \frac{\partial u}{\partial t},0\lt x\lt L, t\gt 0 </mrow>
         <mrow> u(0,t)\amp= 0, t\gt 0  </mrow>
         <mrow> u(L,t)\amp= 0, t\gt 0 </mrow>
         <mrow> u(x,0)\amp= f(x),0\lt x\lt L  </mrow>
@@ -229,6 +254,79 @@
       </p>
     </statement>
   </definition>
+  <definition xml:id="def-wave">
+    <title>Wave Equation</title>   
+    <statement>
+      <p>Consider a string of length <m>L,</m> stretched taut between two end points 
+        on the x-axis. When the string starts to vibrate, assume that the motion 
+        takes place in the xy-plane in such a manner that each point on the string moves 
+        in a direction perpendicular to the x-axis (transverse vibrations). Let <m>u(x,t)</m> 
+        denote the vertical displacement of any point on the string measured from the x-axis for <m>t\gt 0.</m>
+          (Referred back to Section 13.2 for further assumptions.)
+          <md >
+            <mrow xml:id="eq-wave" number="yes">a^2\frac{\partial^2 u}{\partial x^2}\amp =\frac{\partial^2 u}{\partial t^2},0\lt x\lt L, t\gt 0  </mrow>
+            <mrow> u(0,t)\amp =0, u(L,t)=0, t\gt 0 </mrow>
+            <mrow> u(x,0)\amp =f(x),\frac{\partial u}{\partial t}\bigg|_{t=0}=g(x), 0\lt x\lt L </mrow>           
+          </md>        
+      </p>
+    </statement>
+  </definition>
+  <definition xml:id="def-laplace-eq">
+    <title>Laplace's Equation</title>
+    
+    
+    <statement>
+      <p> <m>u(x,t)</m> is the steady-state temperature in a rectangular plate.  
+        When no heat escapes from the lateral faces of the plate, we solve the following BVP:
+        <md>
+          <mrow xml:id="eq-lapalce" number="yes"> \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}\amp =0,0\lt x\lt a, 0\lt y\lt b </mrow>
+          <mrow> \frac{\partial u}{\partial x}\bigg|_{x=0}\amp =0, 0\lt y\lt b </mrow>
+          <mrow>  \frac{\partial u}{\partial x}\bigg|_{x=a}\amp =0, 0\lt y\lt b</mrow>
+          <mrow> u(x,0) \amp =0, 0\lt x\lt a </mrow>
+          <mrow> u(x,b) \amp =f(x),0\lt x\lt a </mrow>
+        </md>
+        
+        <figure xml:id="rect-first-quadrant-shaded-sides">
+          <caption align="center">A Rectangle plate.</caption>
+            <image width="50%" alignment="center">
+              <latex-image>
+              \begin{tikzpicture}
+              \def\W{2}
+              \def\H{1.5}
+              \def\Xmin{-.2} \def\Xmax{2.2}
+              \def\Ymin{-.2} \def\Ymax{1.8}
 
+              \draw[->] (\Xmin,0) -- (\Xmax,0) node[right] {\scriptsize $x$};
+              \draw[->] (0,\Ymin) -- (0,\Ymax) node[above] {\scriptsize $y$};
+
+              \fill[blue!12] (\Xmin,0) rectangle (0,\H);
+              \fill[blue!12] (\W,0) rectangle (\Xmax,\H);
+               \node[left] at (0,0.5*\H) {\scriptsize insulated};
+               \node[below] at (0.5*\W,0) {\scriptsize $u(x,0)=0$};
+               \node[above] at (0.5*\W,\H) {\scriptsize $u(x,b)=f(x)$};
+               \node[right] at (\W,0.5*\H) {\scriptsize insulated};
+              \draw[draw=black, thin] (0,0) rectangle (\W,\H);             
+            \end{tikzpicture}
+              </latex-image>
+        </image>
+        <caption align="center">A Rectangle plate.</caption>
+      </figure>
+      </p>
+    </statement>
+  </definition>
+  <remark>
+    <title>Laplace's Equation-Superposition Principle</title>
+    <statement>
+      <p>
+        <md>
+          <mrow> \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2} =0,\amp  \amp 0\lt x\lt a, 0\lt y\lt b </mrow>
+          <mrow> u(0,y)=F(y),\amp \amp u(a,y)=G(y), 0\lt y\lt b </mrow>
+          <mrow> u(x,0)=f(x),\amp  \amp u(x,b)=f(x), 0\lt x\lt a</mrow>
+        </md>
+      </p>
+    </statement>
+    
+    
+  </remark>
 </worksheet>
 
