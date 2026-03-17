@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Written by Sarah Sparks, Fall 2025 -->
+
+<worksheet xml:id="hw4">
+  <title>Homework 4</title>
+  <introduction>
+    <p>
+      <alert>Instructions:</alert> 
+      <ul>
+        <li><p> Use Markdown cells to label and explain each part of your work clearly.        </p> </li>
+        <li><p> Keep only necessary code cells in the appropriate order. 
+          The entire Juputer Notebook should not have error message when it is re-run 
+          in the sequential order.  </p>  </li>
+        <li><p> All work and explanations should be contained with in a single Jupyter Notebook and not other files 
+          will be accepted.    </p> </li>
+      </ul> 
+    </p>
+  </introduction>
+
+ <exercise>
+  <p>  Use the finite difference method to approximate the solution of each 
+    the given boundary-value problems. Your solution must include the following 3 parts. 
+    <ul>
+      <li><p>Must clearly show the system of the linear equations 
+    from the indicted value of <m>n</m>, </p> </li>
+    <li> <p>Use Mathematica to find the closed form of the analytic solution 
+      if it exists,   </p> </li>
+    <li><p>    Use the Python code from the class to 
+    find the solution and the graph. Make sure you use a value of <m>n</m> that's large enough 
+    to make the maximum error is less than <m>10^{-4}.</m></p>   </li>
+    </ul> 
+  
+  <ol>
+    <li><p><m>y''-4y'+4y=(x+1)e^{2x}, y(0)=3, y(1)=0, n=5</m>    </p> </li>
+    <li> <p><m>x^2y''-xy'+y=\ln x, y(1)=0,y(2)=-2, n=4</m>    </p> </li>
+  </ol>
+  </p>
+ </exercise>
+
+<exercise>
+  <p> <term>Background: </term> When a drug is deposited in tissue the molecules 
+      diffuse while also being consumed by biochemical reactions such as:
+      <ul>
+        <li><p>  enzyme‑catalyzed metabolism            </p>   </li>
+        <li><p>  receptor binding     </p> </li>
+        <li>  <p>  hydrolysis or degradation          </p>   </li>
+      </ul>
+      In many tissues, both diffusion and reaction rates vary with depth due to changes in:
+      <ul>
+        <li>  <p> tissue porosity         </p>    </li>
+        <li>  <p>  water contents        </p>   </li>
+        <li>  <p>  enzyme distribution       </p>   </li>
+        <li>  <p>  extracellular matrix density        </p>   </li>
+      </ul>
+      The steady-state concentration <m>C(x)</m> of the drug can be modeled by a 
+      <term>second‑order diffusion–reaction ODE:</term>   
+      <md xml:id="eq-drug" number="yes">
+        \frac{d}{dx}\left(D(x)\frac{d C(x)}{dx}\right)-k(x)C(x)=0, 0\lt x\lt L
+      </md>
+      Assume that <md> D(x)=D_0 e^{-\beta x}, k(x)=k_0 e^{ax},        
+      </md>
+      where
+      <ul>
+        <li><p> <m>x</m> is a <term>distance measured from the tissue surface</term>,   </p>  </li>
+        <li> <p> <m>D_0</m> and <m> k_0</m> are baseline diffusion and reaction rates,        </p> </li>
+        <li>   <p> <m>\beta \gt 0</m> describes how diffusion slows deeper in tissue,     </p></li>
+        <li><p> <m>\alpha \gt 0</m> describes how metaolic enzyme concentration increase with depth.  </p></li>
+      </ul>
+      Consider the boundary conditions of <m>C(0)=C_0; C'(L)=0.</m>
+  
+    Answer the following questions:
+    <ol>
+      <li><p> <term>Part 1:</term>
+        <ol> 
+          <li><p>Explain why diffusion might decrease with depth in tissue, i.e., interpret
+              <m>D(x)=D_0e^{-\beta x}.</m>   </p></li>
+          <li><p> Explain why enzymatic degradation might increase with depth, i.e., interpret
+              <m>k(x)=k_0e^{\alpha x}.</m>   </p></li>
+            <li><p>  Identify two real drugs for which this model would be relevant and explain why.  </p></li>
+          </ol>   </p></li>
+        <li><p> <term>Part 2: </term> Expand <xref ref="eq-drug"/>  and rewrite is as a standard
+          2nd order differential equation, i.e.
+          <md>C''(x)+p(x)C'(x)+q(x)C(x)=0.</md>   
+          Give explicit expressions for <m>p(x)</m> and <m>q(x).</m>
+          </p>   </li> 
+        <li> <p><term>Part 3: </term> Consider the following value for each parameter: 
+        <table>
+          <title>Parameter Values</title>
+          <tabular>
+            <row>  <cell>Parameter </cell> <cell>Value</cell>     </row>
+            <row> <cell><m>D_0</m></cell> <cell><m>1.0\times 10^{-9}\mbox{m}^2/\mbox{s}</m></cell>       </row>
+            <row> <cell><m>k_0</m></cell> <cell><m>0.02\mbox{s}^{-1}</m></cell>       </row>
+            <row> <cell><m>\alpha=-\beta</m></cell> <cell><m>150 \mbox{m}^{-1}</m></cell>       </row>
+            <row> <cell><m>L</m></cell> <cell><m>3</m>mm</cell>       </row>
+            <row> <cell><m>C_0</m></cell> <cell><m>1.0\mbox{mol}/\mbox{m}^3</m> (normalized)</cell>       </row>
+          </tabular>
+        </table>
+        Modify the finite difference Python code from the class estimate the concentration at depth <m>L.</m> Interpret whether
+        a therapeutic amount of drug reaches deep tissue. Create the graph of <m>C(x)</m> to show the drug concentration 
+        between the surface of tissue and the depth of <m>L</m> meters.
+        </p> </li>
+        <li>  <p> <term>Part 4: (Extra credit) </term>  Use the modified Python code from Part 3 to study the impact 
+          of each case to the concentration at depth <m>L</m>:
+        <ol>
+          <li>   <p>  Increase <m>\beta</m>      </p>   </li>
+          <li>   <p>  Increase <m>\alpha</m>      </p>   </li>
+          <li>   <p>  Decreasing <m>k_0</m>      </p>   </li>
+        
+        </ol>    
+       </p>   </li>
+    </ol>
+  </p>
+  </exercise>
+  <exercise>
+    
+<p>
+    This is a realistic, steady, one–dimensional ADR model with
+    <em>spatially varying</em> coefficients and a nonhomogeneous source term.  Boundary‑value problem (BVP):
+  </p>
+
+  <me xml:id="eq-adr-steady">
+    \frac{d}{dx} \left(D(x)C'(x)\right)-v(x)C'(x)-k(x)C(x) = S(x), \qquad 0 &lt; x &lt; L,
+  </me>
+  <me xml:id="eq-bc">
+    C(0)=C_0, \qquad C'(L)=0.
+  </me>
+  <p>Coefficient models (realistic spatial variation):</p>
+  <ul>
+    <li>
+      <p><em>Dispersion with scale‑dependent dispersivity:</em></p>
+      <me>
+        D(x) = D_m + \alpha(x)\,v(x), \qquad
+        \alpha(x) =
+        \begin{cases}
+          \alpha_{\text{grad}}\,x, &amp; 0 \le x &lt; x_v,\\
+          \alpha_L, &amp; x \ge x_v~.
+        \end{cases}
+      </me>
+    </li>
+    <li>
+      <p><em>Velocity from Darcy kinematics with a mild downstream decrease:</em></p>
+      <me>
+        v(x)=\dfrac{K_0\,i_0}{n\,(1+\beta x)}~.
+      </me>
+    </li>
+    <li>
+      <p><em>First‑order decay increasing with distance (e.g., enhanced biodegradation):</em></p>
+      <me>
+        k(x)=k_0\,e^{\gamma x}.
+      </me>
+    </li>
+    <li>
+      <p><em>Distributed source that fades with distance:</em></p>
+      <me>
+        S(x)=S_0\,e^{-\alpha_s x}.
+      </me>
+    </li>
+  </ul>
+
+  <p><em>Default parameters for the numerical experiment</em> (use unless a part tells you to change them):</p>
+  <ul>
+    <li><m>L = 100~\text{m}</m>, <m>C_0 = 1~\text{mg/L}</m></li>
+    <li><m>D_m = 1\times 10^{-9}~\text{m}^2/\text{s}</m></li>
+    <li><m>\alpha_{\text{grad}} = 0.02~\text{m}^{-1}</m>, <m>\alpha_L = 2~\text{m}</m>, <m>x_v = 50~\text{m}</m></li>
+    <li><m>K_0 = 10^{-4}~\text{m/s}</m>, <m>i_0 = 0.01</m>, <m>n=0.3</m>, <m>\beta = 0.01~\text{m}^{-1}</m></li>
+    <li><m>k_0 = 0.001~\text{s}^{-1}</m>, <m>\gamma = 0.005~\text{m}^{-1}</m></li>
+    <li><m>S_0 = 1.0</m> (consistent with your code’s units), <m>\alpha_s = 0.02~\text{m}^{-1}</m></li>
+    <li>Grid: <m>N = 400</m> uniform nodes on <m>[0,L]</m></li>
+  </ul>
+
+
+  <!-- ========= Numbered Parts using a single ordered list ========= -->
+  <ol>
+    <!-- Part 1 -->
+    <li><p> <term> Part 1 — Physical Interpretation</term>
+          <p>Briefly justify each spatial profile below in the context of heterogeneous aquifers and reactive transport:</p>
+          <ol>
+            <li>Why <m>v(x)</m> might gently decrease with <m>x</m> when <m>K(x)</m> fines downstream.</li>
+            <li>Why first‑order decay <m>k(x)</m> is an appropriate effective model for biodegradation.</li>
+            <li>Why a distributed source <m>S(x)=S_0 e^{-\alpha_s x}</m> is plausible for leachate infiltration.</li>
+          </ol></p>   </li>
+
+    <!-- Part 2 -->
+    <li><p><term>Part 2 — Expanding the Differential Equation</term>
+        <p> Show that <m>\dfrac{d}{dx}\left(D(x)C'(x)\right) = D(x)\,C''(x) + D'(x)\,C'(x)</m>, and rewrite the ADR equation as
+          </p>
+          <me>
+            D(x)\,C''(x) + \bigl(D'(x) - v(x)\bigr)\,C'(x) - k(x)\,C(x) = S(x).
+          </me>
+          <p>
+            Then substitute the explicit formulas for <m>D(x)</m>, <m>D'(x)</m>, <m>v(x)</m>, and <m>k(x)</m> to obtain the
+            full variable‑coefficient, nonhomogeneous ODE to be used in the solver.
+          </p>
+        </p>
+    </li>
+
+    <!-- Part 3 -->
+    <li><p><term>Part 3 — Numerical Experiment </term>
+          <ol>
+            <li>Run the solver with the default parameters and plot the numerical solution <m>C(x)</m>.</li>
+            <li>On separate axes, plot the profiles <m>D(x)</m>, <m>v(x)</m>, and <m>k(x)</m> over <m>[0,L]</m>.</li>
+            <li>
+              Discuss where advection, dispersion, or decay appears to dominate the concentration profile,
+              citing features such as near‑source gradients, downstream tails, or rapid attenuation zones.
+            </li>
+          </ol>
+        </p>
+    </li>
+
+   <li><p><term> Part 4 — Sensitivity Analyses (Only <m>\beta</m> and <m>\gamma</m>)  (Extra Credits)</term>
+      <ol><li>  <p> Recall <m>v(x)=\dfrac{K_0 i_0}{n(1+\beta x)}</m>. Increase <m>\beta</m> by factors of 2 and 4 relative to the
+            baseline, re‑run the solver, and overlay <m>C(x)</m> profiles.
+          <ul>
+            <li>Quantify changes to near‑source concentration, overall plume length, and downstream tailing.</li>
+            <li>
+              Explain the trends mechanistically in terms of advection and the induced change in
+              <m>D(x)=D_m+\alpha(x)\,v(x)</m>.
+            </li>
+          </ul></p></li>
+          <li>   <p>
+            Recall <m>k(x)=k_0 e^{\gamma x}</m>. Increase <m>\gamma</m> by factors of 2 and 4 relative to the baseline,
+            re‑run the solver, and overlay <m>C(x)</m> profiles.
+          <ul>
+            <li>Report how the maximum concentration and the location of strong attenuation change.</li>
+            <li>
+              Discuss how a stronger downstream decay field competes with advection and dispersion in shaping the plume.
+            </li>
+          </ul>
+        </p></li>
+       </ol> 
+      </p> </li>
+  </ol>
+
+  </exercise>
+</worksheet>
