@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "",
   "title": "Week 5 Handout- Series Solution-Part 1",
-  "body": " Week 5 Handout- Series Solution-Part 1    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)         A power series in is an infinite series of the form It is also called a power series centered at .       A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?            A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.     Find the radius of convergence and interval of convergence for the given power series.                   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                             Using the power series in the Remark, find the first 4 terms of a power series in for each function below.                  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.       The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.      Identify all ordinary points and singular points of      If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.      Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.                  A singular point is said to be a regular singular point of the 2nd order linear differential equation if the functions and are both analytic at A singular point is not regular is said to be an irregular singular point of the equation.      Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.                  If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by       Find a solution of the form for       After substituting into the given differential equation and simplifying, the indicial equation is a equation in that results from equating the total coefficient of the lowest power of to zero. The solutions to the indicial equation are called indicial roots , or exponents of the singularity When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.      3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:          For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about and form the general solution on the interval                  The differential equation (DE) has an irregular singular point at   Show that the substitution yields the DE which now has a regular singular point at    Find two series solutions of the above equation about the singular point     Express each solution of the original equation in terms of elementary functions.      "
+  "body": " Week 5 Handout- Series Solution-Part 1    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3)         A power series in is an infinite series of the form It is also called a power series centered at .       A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?      Why is constructing a series solution important?  Iterative  Truncated Series vs Error         A function is said to be analytic at a point if it can be represented by a power series in with either a positive or an infinite radius of convergence.     Find the radius of convergence and interval of convergence for the given power series.                   Taylor series centered at is also called Maclaurin series . The five functions below are analytic at  Power Series of Basic Functions    Power Series  Interval of Convergence                             Using the power series in the Remark, find the first 4 terms of a power series in for each function below.                  Verify by direct substituion that the given power series is a particular solution of the indicated differential equation.       The standard form of a linear second order differential equation is defined as   A point is said to be an ordinary point of the differential equation if both and in the standard form are analytic at A point that is not an ordinary point is said to be a singular point of the equation.      Identify all ordinary points and singular points of    Convert to the standard form:    and are analytic at all real numbers, except or Thus singular points for the given DE are and the ordinary points are and i.e.,       If is an ordinary point of a 2nd order linear differential equation, we can always find 2 linearly independent solutions in the form of a power series centered at ; that is called a solution about the ordinary point A series solution converges at least on some interval defined by where is the distance from to be the closest singular point.      Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.                   Considering  is an ordinary point. By , there exists a solution in the form of    From the above relations, there are two free variables and which generate two sequences of coefficients, and Thus, we have          A singular point is said to be a regular singular point of the 2nd order linear differential equation if the functions and are both analytic at A singular point is not regular is said to be an irregular singular point of the equation.      Determine the singular points of each given differential equation. Classify each singular point as regular or irregular.                 Method of Frobenius   If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by       Find a solution of the form for       After substituting into the given differential equation and simplifying, the indicial equation is a equation in that results from equating the total coefficient of the lowest power of to zero. The solutions to the indicial equation are called indicial roots , or exponents of the singularity When the given differential equations are in the standard form of the 2nd order DE, the indicial equation is quadratic.      3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:           For each given differential equations, show that the indicial roots of the singularity do not differ by an integer, use the method of Frobenius to obtain 2 linearly independent series solution about and form the general solution on the interval                  The differential equation (DE) has an irregular singular point at   Show that the substitution yields the DE which now has a regular singular point at    Find two series solutions of the above equation about the singular point     Express each solution of the original equation in terms of elementary functions.      "
 },
 {
   "id": "week5-handout-2-1-1",
@@ -601,7 +601,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "64",
   "title": "",
-  "body": "  A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?         "
+  "body": "  A few issues are important to consider when using a series:   Is the series convergent ?    If the series is convergent,   What is the radius of convergence? That is the same question as \"What is the interval of convergence?\".    Is it convergent absolutely? Is it convergent pointwisely?    Is it convergent to the function we are looking for? Are the derivatives or the anti-derivatives of the series the same with the derivatives or the anti-derivatives of the function we are looking for?      Why is constructing a series solution important?  Iterative  Truncated Series vs Error      "
 },
 {
   "id": "def-analytic",
@@ -664,7 +664,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "71",
   "title": "",
-  "body": "  Identify all ordinary points and singular points of   "
+  "body": "  Identify all ordinary points and singular points of    Convert to the standard form:    and are analytic at all real numbers, except or Thus singular points for the given DE are and the ordinary points are and i.e.,    "
 },
 {
   "id": "thm-existence-power-solution",
@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "73",
   "title": "",
-  "body": "  Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.               "
+  "body": "  Find a power series solution of each given differential equation about the ordinary point and a lower bound for the radius of convergence.                   Considering  is an ordinary point. By , there exists a solution in the form of    From the above relations, there are two free variables and which generate two sequences of coefficients, and Thus, we have       "
 },
 {
   "id": "def-regular-singular",
@@ -708,8 +708,8 @@ var ptx_lunr_docs = [
   "url": "week5-handout.html#thm-Frobenius",
   "type": "Theorem",
   "number": "76",
-  "title": "",
-  "body": "  If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by    "
+  "title": "Method of Frobenius.",
+  "body": " Method of Frobenius   If is a regular singular point of the 2nd order linear differential equation, then there exists at least one nonzero solution of the form   where the number is a constant to be determined. The series will converge at least on some interval defined by    "
 },
 {
   "id": "week5-handout-17",
@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "79",
   "title": "",
-  "body": "  3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:       "
+  "body": "  3 Cases of and :   Case I:  and are distinct and do not differ by an integer   Case II:  , where is a positive integer   Case III:        "
 },
 {
   "id": "week5-handout-20",
@@ -755,6 +755,195 @@ var ptx_lunr_docs = [
   "number": "81",
   "title": "",
   "body": "  The differential equation (DE) has an irregular singular point at   Show that the substitution yields the DE which now has a regular singular point at    Find two series solutions of the above equation about the singular point     Express each solution of the original equation in terms of elementary functions.     "
+},
+{
+  "id": "week5-handout",
+  "level": "1",
+  "url": "week5-handout.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Week 6 Handout- Series Solution-Part 2",
+  "body": " Week 6 Handout- Series Solution-Part 2    We will discuss the following topics related to Series Solution :   Week 5: Power Series about Ordinary Points and Singular Points (Section 5.1-5.2)    Week 6-7: Orthogonal Functions (Section 12.1), Legendre Function (Section 5.3), Fourier Series (Section 12.2-12.3), Sturm-Liouville Problem (Section 12.5)        Review of inner product between two vectors   The inner product of two vectors and is defined as A key property is It means if then the projection of onto is 0 and the projection of onto is 0. This makes decomposition of vectors cleaner.      The inner product of two functions and on an interval is       Two function and are said to be orthogonal on an interval if A set of real-valued functions is said to be orthogonal on an interval if       Given Determine whether is orthogonal on          Show that is orthogonal on     Show that and are orthogonal for any integer on the interval of          Legendre's Equation of order  is defined as It is named after the French mathematician Adrien-Marie Legendre.         Show that is a solution to with    Show that is a solution to with    Show that and are orthogonal over         Properties of Legendre Polynomials   Let be a solution to .  Legendre Polynomial , satisfies the followings:         and       odd, and  even                 Given and Derive and     Show that the Legendre Polynomials are orthogonal, i.e.,          The norm of a function is If is an orthogonal set of functions on the interval with for all then is said to be an orthonormal set on the interval of       Find the norm of each function in on       Suppose is an infinite orthogonal set of functions on If is a function on , is it possible to write as a linear combination of , i.e, is it possible to determine ?      Consider and on .   Find such that on    Create graphs of partial sum: and the graph of . Observe the behavior of as with         The Fourier Series of a function defined on is given by       Show how to obtain and shown in the .      Given    Find the Fourier series of the function on the given interval and give the number to which the Fourier series converges at a point of discontinuity of    Create graphs of partial sum and the graph of Observe the behavior of as with Sketch the periodic extension.        Conditions for Convergences   Let and be piecewise continuous on the interval of that is, let and be continuous except at a finite number of points in the interval and have only finite discontinuities at these points. Then for all in the interval the Fourier series of converges to at a point of continuity. At the point of discontinuity, the Fourier series converges to the average where and denote the limit of and from the right and from the left, respectively.      Given    Find the Fourier Series of     What happened to the part of series? Why?   Create the graph of partial sum and observe what happens as        When to use Power Series? When to use Fourier Series?    "
+},
+{
+  "id": "week5-handout-2-1-1",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-2-1-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Series Solution "
+},
+{
+  "id": "week5-handout-3",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-3",
+  "type": "Remark",
+  "number": "82",
+  "title": "Review of inner product between two vectors.",
+  "body": " Review of inner product between two vectors   The inner product of two vectors and is defined as A key property is It means if then the projection of onto is 0 and the projection of onto is 0. This makes decomposition of vectors cleaner.   "
+},
+{
+  "id": "def-inner-product",
+  "level": "2",
+  "url": "week5-handout.html#def-inner-product",
+  "type": "Definition",
+  "number": "83",
+  "title": "",
+  "body": "  The inner product of two functions and on an interval is    "
+},
+{
+  "id": "def-orthogonal",
+  "level": "2",
+  "url": "week5-handout.html#def-orthogonal",
+  "type": "Definition",
+  "number": "84",
+  "title": "",
+  "body": "  Two function and are said to be orthogonal on an interval if A set of real-valued functions is said to be orthogonal on an interval if    "
+},
+{
+  "id": "week5-handout-6",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-6",
+  "type": "Example",
+  "number": "85",
+  "title": "",
+  "body": "  Given Determine whether is orthogonal on    "
+},
+{
+  "id": "week5-handout-7",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-7",
+  "type": "Example",
+  "number": "86",
+  "title": "",
+  "body": "     Show that is orthogonal on     Show that and are orthogonal for any integer on the interval of       "
+},
+{
+  "id": "def-Legendre-de",
+  "level": "2",
+  "url": "week5-handout.html#def-Legendre-de",
+  "type": "Definition",
+  "number": "87",
+  "title": "",
+  "body": "  Legendre's Equation of order  is defined as It is named after the French mathematician Adrien-Marie Legendre.   "
+},
+{
+  "id": "week5-handout-9",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-9",
+  "type": "Example",
+  "number": "88",
+  "title": "",
+  "body": "     Show that is a solution to with    Show that is a solution to with    Show that and are orthogonal over       "
+},
+{
+  "id": "week5-handout-10",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-10",
+  "type": "Remark",
+  "number": "89",
+  "title": "Properties of Legendre Polynomials.",
+  "body": " Properties of Legendre Polynomials   Let be a solution to .  Legendre Polynomial , satisfies the followings:         and       odd, and  even           "
+},
+{
+  "id": "week5-handout-11",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-11",
+  "type": "Example",
+  "number": "90",
+  "title": "",
+  "body": "     Given and Derive and     Show that the Legendre Polynomials are orthogonal, i.e.,       "
+},
+{
+  "id": "def-norm",
+  "level": "2",
+  "url": "week5-handout.html#def-norm",
+  "type": "Definition",
+  "number": "91",
+  "title": "",
+  "body": "  The norm of a function is If is an orthogonal set of functions on the interval with for all then is said to be an orthonormal set on the interval of    "
+},
+{
+  "id": "week5-handout-13",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-13",
+  "type": "Example",
+  "number": "92",
+  "title": "",
+  "body": "  Find the norm of each function in on    "
+},
+{
+  "id": "week5-handout-14",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-14",
+  "type": "Remark",
+  "number": "93",
+  "title": "",
+  "body": "  Suppose is an infinite orthogonal set of functions on If is a function on , is it possible to write as a linear combination of , i.e, is it possible to determine ?   "
+},
+{
+  "id": "week5-handout-15",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-15",
+  "type": "Example",
+  "number": "94",
+  "title": "",
+  "body": "  Consider and on .   Find such that on    Create graphs of partial sum: and the graph of . Observe the behavior of as with      "
+},
+{
+  "id": "def-Fourier-Series",
+  "level": "2",
+  "url": "week5-handout.html#def-Fourier-Series",
+  "type": "Definition",
+  "number": "95",
+  "title": "",
+  "body": "  The Fourier Series of a function defined on is given by    "
+},
+{
+  "id": "week5-handout-17",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-17",
+  "type": "Example",
+  "number": "96",
+  "title": "",
+  "body": "  Show how to obtain and shown in the .   "
+},
+{
+  "id": "week5-handout-18",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-18",
+  "type": "Example",
+  "number": "97",
+  "title": "",
+  "body": "  Given    Find the Fourier series of the function on the given interval and give the number to which the Fourier series converges at a point of discontinuity of    Create graphs of partial sum and the graph of Observe the behavior of as with Sketch the periodic extension.      "
+},
+{
+  "id": "thm-Fourier-convergence",
+  "level": "2",
+  "url": "week5-handout.html#thm-Fourier-convergence",
+  "type": "Theorem",
+  "number": "98",
+  "title": "Conditions for Convergences.",
+  "body": " Conditions for Convergences   Let and be piecewise continuous on the interval of that is, let and be continuous except at a finite number of points in the interval and have only finite discontinuities at these points. Then for all in the interval the Fourier series of converges to at a point of continuity. At the point of discontinuity, the Fourier series converges to the average where and denote the limit of and from the right and from the left, respectively.   "
+},
+{
+  "id": "week5-handout-20",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-20",
+  "type": "Example",
+  "number": "99",
+  "title": "",
+  "body": "  Given    Find the Fourier Series of     What happened to the part of series? Why?   Create the graph of partial sum and observe what happens as     "
+},
+{
+  "id": "week5-handout-21",
+  "level": "2",
+  "url": "week5-handout.html#week5-handout-21",
+  "type": "Remark",
+  "number": "100",
+  "title": "",
+  "body": "  When to use Power Series? When to use Fourier Series?   "
 },
 {
   "id": "hw1",
