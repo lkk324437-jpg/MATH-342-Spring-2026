@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+
+<worksheet xml:id="week10-handout">
+  <title>Week 10 Handout-Numerical Solutions of PDEs- Part 2</title>
+
+    <introduction>
+        <statement> <p>
+        We will discuss the following topics related to <term> Numerical Methods of PDEs (Chap 16)</term>:
+      <ul>
+        <li> <p>Week 9: Introduction to Finite Difference (6.5), Laplace Equations (16.1)  </p>   </li>
+        <li> <p>Week 10: Heat Equations (16.2), Wave Equations (16.3) </p> </li>
+      </ul>  </p>
+        </statement>
+    </introduction>
+    <definition xml:id="def-1d-heat">
+      <title>1D Heat Equation</title>      
+      <statement>
+        <p> <md xml:id="eq-1d-heat" number="yes">
+          c\frac{\partial^2 u}{\partial x^2}=\frac{\partial u}{\partial t}
+        </md>         
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <p>Similar to what we did in Week 9, we need to replace the PDE with approximation 
+        of derivatives. For <m>x,</m> we still use <term>central difference</term>,
+        <md>
+          \frac{\partial^2 u}{\partial x^2}\approx \frac{1}{h^2}\left[u(x+h,t)-2u(x,t)+u(x-h,t)\right]
+        </md>
+        For <m>t,</m> we use <term>forward difference</term> to avoid "negative time",
+        <md>
+          \frac{\partial u}{\partial t}\approx\frac{1}{k}\left[u(x,t+k)-u(x,t)\right].
+        </md>
+        Substitue them to <xref ref="eq-1d-heat"/>, we have
+        <md>
+          \frac{2}{h^2}\left[u(x+h,t)-2u(x,t)+u(x-h,t)\right]=\frac{1}{k}\left[u(x,t+k)-u(x,t)\right].
+        </md>
+        Let <m>\lambda=\frac{ck}{h^2}</m>, the equation can be simplified to
+        <md>
+          u_{i,j+1}=\lambda u_{i-1,j}+(1-2\lambda)u_{i,j}+\lambda u_{i+1,j}
+        </md>
+      <figure xml:id="fig-1d-heat">
+          <caption>Three-point stencil from time level <m>j</m> to <m>j+1</m>.</caption>
+            <image width="50%" alignment="center">
+              <latex-image>
+                \begin{tikzpicture}[thick, scale=1.0]
+                
+                    %--- Parameters (you can tweak these) ---
+                      \def\xstep{2.0}     % horizontal spacing between i-1, i, i+1
+                      \def\yk{2.0}        % vertical gap between time lines (k)
+                      \def\doth{2.2pt}    % dot size
+                      \def\labshift{0.25} % small label shift
+
+                      %--- Coordinates ---
+                      \coordinate (i-1j) at (0,0);
+                      \coordinate (ij)   at (\xstep,0);
+                      \coordinate (i+1j) at (2*\xstep,0);
+                      \coordinate (ij+1) at (\xstep,\yk);
+
+                      %--- Time lines ---
+                      \draw[line width=0.8pt] (-0.6,0) -- (2*\xstep+0.6,0);
+                      \draw[line width=0.8pt] (-0.6,\yk) -- (2*\xstep+0.6,\yk);
+
+                      %--- Time line labels ---
+                      \node[anchor=east] at (-0.65,\yk) {$\text{(}j+1\text{)st time}$};
+                      \node[anchor=east] at (-0.65,0)   {$j\text{th time}$};
+
+                      %--- Base nodes on j-th line ---
+                      \fill (i-1j) circle (\doth);
+                      \fill (ij)   circle (\doth);
+                      \fill (i+1j) circle (\doth);
+
+                      %--- Top node on (j+1)-st line ---
+                      \fill[red!70!black] (ij+1) circle (\doth);
+
+                      %--- Connecting segments (stencil) ---
+                      \draw[-\lt] (i-1j) -- (ij+1);
+                      \draw[-\lt] (ij)   -- (ij+1);
+                      \draw[-\lt] (i+1j) -- (ij+1);
+
+                      %--- Node labels along bottom ---
+                      \node[below=4pt] at (i-1j) {$u_{i-1,\,j}$};
+                      \node[below=4pt] at (ij)   {$u_{i j}$};
+                      \node[below=4pt] at (i+1j) {$u_{i+1,\,j}$};
+
+                      %--- Top node label ---
+                      \node[above=4pt, text=red!70!black] at (ij+1) {$u_{i,\,j+1}$};
+
+                      %--- Vertical bracket for k ---
+                      \draw[decorate, decoration={brace, amplitude=5pt}]
+                        (-0.15,0) -- (-0.15,\yk) node[midway, xshift=-11pt, rotate=90] {$k$};
+
+                      %--- Horizontal bracket for h between i-1 and i ---
+                      \draw[decorate, decoration={brace, amplitude=5pt}]
+                        (0,0.30) -- (\xstep,0.30) node[midway, yshift=10pt] {$h$};
+
+                \end{tikzpicture}
+               </latex-image> 
+              </image>
+              </figure>
+      </p>
+    </remark>
+    <example xml:id="example-week10-1d-heat">
+      <statement>
+        <p>Solve the 1D heat equation <xref ref="eq-1d-heat"/> with <m>c=1</m> and the
+          following boundary and initial conditions:
+          <md>
+            <mrow>u(0,t)=0, u(2,t)=0,  0\leq t\leq 1 </mrow>
+            <mrow> u(x,0)=\left\{\begin{array}{cc}1,\amp 0\leq x\leq 1\cr 0,\amp 1\lt x\leq 2
+              \end{array}\right\} </mrow>
+          </md>
+          Use 
+          <ol>
+            <li><p><m>n=4</m> and <m>m=10</m>       </p>  </li>
+            <li><p><m>n=8</m> and <m>m=40</m>      </p></li>
+          </ol>         
+        </p>
+      </statement>
+    </example>
+   <remark>
+    <title>Stability</title>
+    <p>
+    A numerical method is <term>unstable</term> if round-off errors or any other errors
+    grow too rapidly as the computations proceed. It can be proved that the precedure is 
+    <term>stable</term> if <m>\lambda\leq 0.5</m>, but <term>unstable</term> otherwise. 
+    For a small <m>k</m> and small <m>h</m>, <m>\lambda</m> is unlikely satisfied the 
+    stability condition of less than or equation 0.5.   
+    </p> 
+   </remark>
+   <definition xml:id="def-Crank-Nicholson">
+    <title>Crank-Nicholson Method</title>
+     <statement>
+      <p> The algorithm consists of replacing the 2nd order PDE in the heat equation by the 
+        average of two central differences, one evaluated at <m>t</m> and the other at <m>t+k</m>:
+        <md>
+          <mrow xml:id="eq-crank-nicholson" number="yes">\amp \frac{c}{2}\left[\frac{u(x+h,t)-2u(x,t)+u(x-h,t)}{h^2} +\frac{u(x+h,t+k)-2u(x,t+k)+u(x-h,t+k)}{h^2}\right] </mrow>
+          <mrow>= \amp \frac{1}{k}\left[u(x,t+k)-u(x,t)\right] </mrow>
+        </md>       
+      </p>
+    </statement>
+   </definition>
+   <remark>
+    <statement>
+      <p>The <term>Crank-Nicholson method</term> is an <term>implicit finite difference
+        method</term>. It requires that we solve a system of equations to determine
+        the approximate value of <m>u</m> on <m>(j + 1)</m>-st time line. However, implicit
+        methods do not suffer from instability problems.      
+      </p>
+
+   <p>
+    Again, we let <m>\lambda=\frac{ck}{h^2}.</m>  After rearranging 
+    <xref ref="eq-crank-nicholson"/>, we can write it as 
+    <md xml:id="eq-ck" number="yes">
+      -u_{i-1,j+1}+\alpha u_{i,j+1}-u_{i+1,j+1}=u_{i+1,j}-\beta u_{i,j}+u_{i-1,j},
+    </md>
+    where <m>\alpha=2\left(1+\frac{1}{\lambda}\right)</m> and 
+    <m>\beta=2\left(1-\frac{1}{\lambda}\right),</m> <m>j=0,1,\ldots,m-1,</m> and 
+    <m>i=1,2,\ldots,n-1.</m>
+    
+    At <m>(j+1)</m>-st timeline, we have <m>n-1</m> equations (one for each interior point),
+    which looks like <m>\textbf{A}\textbf{u}_{:,j+1}=\textbf{b}</m>,
+    where
+    <md>
+      \textbf{A}=\left[\begin{array}{ccccc}
+      \alpha \amp -1 \amp 0 \amp \cdots \amp 0\cr
+      -1     \amp \alpha \amp -1\amp  \amp\cr
+      0\amp -1\amp \alpha \amp \ddots\amp\cr
+      \vdots\amp \ddots \amp \ddots \amp \ddots\amp\cr
+      0\amp 0\amp \cdots\amp -1\amp \alpha\end{array}      
+      \right], \textbf{b}=\left[\begin{array}{c}
+      u_{2,j}-\beta u_{i,j}+u_{0,j}+u_{0,j+1}\cr
+      u_{3,j}-\beta u_{2,j}+u_{1,j}\cr
+      u_{4,j}-\beta u_{3,j}+u_{2,j}\cr
+      \vdots\cr
+      u_{n,j}-\beta u_{n-1,j}+u_{n-2,j}+u_{n,j+1}\end{array}\right]
+    </md>
+    Since <m>\textbf{A}</m> is a <term>tridiagonal matrix</term>. 
+    <m>\textbf{A}\textbf{u}_{:,j+1}=\textbf{b}</m> can be solved efficiently.    
+   </p>
+  </statement>
+   </remark>
+   <example>
+    <statement>
+      <p>
+        Solve <xref ref="example-week10-1d-heat"/> using the Crank-Nicholson method.
+      </p>
+    </statement>
+   </example>
+  <definition  xml:id="def-1d-wave">
+    <title>1D Wave Equation</title>
+    <statement>
+      <p><md xml:id="eq-1d-wave" number="yes">
+        c^2\frac{\partial^2 u}{\partial x^2}=\frac{\partial^2 u}{\partial t^2}
+      </md>
+      </p>
+    </statement>
+  </definition>
+  <remark>
+    <statement> <p>
+    Use 2 central differences, we replace <xref ref="eq-1d-wave"/> by
+      <md>
+        <mrow xml:id="eq-wave-cen" number="yes">  
+          \amp \frac{c^2}{h^2}\left[u(x+h, t)-2u(x,t)+u(x-h,t)\right] </mrow>
+        <mrow>=\amp \frac{1}{k^2}\left[u(x,t+k)-2u(x,t)+u(x,t-k)\right] </mrow>
+      </md>
+      Let <m>\lambda=\frac{ck}{h} </m>, then <xref ref="eq-wave-cen"/> yields
+      <md xml:id="eq-wave-discretize" number="yes">
+        u_{i,j+1}=\lambda u_{i+1,j}+2(1-\lambda^2)u_{i,j}+\lambda^2 u_{i-1,j}-u_{i,j-1},        
+      </md>
+      for <m>i=1,2,\ldots,n-1,</m> and <m>j=1,2,\ldots,m-1.</m>
+      <figure xml:id="fig-1d-wave">
+          <caption>Five-point stencil from time level <m>j-1</m> to <m>j+1</m>.</caption>
+            <image width="80%" alignment="center">
+              <latex-image>
+                \begin{tikzpicture}[scale=1.2, every node/.style={font=\small}]
+
+                % Time lines
+                \draw (-0.5,2) -- (4.5,2);
+                \draw (-0.5,1) -- (4.5,1);
+                \draw (-0.5,0) -- (4.5,0);
+
+                % Labels for time lines
+                \node[left] at (-0.5,2) {$(j+1)$st time line};
+                \node[left] at (-0.5,1) {$j$th time line};
+                \node[left] at (-0.5,0) {$(j-1)$st time line};
+
+                % Points on j-th time line
+                \fill (1,1) circle (2pt);  
+                \node[above] at (1,1) {$u_{i-1,j}$};
+
+                \fill (2.5,1) circle (2pt);
+                \node[below] at (2.5,1) {$u_{i,j}$};
+
+                \fill (4,1) circle (2pt);
+                \node[below] at (4,1) {$u_{i+1,j}$};
+
+                % Point on (j+1)st line
+                \fill[red] (2.5,2) circle (2pt);
+                \node[above, red] at (2.5,2) {$u_{i,j+1}$};
+
+                % Point on (j-1)st line
+                \fill (2.5,0) circle (2pt);
+                \node[below] at (2.5,0) {$u_{i,j-1}$};
+
+                % Vertical dashed line between j+1 and j-1 levels
+                \draw[dashed] (2.5,2) -- (2.5,0);
+                
+                % Vertical dashed line between j and j-1 levels
+                \draw[dashed] (1,1) -- (1,0);
+
+                  %--- Vertical bracket for k ---
+                   \draw[decorate, decoration={brace, amplitude=5pt}]
+                     (1,0) -- (1,1) node[midway, xshift=-11pt, rotate=90] {$k$};
+
+                      %--- Horizontal bracket for h between i-1 and i ---
+                      \draw[decorate, decoration={brace, amplitude=5pt}]
+                        (1,0) -- (2.5, 0) node[midway, yshift=10pt] {$h$};
+                \end{tikzpicture}
+
+
+
+              </latex-image>
+            </image>
+      </figure>
+    </p></statement>
+  </remark>
+  <example>
+    <statement>
+      <p>
+        Use Finite Difference to approximate the solution of the BVP:
+        <md xml:id="eq-wave-ex" number="yes">
+          <mrow> \frac{\partial^2 y}{\partial x^2}=\frac{\partial^2 u}{\partial t^2}\amp \amp  0\lt x\lt 2, 0\lt t\lt 1 </mrow>
+          <mrow>u(0,t)=1,u(2,t)=0, \amp \amp 0\leq t\leq 1 </mrow>
+          <mrow>u(x,0)=e^{-16(x-1)^2}, \frac{\partial u}{\partial t}\bigg|_{t=0}=0 \amp \amp  0\leq x \leq 2 </mrow>
+        </md>
+        with <m> n=5</m>, and <m>m=10</m>.
+      </p>
+    </statement>
+  </example>
+</worksheet>
+
