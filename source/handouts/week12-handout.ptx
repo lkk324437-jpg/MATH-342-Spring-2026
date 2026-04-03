@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+
+<worksheet xml:id="week12-handout">
+  <title>Week 11-12 Handout-Boundary Value Problems in Other Coordinate Systems</title>
+
+    <introduction>
+        <statement> <p>
+         To solve a PDE on the domain whose shape is a 2D disk, it is much more 
+        convenient to represent the solution in terms of the polar coordinate system 
+        than in terms of the usual Cartesian coordinate system.
+
+        For example, the behavior of the drum surface when hitting it by a stick would 
+        be best described by the solution of the wave equation in the polar coordinate system.
+
+        We will discuss the following topics related to <term> BVP in other coordinate systems (Chap 14)</term>:
+      <ul>
+        <li> <p>Week 11: Polar Coordinates (14.1)  </p>   </li>
+        <li> <p>Week 12: Cylindrical Coordinates (14.2)</p> </li>
+      </ul>  </p>
+        </statement>
+    </introduction>
+    <remark xml:id="rem-polar-rectangle">
+      <title>Relationship between Polar Coordinates and Rectangle Coordinates</title>
+      <statement> <p>
+        <md>
+          <mrow xml:id="eq-x-y" number="yes"> 
+             x=r\cos\theta \amp \amp  y=r\sin\theta </mrow>
+          <mrow xml:id="eq-r-theta" number="yes"> 
+            r^2=x^2+y^2 \amp  \amp \tan\theta=\frac{y}{x} </mrow>
+        </md>       
+
+        <figure xml:id="fig-polar">
+          <caption>Relationship between polar coordinates and rectangle coordinates. </caption>
+            <image width="80%" alignment="center">
+              <latex-image>
+                  \begin{tikzpicture}[scale=.8]
+
+                  % Axes
+                  \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+                  \draw[->] (0,-0.2) -- (0,3.2) node[above] {$y$};
+
+                  % Point values
+                  \coordinate (O) at (0,0);
+                  \coordinate (P) at (3,2);
+                  \coordinate (X) at (3,0);
+                  \coordinate (Y) at (0,2);
+
+                  % Radius r
+                  \draw[thick] (O) -- (P) node[midway,above left] {$r$};
+
+                  % Right triangle
+                  \draw[dashed] (P) -- (X);
+                  \draw[dashed] (P) -- (Y);
+
+                  % Horizontal and vertical sides
+                  \draw[decorate, decoration={brace,mirror,raise=3pt}]
+                        (O) -- (X) node[midway, yshift=-10pt] {$x = r\cos\theta$};
+                  \draw[decorate, decoration={brace, amplitude=5pt}]
+                        (O) -- (Y) node[midway, xshift=-11pt, rotate=90] {$y = r\sin\theta$};
+
+                  % Angle theta
+                  \draw (0.8,0) arc[start angle=0,end angle=34,radius=0.8];
+                  \node at (1.0,0.3) {$\theta$};
+
+                  % Point label
+                  \fill (P) circle (2pt);
+                  \node[above right] at (P) {$(x,y)$};
+
+                  \end{tikzpicture}
+              </latex-image>
+             </image>
+        </figure> 
+
+      </p>
+
+      </statement>
+      
+      
+    </remark>
+    <definition xml:id="def-Laplacian-Polar">
+      <title>Laplace's Equation in Polar Coordinates</title>
+        <statement>
+        <p>  The <term>Laplace's equation </term> in <m>R^2</m> in terms of the 
+          <term>Cartesian</term> <m>(x,y)</m> coordinate system is:
+          <md xml:id="eq-laplace-rec" number="yes">
+            \nabla^2 u=\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=u_{xx}+u_{yy}=0.
+          </md>
+          From <xref ref="rem-polar-rectangle"/>, we can compute partial derivatives of 
+          <m>r, \theta</m> with respect to <m>x, y</m> from <xref ref="eq-r-theta"/> using 
+          <term>implicit differentiation</term>:
+          <md>
+            <mrow> 2r\frac{\partial r}{\partial x}=2x, \amp \amp 2r\frac{\partial r}{\partial y}=2y </mrow>
+            <mrow xml:id="eq-1st-r-xy" number="yes"> \Rightarrow \frac{\partial r}{\partial x}=\frac{x}{r}=\cos\theta, \amp \amp \frac{\partial r}{\partial y}=\frac{y}{r}=\sin\theta </mrow>
+          </md>
+          <md>
+            <mrow> \sec^2\theta\frac{\partial \theta}{\partial x}=-\frac{y}{x^2},\amp \amp \sec^2\theta\frac{\partial\theta}{\partial y}=\frac{1}{x} </mrow>
+            <mrow xml:id="eq-1st-theta-xy" number="yes">\Rightarrow  \frac{\partial \theta}{\partial x}=-\frac{y\cos^2\theta}{x^2}=-\frac{\sin\theta}{r}, 
+              \amp \amp \frac{\partial \theta}{\partial y}=\frac{\cos^2\theta}{x}=\frac{\cos\theta}{r} </mrow>
+          </md>
+          
+          Next, we start rewriting <m>\frac{\partial u}{\partial x}</m> and <m>\frac{\partial u}{\partial y}</m>
+          using <term>Chain Rule</term>:
+          <md>
+            <mrow>\frac{\partial u}{\partial x} = \amp \frac{\partial u}{\partial r}\frac{\partial r}{\partial x}+\frac{\partial u}{\partial \theta}\frac{\partial \theta}{\partial x} </mrow>
+            <mrow xml:id="eq-1st-u-r" number="yes">
+              = \amp \cos\theta\frac{\partial u}{\partial r}-\frac{\sin\theta}{r}\frac{\partial u}{\partial \theta}</mrow>
+          </md>
+          <md>
+            <mrow>\frac{\partial u}{\partial y}= \amp \frac{\partial u}{\partial r}\frac{\partial r}{\partial y}+\frac{\partial u}{\partial \theta}\frac{\partial \theta}{\partial y} </mrow>
+            <mrow xml:id="eq-1st-u-theta" number="yes"> 
+                   =\amp \sin\theta\frac{\partial u}{\partial r}+\frac{\cos\theta}{r}\frac{\partial u}{\partial \theta} </mrow>
+          </md>        
+          Then we further compute <m>\frac{\partial^2 u}{\partial x^2}</m> and <m>\frac{\partial ^2 u}{\partial y^2}</m>:
+          <md>
+            <mrow>\frac{\partial^2 u}{\partial x^2} = \amp \frac{\partial }{\partial x}\left\{\cos\theta\frac{\partial u}{\partial r}-\frac{\sin\theta}{r}\frac{\partial u}{\partial \theta}\right\}</mrow>
+            <mrow> \frac{\partial }{\partial x}\left\{\cos\theta\frac{\partial u}{\partial r}\right\}=\amp \frac{\partial \cos\theta}{\partial x}\frac{\partial u}{\partial r}+\cos\theta\frac{\partial}{\partial x}\left\{\frac{\partial u}{\partial r}\right\} </mrow>
+            <mrow>= \amp-\sin\theta\frac{\partial \theta}{\partial x}\frac{\partial u}{\partial r} +\cos\theta\left\{\frac{\partial^2 u}{\partial\theta\partial r}\frac{\partial \theta}{\partial x}+\frac{\partial^2 u}{\partial r^2}\frac{\partial r}{\partial x}\right\} </mrow>
+            <mrow> =\amp \frac{\sin^2\theta}{r}\frac{\partial u}{\partial r} +\cos\theta\left\{-\frac{\sin\theta}{r}\frac{\partial^2 u}{\partial \theta\partial r}+\cos\theta\frac{\partial^2u}{\partial r^2}\right\} </mrow>
+            <mrow>\frac{\partial}{\partial x } \left\{\frac{\sin\theta}{r}\frac{\partial u}{\partial \theta}\right\}
+              =\amp \frac{\partial \frac{\sin\theta}{r}}{\partial x}\frac{\partial u}{\partial \theta}+\frac{\sin\theta}{r}\frac{\partial }{\partial x}\left\{\frac{\partial u}{\partial\theta}\right\}</mrow>
+            <mrow>= \amp \frac{\partial u}{\partial \theta}\left\{\frac{\partial \frac{\sin\theta}{r}}{\partial \theta}\frac{\partial \theta}{\partial x}+\frac{\partial \frac{\sin\theta}{r}}{\partial r}\frac{\partial r}{\partial x}\right\} </mrow>
+            <mrow> \amp +\frac{\sin\theta}{r}\left\{\frac{\partial ^2 u}{\partial \theta^2}\frac{\partial \theta}{\partial x}+\frac{\partial^2 u}{\partial \theta\partial r}\frac{\partial r}{\partial x}\right\} </mrow>
+            <mrow> =\amp\frac{\partial u}{\partial \theta}\left\{\frac{-2\cos\theta\sin\theta}{r^2}\right\}+\frac{\partial^2 u}{\partial\theta^2}\left\{-\frac{\sin^2\theta}{r^2}\right\}</mrow>
+            <mrow>\amp +\frac{\partial^2 u}{\partial\theta\partial r}\left\{\frac{\sin\theta\cos\theta}{r}\right\} </mrow>
+          </md>
+          Thus, 
+          <md>
+            <mrow> \frac{\partial^2 u}{\partial x^2}=\amp \frac{\sin^2\theta}{r}\frac{\partial u}{\partial r} -\frac{2\sin\theta\cos\theta}{r}\frac{\partial^2 u}{\partial \theta\partial r}+\cos^2\theta\frac{\partial^2u}{\partial r^2}</mrow>
+            <mrow xml:id="eq-u-xx" number="yes">\amp +\frac{2\cos\theta\sin\theta}{r^2}\frac{\partial u}{\partial \theta}+\frac{\sin^2\theta}{r^2}\frac{\partial^2 u}{\partial\theta^2}</mrow>
+          </md>
+          
+        Similarly, we can derive 
+        <md>
+          <mrow>\frac{\partial^2 u}{\partial y^2} =\amp \frac{\cos^2\theta}{r}\frac{\partial u}{\partial r} +\frac{2\sin\theta\cos\theta}{r}\frac{\partial^2 u}{\partial \theta\partial r}+\sin^2\theta\frac{\partial^2u}{\partial r^2}</mrow>
+            <mrow xml:id="eq-u-yy" number="yes">\amp -\frac{2\cos\theta\sin\theta}{r^2}\frac{\partial u}{\partial \theta}+\frac{\cos^2\theta}{r^2}\frac{\partial^2 u}{\partial\theta^2}</mrow>
+        </md>
+        Adding <xref ref="eq-u-xx"/> and <xref ref="eq-u-yy"/>, we obtain
+        <md>
+          \frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=\frac{\partial^2 u}{\partial r^2}+\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial\theta^2}.
+        </md>
+        Thus, the <term>Laplace's equation in polar coordinates</term> is
+        <md xml:id="eq-laplace-polar" number="yes">
+          \frac{\partial^2 u}{\partial r^2}+\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial\theta^2}=0
+        </md>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Solve the Laplace's Equation <xref ref="eq-laplace-polar"/> for steady state temperature in a circular plate with the radius 
+          of <m>r</m> and the bounary condition of <m>u(c, \theta)=f(\theta), 0\lt \theta\lt 2\pi.</m>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p> Consider the steady-state temperature <m>u(r,\theta)</m> in the semicircular plate below:
+          <figure xml:id="fig-semi-circle">
+          <caption>Boundary conditions of Steady-State temperature $u(r,\theta)$ on a semicircular plate  </caption>
+            <image width="80%" alignment="center">
+              <latex-image>
+                  \begin{tikzpicture}[scale=.8]
+                  \usetikzlibrary{arrows.meta,decorations.pathreplacing}
+
+                  % Parameters
+                  \def\R{4}
+                  \def\ang{40}
+
+                  % Axes
+                  \draw[->] (-4.5,0) -- (4.5,0) node[right] {$x$};
+                  \draw[->] (0,0) -- (0,4.5) node[above] {$y$};
+
+                  % Shaded semicircle
+                  \fill[brown!40]
+                    (-\R,0) arc[start angle=180,end angle=0,radius=\R] -- cycle;
+
+                  % Semicircle boundary
+                  \draw[thick,blue]
+                    (-\R,0) arc[start angle=180,end angle=0,radius=\R];
+
+                  % Diameter
+                  \draw[thick] (-\R,0) -- (\R,0);
+
+                  % Polar angle theta at origin
+                  \draw[thick] (1.2,0) arc[start angle=0,end angle=180,radius=1.2];
+                  \node at (-0.1,1.4) {$\theta=\pi$};
+
+                  % Dashed radius line
+                  \draw[dashed,->] (0,0) -- ({\R*cos(\ang)},{\R*sin(\ang)})
+                    node[midway,right] {$c$};
+
+                  % Boundary labels
+                  \node[above right] at (2.6,3.3) {$u=u_0$};
+
+                  \node[below] at (2.5,-0.4) {$u=0\ \text{at}\ \theta=0$};
+                  \node[below] at (-2.8,-0.4) {$u=0\ \text{at}\ \theta=\pi$};
+
+                  \end{tikzpicture}
+                </latex-image>  
+              </image>
+              </figure>
+        </p>
+        <ol>
+          <li>   <p> Write out the entire model.     </p>     </li>
+          <li>  <p> Find the solution <m>u(r,\theta)</m> that satifies the given boundary conditions. </p>  </li>
+        </ol>
+      </statement>
+    </example>
+    <definition xml:id="def-heatwave-Polar">
+      <title>Cylindrical Coordinates</title>
+      
+      
+      <statement>
+        <p>
+          <ul>
+            <li> <p><term>Heat Equation in polar coordinate system</term>:
+            <md>
+              u_t=k\left(u_{rr}+\frac{1}{r}u_r+\frac{1}{r^2}u_{\theta\theta}\right), k>0:\mbox{diffusivity}
+            </md>             </p>     </li>
+            <li><p><term>Wave Equation in polar coordinate system</term>:
+            <md>
+              u_{tt}=c^2\left(u_{rr}+\frac{1}{r}u_r+\frac{1}{r^2}u_{\theta\theta}\right), c>0:\mbox{wave velocity}
+            </md>      
+              The above two equations are in <term>cylindrical coordinates</term> since
+              the <term> time <m>t</m> </term> gives the 3rd axis from the circular plate which produces
+              a cylinder with infinite length as <m>t\gt 0.</m> </p> </li>
+              
+            <li> <p><term>Laplacian in Cylindrical Coordinates</term>: 
+              Consider a domain of a cylinder for the Laplace's Equation: <m>x=r\cos\theta,y=r\sin\theta, z=z</m>
+              <md>
+                \nabla^2 u=\frac{\partial^2u}{\partial r^2}+\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2}+\frac{\partial^2u}{\partial z^2}
+              </md>
+              
+              </p>
+            </li>
+          </ul>
+
+        </p>
+      </statement>
+    </definition>
+</worksheet>
+

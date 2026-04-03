@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  -->
+
+  <!-- Include common macros etc: -->
+
+<worksheet xml:id="week14-handout">
+  <title>Week 13-14 Handout-Integral Transforms</title>
+
+    <introduction>
+        <statement> <p>
+        We will discuss the following topics related to <term> Integral Transforms (Chap 15)</term>:
+      <ul>
+        <li> <p>Week 13: Laplace Transforms (15.2) , Fourier Transforms (15.4) </p>   </li>
+        <li> <p>Week 14: Fourier Transforms (15.4), Finite Fourier Transforms (15.5)</p> </li>
+      </ul>  </p>
+        </statement>
+    </introduction>
+    <definition xml:id="def-laplace-transform-partial">
+      <title>Laplace Transform</title>     
+      <statement>The Laplace transform of <m> u(x,t)</m> with respect to <m>t</m> is defined as
+        <p> <md>\mathscr{L}\left\{u(x,t)\right\}=\int_0^\infty e^{-st}u(x,t)dt=U(x,s),</md>
+          where <m>x</m> is treated as a parameter.
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <statement>
+        <p> In Week 1, we used <m>Laplace Transform</m> to reduce the ODE to an algebraic equation.
+          Here, we will use <m>Laplace Transform</m> to reduce a PDE to an ODE. Here are a few useful
+          properties:
+          <ol>
+            <li> <p> <md xml:id="eq-laplace-transform-1st" number="yes">
+              \mathscr{L}\left\{\frac{\partial u}{\partial t}\right\}=sU(x,s)-u(x,0)
+            </md> </p> </li>
+            <li><p> <md xml:id="eq-laplace-transform-2nd" number="yes">
+              \mathscr{L}\left\{\frac{\partial^2 u}{\partial t^2}\right\}=s^2U(x,s)-su(x,0)-u_t(x,0)
+            </md>      </p>        </li>
+            <li>  <p>  <md xml:id="eq-laplace-transform-2nd-x" number="yes">
+              \mathscr{L}\left\{\frac{\partial ^2 u}{\partial x^2}\right\}=\frac{d^2 U}{d x^2}
+            </md>
+                     </p>     </li>
+
+          </ol> 
+        </p>
+      </statement>
+    </remark>
+</worksheet>
+
