@@ -11,8 +11,8 @@
         <statement> <p>
         We will discuss the following topics related to <term> Integral Transforms (Chap 15)</term>:
       <ul>
-        <li> <p>Week 13: Laplace Transforms (15.2) , Fourier Transforms (15.4) </p>   </li>
-        <li> <p>Week 14: Fourier Transforms (15.4), Finite Fourier Transforms (15.5)</p> </li>
+        <li> <p>Laplace Transforms (15.2)  </p>   </li>
+        <li> <p>Fourier Transforms (15.4)</p> </li>
       </ul>  </p>
         </statement>
     </introduction>
@@ -26,8 +26,8 @@
     </definition>
     <remark>
       <statement>
-        <p> In Week 1, we used <m>Laplace Transform</m> to reduce the ODE to an algebraic equation.
-          Here, we will use <m>Laplace Transform</m> to reduce a PDE to an ODE. Here are a few useful
+        <p> In Week 1, we used <term>Laplace Transform</term> to reduce the ODE to an algebraic equation.
+          Here, we will use <term>Laplace Transform</term> to reduce a PDE to an ODE. Here are a few useful
           properties:
           <ol>
             <li> <p> <md xml:id="eq-laplace-transform-1st" number="yes">
@@ -45,5 +45,155 @@
         </p>
       </statement>
     </remark>
+    <example>
+      <statement>
+        <p>
+          Solve the boundary value problem using Laplace Transform:
+          <md>
+            <mrow>\frac{\partial^2 u}{\partial x^2}=\frac{\partial^2 u}{\partial t^2}, \amp  \amp  0\lt x\lt 1, t\gt 0 </mrow>
+            <mrow>u(0,t)=0, u(1,t)=0,  \amp \amp  t\gt 0 </mrow>
+            <mrow> u(x,0)=0,  \frac{\partial u}{\partial t}\biggr|_{t=0}=2\sin\pi x+4\sin 3\pi x, \amp  \amp  0\lt x\lt 1</mrow>
+          </md>
+
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p> Use the Laplace transform to solve the heat equation 
+          <md>u_{xx}=u_t, x\gt 0,t\gt 0 </md> 
+          subjec to
+          <md>u(0,t)=0, u(1,t)=u_0, t\gt 0, u(x,0)=0, 0\lt x\lt 1</md>
+          
+        </p>
+      </statement>
+    </example>
+    <remark>
+      <statement>
+        <p>Integral transforms appear in <term>transform pairs.</term> If <m>f(x)</m> is transformed into
+          <m>F(\alpha)</m> by an <term>integral transform</term>
+          <md xml:id="eq-integral-trans" number="yes">
+            F(\alpha)=\int_a^b f(x)K(\alpha,x)dx,
+          </md>
+          then the function <m>f</m> can be recovered by another integral transform
+          <md xml:id="eq-inverse-integral" number="yes">
+            f(x)=\int_c^d F(\alpha)H(\alpha,x)d\alpha
+          </md>
+          called the <term>inverse transform.</term> The functions <m>K</m> and <m>H</m> in 
+          <xref ref="eq-integral-trans"/> and <xref ref="eq-inverse-integral"/> are called
+          <term>kernels</term> of their respective transforms.
+          
+          In <term>Laplace transform</term>, <m>K(s,t)=e^{-st}</m> and <m>H(s,t)=\frac{e^{st}}{2\pi i}.</m>
+        </p>
+      </statement>
+    </remark>
+    <definition xml:id="def-fourier-transform">
+      <title>Fourier Transform Pairs</title>    
+      
+      <statement>
+        <p><ol>
+          <li>  <p>
+            <ul> <li>   <p>            <term>Fourier Transform</term>: <md xml:id="eq-fourier-trans" number="yes">
+            \mathscr{F}\{f(x)\}=\int_{-\infty}^{\infty}f(x)e^{i\alpha x}dx=F(\alpha)</md>     </p> </li>
+            <li><term>Inverse Fourier Transform</term>: <md xml:id="eq-inverse-fourier" number="yes">
+            \mathscr{F}^{-1}\{F(\alpha)\}=\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\alpha)e^{-i\alpha x}d\alpha=f(x)</md> 
+              <p>
+                
+              </p>
+            </li>
+            </ul>
+
+            </p>
+          </li>
+          <li>  <p>
+            <ul> <li>   <p>            <term>Fourier cosine Transform</term>: <md xml:id="eq-fourier-cos" number="yes">
+            \mathscr{F}_c\{f(x)\}=\int_{-\infty}^{\infty}f(x)\cos(\alpha x)dx=F(\alpha)</md>     </p> </li>
+            <li><term>Inverse Fourier cosine Transform</term>: <md xml:id="eq-inverse-fourier-cos" number="yes">
+            \mathscr{F}_c^{-1}\{F(\alpha)\}=\frac{2}{\pi}\int_{-\infty}^{\infty}F(\alpha)\cos(\alpha x)d\alpha=f(x)</md> 
+              <p>
+                
+              </p>
+            </li>
+            </ul>
+
+            </p>
+          </li>
+                    <li>  <p>
+            <ul> <li>   <p>            <term>Fourier sine Transform</term>: <md xml:id="eq-fourier-sin" number="yes">
+            \mathscr{F}_s\{f(x)\}=\int_{-\infty}^{\infty}f(x)\sin(\alpha x)dx=F(\alpha)</md>     </p> </li>
+            <li><term>Inverse Fourier sine Transform</term>: <md xml:id="eq-inverse-fourier-sin" number="yes">
+            \mathscr{F}_s^{-1}\{F(\alpha)\}=\frac{2}{\pi}\int_{-\infty}^{\infty}F(\alpha)\sin(\alpha x)d\alpha=f(x)</md> 
+              <p>
+                
+              </p>
+            </li>
+            </ul>
+            </p>
+          </li>
+        </ol> 
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <title>Existence and Properties of Fourier Transform</title>
+      <statement>
+        <p>
+          <ul>
+            <li><p> Sufficient conditions for existence of <xref ref="eq-fourier-trans"/>, 
+              <xref ref="eq-fourier-cos"/>, and <xref ref="eq-fourier-sin"/> are that 
+              <m>f</m> be <term>absolutely integrable</term> on the appropriate interval
+              and that <m>f</m> and <m>f'</m> be <term>piecewise continuous on every finite interval.</term>
+              </p>  </li>
+            <li><p> <m>\mathscr{F}\{1\},</m> <m>\mathscr{F}_c\{1\}</m>, and <m>\mathscr{F}_s\{1\}</m> <term> do not exist.</term>
+              </p> </li>
+            <li><p>All 6 transforms in <xref ref="def-fourier-transform"/> are <term>linear transforms.</term>    </p>   </li>
+            <li><p> Suppose that <m>f</m> is continuous and absolute integrable on the interval 
+              <m>(-\infty, \infty)</m> and <m>f'</m> is piecewise continuous on every finite interval. 
+              If <m>f(x)\rightarrow 0</m> as <m>x\rightarrow \pm\infty,</m> then
+              <ul>
+                <li>    <p> <md xml:id="eq-fourer-1d" number="yes">
+                  \mathscr{F}\{f'(x)\}=-i\alpha F(\alpha)
+                </md>   </p>         </li>
+                <li><p> With added assumptions that <m>f'</m> is continuous on <m>(-\infty,\infty)</m>, 
+                  <m>f''</m> is piecewise continuous on every finite interval, and <m>f'(x)\rightarrow 0</m> 
+                  as <m>x\rightarrow\pm\infty</m>, we have
+                  <md xml:id="eq-fourier-2d" number="yes">
+                    \mathscr{F}\{f''(x)\}=\left(-i\alpha\right)^2\mathscr{F}\{f(x)\}=-\alpha^2F(\alpha)                   
+                  </md>                  
+                  </p>    </li>
+                 <li>  <p>Similarly, we have
+                  <md>
+                    \mathscr{F}\{f^{(n)}(x)\}=(-i\alpha)^nF(\alpha),
+                  </md>  
+                where <m>n=0,1,2,\ldots.</m>           </p>         </li> 
+              </ul>
+              </p>
+            </li>
+            <li>  <p>  For <term>Fourier Cosine Transform</term> and <term> Fourier Sine Transform</term>: 
+              under the same assumptions mentioned above:
+            <ul>
+              <li> <p> <m>\mathscr{F}_c\{f'(x)\}=\alpha \mathscr{F}_s\{f(x)\}-f(0)</m>  </p>   </li>
+              <li> <p>  <m>\mathscr{F}_s\{f'(x)\}=-\alpha \mathscr{F}_c\{f(x)\}</m>      </p>      </li>
+              <li><p> <m>\mathscr{F}_c\{f''(x)\}=-\alpha^2 F(\alpha)-f'(0)</m>  </p>       </li>
+              <li> <p>  <m>\mathscr{F}_s\{f''(x)\}=-\alpha^2 F(\alpha)+\alpha f'(0)</m>     </p>    </li>
+            </ul>             
+          </p> </li>
+          </ul>
+        </p>
+      </statement>      
+    </remark>
+    <example>
+      <statement>
+        <p> Use a Fourier transform to solve:
+          <md>
+            <mrow>
+            a^2\frac{\partial^2 u}{\partial x^2}=\frac{\partial u}{\partial t},\amp -\infty\lt x\lt\infty, t\gt 0</mrow>
+            <mrow>u(x,0)=f(x),\frac{\partial u}{\partial t}\biggr|_{t=0}=g(x), \amp -\infty\lt x\lt\infty </mrow>
+          </md>
+          
+          
+        </p>
+      </statement>
+    </example>
 </worksheet>
 
